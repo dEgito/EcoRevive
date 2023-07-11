@@ -20,8 +20,8 @@ Este repositório contém uma plataforma com o objetivo de contribuir para a cri
 ---
 
 - Clonar o repositório
-- `yarn install` pra instalar as dependências
-- `yarn start` pra iniciar o server de desenvolvimento
+- `npm install` pra instalar as dependências
+- `npm start` pra iniciar o server de desenvolvimento
 
 ---
 ### Guia de branchs
