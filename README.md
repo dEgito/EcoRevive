@@ -1,7 +1,5 @@
 # EcoRevive
 
-# Astrolab
-
 Repositório para desenvolver o projeto 'Eco Revive'. <br>
 
 O EcoRevive é um projeto desenvolvido como parte do Programa STRAT 2023, com o objetivo de aprimorar as habilidades na construção de interfaces web utilizando React. 
