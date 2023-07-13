@@ -83,4 +83,9 @@ export const Section = styled.section`
   p {
     max-width: 38rem;
   }
+
+  span {
+    color: #004BB0;
+    font-weight: 700;
+  }
 `;

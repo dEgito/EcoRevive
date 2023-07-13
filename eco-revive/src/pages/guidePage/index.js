@@ -3,14 +3,15 @@ import Navbar from "../../components/navbar";
 import BottomWhiteWave from "../../components/bottomWhiteWave";
 import BottomBlueWave from "../../components/bottomBlueWave";
 import TopBlueWave from "../../components/TopBlueWave";
-
+import TopGreenWave from "../../components/TopGreenWave";
 import ProcedureBox from "../../components/ProcedureBox";
 
 import Logo from "../../assets/Logo320.png"; //rever qualidade da imagem
 import RecycleSymbol from "../../assets/Recycle.png";
 import QuestionBox from "../../assets/question-box.png";
 import Benefits from "../../assets/benefits.png";
-import Planet from "../../assets/planet.png"
+import Planet from "../../assets/planet.png";
+import Idea from "../../assets/Idea.png";
 
 import { Banner, Container, LogoImg, Section } from "./style";
 
@@ -120,10 +121,23 @@ function GuidePage() {
             );
           })}
         </div>
-
-        <img src={Planet}/> {/* jogar imagem pro final */}
+        <img src={Planet} /> {/* jogar imagem pro final */}
       </Section>
       <BottomBlueWave />
+      <Section>
+        <div>
+          <h2>Tá, mas onde descartar?</h2>
+          <p>
+            Nossa plataforma te conecta com pontos de coleta e centros
+            especializados.
+          </p>
+          <p>E é simples! Basta entrar e agendar o descarte!!</p>
+          <p>Conheça a <span>ECO REVIVE</span></p>
+          <Button type="accent">Saiba mais</Button>
+        </div>
+
+        <img src={Idea} />
+      </Section>
     </Container>
   );
 }
