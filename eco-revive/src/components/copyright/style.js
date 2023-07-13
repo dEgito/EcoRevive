@@ -4,7 +4,6 @@ export const Copy = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
   padding: .5rem;
   background-color: #222222;
 
