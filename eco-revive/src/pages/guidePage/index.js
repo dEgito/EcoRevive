@@ -13,7 +13,9 @@ import Benefits from "../../assets/benefits.png";
 import Planet from "../../assets/planet.png";
 import Idea from "../../assets/Idea.png";
 
-import { Banner, Container, LogoImg, Section } from "./style";
+import { Banner, Container, LogoImg, Section, TeamContent } from "./style";
+import ColaboratorPicture from "../../components/colaboratorInfo";
+import ColaboratorSection from "../../components/colaboratorSection";
 
 // import Trash from "@phosphor-icons/react"
 
@@ -132,12 +134,16 @@ function GuidePage() {
             especializados.
           </p>
           <p>E é simples! Basta entrar e agendar o descarte!!</p>
-          <p>Conheça a <span>ECO REVIVE</span></p>
+          <p>
+            Conheça a <span>ECO REVIVE</span>
+          </p>
           <Button type="accent">Saiba mais</Button>
         </div>
 
         <img src={Idea} />
       </Section>
+      <TopGreenWave />
+      <ColaboratorSection />
     </Container>
   );
 }

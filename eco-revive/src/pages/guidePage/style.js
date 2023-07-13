@@ -43,12 +43,20 @@ export const LogoImg = styled.img`
 
 export const Section = styled.section`
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
-  column-gap: 4rem;
+  column-gap: 3rem;
   row-gap: 1rem;
   padding: 2rem 0;
+
+  flex-direction: ${(props) => {
+    switch(props.direction) {
+      case "vertical":
+        return "column"
+      default:
+        return "row"
+    }
+  }};
 
   color: ${(props) => {
     switch(props.background) {
@@ -81,7 +89,7 @@ export const Section = styled.section`
   }
 
   p {
-    max-width: 38rem;
+    max-width: 30rem;
   }
 
   span {
