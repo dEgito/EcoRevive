@@ -1,7 +1,5 @@
 import { Content } from "./style";
 
-import Colaborator from "../../assets/icon.png";
-
 function ColaboratorInfo({name, icon, github, url}) {
   return (
     <Content>
