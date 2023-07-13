@@ -1,8 +1,8 @@
-import { Button } from "./style"
+import { Btn } from "./style"
 
 function Button({type, children}) {
   return (
-    <Button type={type}>{children}</Button>
+    <Btn type={type}>{children}</Btn>
   )
 }
 

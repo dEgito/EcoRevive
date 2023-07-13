@@ -1,4 +1,4 @@
-import { Button } from "../../components/button/style";
+import Button from "../button"
 import { Container, BtnContainer } from "./style";
 
 import Logo from "../../assets/Logo-nav.png";
