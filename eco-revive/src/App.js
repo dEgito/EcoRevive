@@ -1,8 +1,9 @@
+import GuidePage from "./pages/guidePage"
 import './App.css';
 
 function App() {
   return (
-    <h1>Eco Revive</h1>
+    <GuidePage />
   );
 }
 
