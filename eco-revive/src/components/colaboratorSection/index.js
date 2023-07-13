@@ -1,5 +1,4 @@
-import { Section, TeamContent } from "./style";
-import ColaboratorInfo from "../colaboratorInfo";
+import { Section, TeamContent, Content } from "./style";
 
 const colaborators = [
   {
@@ -46,13 +45,14 @@ function ColaboratorSection() {
       <TeamContent>
         {colaborators.map((colaborator) => {
           return (
-            <ColaboratorInfo
-              key={colaborator.id}
-              name={colaborator.name}
-              icon={colaborator.icon}
-              github={colaborator.github}
-              url={colaborator.url}
-            />
+            <Content>
+              <img src={colaborator.icon} />
+
+              <div>
+                <h4>{colaborator.name}</h4>
+                <a href={colaborator.url}>{colaborator.github}</a>
+              </div>
+            </Content>
           );
         })}
       </TeamContent>
