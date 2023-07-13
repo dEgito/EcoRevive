@@ -8,7 +8,27 @@ export const Btn = styled.button`
   justify-content: center;
   align-items: center;
 
-  border: 2px solid #4eb969;
+  font-family: Montserrat, sans-serif;
+  font-size: .8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  border: 2px solid
+    ${(props) => {
+      switch (props.type) {
+        case "primary":
+          return "#4eb969";
+
+        case "secundary":
+          return "#4eb969";
+
+        case "accent":
+          return "#004BB0";
+
+        default:
+          return "#4eb969";
+      }
+    }};
   background-color: ${(props) => {
     switch (props.type) {
       case "primary":
@@ -16,6 +36,9 @@ export const Btn = styled.button`
 
       case "secundary":
         return "#ffffff";
+
+      case "accent":
+        return "#004BB0";
 
       default:
         return "#4eb969";
@@ -29,6 +52,9 @@ export const Btn = styled.button`
 
       case "secundary":
         return "#4eb969";
+
+      case "accent":
+        return "#ffffff";
 
       default:
         return "#ffffff";
