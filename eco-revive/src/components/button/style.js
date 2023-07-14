@@ -9,7 +9,7 @@ export const Btn = styled.button`
   align-items: center;
 
   font-family: Montserrat, sans-serif;
-  font-size: .8rem;
+  font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
 
@@ -60,4 +60,43 @@ export const Btn = styled.button`
         return "#ffffff";
     }
   }};
+  &:hover {
+    border: 2px solid
+      ${(props) => {
+        switch (props.type) {
+          case "primary":
+            return "#0E3973";
+          case "secundary":
+            return "4EB969";
+          case "accent":
+            return "#004BB0";
+          default:
+            return "#4EB969";
+        }
+      }};
+    background-color: ${(props) => {
+      switch (props.type) {
+        case "primary":
+          return "#0E3973";
+        case "secundary":
+          return "#52D874";
+        case "accent":
+          return "#0E3973";
+        default:
+          return "#4EB969";
+      }
+    }};
+    color: ${(props) => {
+      switch (props.type) {
+        case "primary":
+          return "#f2f2f2";
+        case "secundary":
+          return "#f2f2f2";
+        case "accent":
+          return "#f2f2f2";
+        default:
+          return "#f2f2f2";
+      }
+    }};
+  }
 `;
