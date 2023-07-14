@@ -20,6 +20,7 @@ Este repositório contém uma plataforma com o objetivo de contribuir para a cri
 ---
 
 - Clonar o repositório
+- `cd eco-revive` para acessar o diretório do projeto
 - `npm install` pra instalar as dependências
 - `npm start` pra iniciar o server de desenvolvimento
 
