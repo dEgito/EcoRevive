@@ -11,6 +11,7 @@ export const Container = styled.body`
     font-size: 1.5rem;
     letter-spacing: 0.14rem;
     text-transform: uppercase;
+    color: #4eb969;
   }
 
   h3 {
@@ -49,5 +50,11 @@ export const Inicio = styled.section`
   span {
     color: #4eb969;
     font-weight: bold;
+  }
+`;
+
+export const Section = styled.section`
+  h2 {
+    color: #4eb969;
   }
 `;

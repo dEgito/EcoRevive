@@ -67,7 +67,7 @@ export const Btn = styled.button`
           case "primary":
             return "#0E3973";
           case "secundary":
-            return "4EB969";
+            return "#0E3973";
           case "accent":
             return "#004BB0";
           default:
@@ -79,7 +79,7 @@ export const Btn = styled.button`
         case "primary":
           return "#0E3973";
         case "secundary":
-          return "#52D874";
+          return "#0E3973";
         case "accent":
           return "#0E3973";
         default:
