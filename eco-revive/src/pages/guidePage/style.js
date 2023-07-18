@@ -32,7 +32,6 @@ export const Banner = styled.section`
   align-items: center;
   justify-content: center;
   gap: 4rem;
-
   background-color: #f8f8f8;
 `;
 

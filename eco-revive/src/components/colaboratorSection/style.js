@@ -6,6 +6,7 @@ export const Section = styled.section`
   justify-content: center;
   row-gap: 2rem;
   padding: 2rem 0;
+  flex-wrap: wrap;
 
   flex-direction: ${(props) => {
     switch(props.direction) {
@@ -41,6 +42,7 @@ export const Section = styled.section`
   h2 {
     font-size: 1.2rem;
     margin: .5rem 0;
+    color: #000000;
   } 
 `;
 
