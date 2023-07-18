@@ -1,9 +1,22 @@
 import Navbar from "../../components/navbar";
-import { Container, Inicio } from "./style";
-import { Section } from "../guidePage/style";
-import NossaMissao from "../../assets/nossa-missao.png";
-import NossaVisao from "../../assets/nossa-visao.png";
-import NossosValores from "../../assets/nossos-valores.png";
+import TopBlueWave from "../../components/TopBlueWave";
+import TopGreenWave from "../../components/TopGreenWave";
+import BottomGreenWave from "../../components/bottomGreenWave";
+import BottomBlueWave from "../../components/bottomBlueWave";
+
+import OurMission from "../../assets/Our-mission.png";
+import OurVision from "../../assets/Our-vision.png";
+import OurValues from "../../assets/Our-values.png";
+import Eco from "../../assets/Eco.png";
+import Tech from "../../assets/Tech.png";
+import Eletronic from "../../assets/Eletronic.png";
+import Rec from "../../assets/Rec.png";
+import Company from "../../assets/Company.png";
+
+import { Container, Content, Inicio, Section, Presentation, Mission, Values} from "./style";
+import ColaboratorSection from "../../components/colaboratorSection";
+import Copyright from "../../components/copyright";
+
 
 function QuemSomos() {
   return (
@@ -18,39 +31,56 @@ function QuemSomos() {
         </p>
       </Inicio>
       <Section>
-        <div>
+        <Mission>
           <h2>Nossa missão</h2>
           <p>
             Reduzir a incidência do descarte incorreto dos e-lixo na território
             do Grande Recife e região Metropolitana.
           </p>
-        </div>
-        <img src={NossaMissao} />
+        </Mission>
+        <img src={OurMission} />
       </Section>
-      <Section>
+      <Section background="green">
+        <img src={OurVision} />
         <div>
           <h2>Nossa visão</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+          Ser uma empresa competitiva no âmbito de reciclagem de eletrônicos na Grande Recife até o segundo semestre de 2024.
           </p>
         </div>
-        <img src={NossaVisao} />
       </Section>
+      <BottomGreenWave/>
       <Section>
-        <div>
+        <Values>
           <h2>Nossos valores</h2>
-          <ul class="lista-valores">
+          <ul>
             <li>Reponsabilidade social</li>
             <li>Consciência ambiental</li>
             <li>Qualidade</li>
             <li>Inovação</li>
           </ul>
-        </div>
-        <img src={NossosValores}/>
+        </Values>
+        <img src={OurValues} />
       </Section>
+      <Section direction="vertical" background="blue">
+          <h2>O que nos motiva?</h2>
+        <Content>
+          <img src={Eco} />
+          <img src={Tech} />
+          <img src={Eletronic} />
+          <img src={Rec} />
+          <img src={Company} />
+        </Content>
+      </Section>
+      <BottomBlueWave/>
+      <Section>
+        <Presentation>
+          <p>Somos a solução para os lixos eletrônicos descartados incorretamente
+          na Grande Recife!</p>
+        </Presentation>
+      </Section>
+     <ColaboratorSection/>
+     <Copyright />
     </Container>
   );
 }
