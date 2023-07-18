@@ -1,9 +1,8 @@
-import GuidePage from "./pages/guidePage"
-import './App.css';
+import ContactUs from "./pages/contactUs";
 
 function App() {
   return (
-    <GuidePage />
+    <ContactUs />
   );
 }
 
