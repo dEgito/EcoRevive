@@ -9,6 +9,7 @@ export const Btn = styled.button`
   border-radius: 6.25rem;
   display: flex;
   gap: 0.25rem;
+
   justify-content: center;
   align-items: center;
   padding: ${(props) => {
@@ -17,6 +18,7 @@ export const Btn = styled.button`
 
   font-family: Montserrat, sans-serif;
   font-size: 0.8rem;
+  font-weight: 700;
   text-transform: uppercase;
   font-weight: ${(props) => {
     return props.type === "filter" ? "500" : "700";
@@ -79,8 +81,42 @@ export const Btn = styled.button`
   }};
 
   &:hover {
-    border: 1px solid #4eb969;
-    transition: 0.4s;
-    color: #4eb969;
+    border: 2px solid
+      ${(props) => {
+        switch (props.type) {
+          case "primary":
+            return "#0E3973";
+          case "secundary":
+            return "#0E3973";
+          case "accent":
+            return "#004BB0";
+          default:
+            return "#4EB969";
+        }
+      }};
+    background-color: ${(props) => {
+      switch (props.type) {
+        case "primary":
+          return "#0E3973";
+        case "secundary":
+          return "#0E3973";
+        case "accent":
+          return "#0E3973";
+        default:
+          return "#4EB969";
+      }
+    }};
+    color: ${(props) => {
+      switch (props.type) {
+        case "primary":
+          return "#f2f2f2";
+        case "secundary":
+          return "#f2f2f2";
+        case "accent":
+          return "#f2f2f2";
+        default:
+          return "#f2f2f2";
+      }
+    }};
   }
 `;

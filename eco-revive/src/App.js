@@ -1,9 +1,12 @@
 import GuidePage from "./pages/guidePage";
-import ColletionLocations from "./pages/collectionLocationsPage";
 import "./App.css";
+import QuemSomos from "./pages/quemSomos";
 
 function App() {
-  return <ColletionLocations />;
+  return (
+    // <GuidePage />
+    <QuemSomos />
+  );
 }
 
 export default App;

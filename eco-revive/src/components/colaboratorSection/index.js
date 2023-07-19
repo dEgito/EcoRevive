@@ -24,7 +24,7 @@ const colaborators = [
   },
   {
     id: 4,
-    name: "Emily Araújo",
+    name: "Emilly Araújo",
     icon: "https://avatars.githubusercontent.com/u/134067128?s=64&v=4",
     github: "@EmillyMariaAraujo",
     url: "https://github.com/EmillyMariaAraujo",
