@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const Btn = styled.button`
-  width: 100%;
-  max-width: 9.5rem;
-  border-radius: 6.25rem;
+  max-width: 10rem;
+  display: flex;
+  border-radius: 6rem;
   padding: 0.5rem 1.5rem;
   justify-content: center;
   align-items: center;

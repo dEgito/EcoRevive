@@ -1,10 +1,11 @@
 import styled from "styled-components";
-import Background from "../../assets/Bg-quem-somos.jpg";
+import Background from "../../assets/bg-quem-somos.jpg";
 
 export const Container = styled.body`
   font-family: Montserrat, sans-serif;
   color: #002454;
   margin: 0;
+  flex-wrap: wrap;
 
   h2 {
     font-size: 1.5rem;
@@ -33,9 +34,12 @@ export const Inicio = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   padding: 6rem 0;
   gap: 0.5rem;
   background-image: url(${Background});
+  background-position: center;
+  background-size: auto;
   flex-wrap: wrap;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -51,14 +55,6 @@ export const Inicio = styled.section`
     color: #4eb969;
     font-weight: bold;
   }
-`;
-
-export const Content = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
 `;
 
 export const Mission = styled.div`
@@ -82,6 +78,19 @@ p{
 }
 `;
 
+export const Content = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+
+  img{
+    padding: 1rem;
+  }
+`;
+
 export const Presentation = styled.div`
   p {
     color: #52d874;
@@ -94,6 +103,7 @@ export const Section = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   column-gap: 3rem;
   row-gap: 1rem;
   padding: 2rem 0;

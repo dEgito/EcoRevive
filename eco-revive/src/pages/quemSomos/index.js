@@ -13,10 +13,17 @@ import Eletronic from "../../assets/Eletronic.png";
 import Rec from "../../assets/Rec.png";
 import Company from "../../assets/Company.png";
 
-import { Container, Content, Inicio, Section, Presentation, Mission, Values} from "./style";
+import {
+  Container,
+  Content,
+  Inicio,
+  Section,
+  Presentation,
+  Mission,
+  Values,
+} from "./style";
 import ColaboratorSection from "../../components/colaboratorSection";
 import Copyright from "../../components/copyright";
-
 
 function QuemSomos() {
   return (
@@ -38,18 +45,23 @@ function QuemSomos() {
             do Grande Recife e região Metropolitana.
           </p>
         </Mission>
-        <img src={OurMission} />
+        <div>
+          <img src={OurMission} />
+        </div>
       </Section>
       <Section background="green">
-        <img src={OurVision} />
+        <div>
+          <img src={OurVision} />
+        </div>
         <div>
           <h2>Nossa visão</h2>
           <p>
-          Ser uma empresa competitiva no âmbito de reciclagem de eletrônicos na Grande Recife até o segundo semestre de 2024.
+            Ser uma empresa competitiva no âmbito de reciclagem de eletrônicos
+            na Grande Recife até o segundo semestre de 2024.
           </p>
         </div>
       </Section>
-      <BottomGreenWave/>
+      <BottomGreenWave />
       <Section>
         <Values>
           <h2>Nossos valores</h2>
@@ -60,27 +72,41 @@ function QuemSomos() {
             <li>Inovação</li>
           </ul>
         </Values>
-        <img src={OurValues} />
+        <div>
+          <img src={OurValues} />
+        </div>
       </Section>
       <Section direction="vertical" background="blue">
-          <h2>O que nos motiva?</h2>
+        <h2>O que nos motiva?</h2>
         <Content>
-          <img src={Eco} />
-          <img src={Tech} />
-          <img src={Eletronic} />
-          <img src={Rec} />
-          <img src={Company} />
+          <div>
+            <img src={Eco} />
+          </div>
+          <div>
+            <img src={Tech} />
+          </div>
+          <div>
+            <img src={Eletronic} />
+          </div>
+          <div>
+            <img src={Rec} />
+          </div>
+          <div>
+            <img src={Company} />
+          </div>
         </Content>
       </Section>
-      <BottomBlueWave/>
+      <BottomBlueWave />
       <Section>
         <Presentation>
-          <p>Somos a solução para os lixos eletrônicos descartados incorretamente
-          na Grande Recife!</p>
+          <p>
+            Somos a solução para os lixos eletrônicos descartados incorretamente
+            na Grande Recife!
+          </p>
         </Presentation>
       </Section>
-     <ColaboratorSection/>
-     <Copyright />
+      <ColaboratorSection />
+      <Copyright />
     </Container>
   );
 }
