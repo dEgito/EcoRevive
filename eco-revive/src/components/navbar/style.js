@@ -5,6 +5,7 @@ export const Container = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   padding: 1rem 7.5rem;
   //padding: 0 7.5rem; LEMBRETE: rever responsividade
 
@@ -35,9 +36,4 @@ export const Container = styled.div`
 `;
 
 export const BtnContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  width: 100%;
-  max-width: 25rem;
 `;
