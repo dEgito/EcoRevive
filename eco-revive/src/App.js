@@ -1,10 +1,9 @@
-import GuidePage from "./pages/guidePage"
-import './App.css';
+import GuidePage from "./pages/guidePage";
+import "./App.css";
+import DisposalSchedule from "./pages/disposalSchedule";
 
 function App() {
-  return (
-    <GuidePage />
-  );
+  return <DisposalSchedule />;
 }
 
 export default App;
