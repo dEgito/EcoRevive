@@ -24,6 +24,8 @@ export const Btn = styled.button`
     return props.type === "filter" ? "500" : "700";
   }};
 
+  cursor: pointer;
+
   border: ${(props) => {
     switch (props.type) {
       case "primary":
@@ -81,19 +83,20 @@ export const Btn = styled.button`
   }};
 
   &:hover {
-    border: 2px solid
-      ${(props) => {
-        switch (props.type) {
-          case "primary":
-            return "#0E3973";
-          case "secundary":
-            return "#0E3973";
-          case "accent":
-            return "#004BB0";
-          default:
-            return "#4EB969";
-        }
-      }};
+    border: ${(props) => {
+      switch (props.type) {
+        case "2px solid primary":
+          return "#0E3973";
+        case "2px solid secundary":
+          return "2px solid #0E3973";
+        case "accent":
+          return "2px solid #004BB0";
+        case "filter":
+          return "1px solid #4eb969 ";
+        default:
+          return "2px solid #4EB969";
+      }
+    }};
     background-color: ${(props) => {
       switch (props.type) {
         case "primary":
@@ -102,6 +105,8 @@ export const Btn = styled.button`
           return "#0E3973";
         case "accent":
           return "#0E3973";
+        case "filter":
+          return "none";
         default:
           return "#4EB969";
       }
@@ -114,6 +119,8 @@ export const Btn = styled.button`
           return "#f2f2f2";
         case "accent":
           return "#f2f2f2";
+        case "filter":
+          return "#4eb969";
         default:
           return "#f2f2f2";
       }

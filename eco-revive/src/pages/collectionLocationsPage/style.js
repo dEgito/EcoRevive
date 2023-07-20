@@ -9,27 +9,42 @@ export const Container = styled.body`
   li {
     list-style: none;
   }
-`;
+  ${Btn} {
+    margin: 2rem 0 0 5.5rem;
+  }
 
-export const DivFilter = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 1.87rem;
-  margin-left: 4rem;
+  @media (max-width: 600px) {
+    ${Btn} {
+      margin: 1rem 0 0 1rem;
+      width: 100%;
+      width: 3.3rem;
+      height: 2.3rem;
+      font-size: 0rem; /* Falta: remover o texto de corretamente  */
+      gap: 0;
+      padding: 0;
+      border-radius: 2rem;
+    }
+  }
+
+  @media (min-width: 451px) and (max-width: 600px) {
+    ${Btn} {
+      margin: 1rem 0 0 4.5rem;
+    }
+  }
 `;
 
 export const Map = styled.iframe`
   border: 0;
   margin-left: 3rem;
-  width: 41.6rem;
+  width: 40rem;
   height: 45.06rem;
 `;
 
 export const ConteinerMain = styled.div`
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding-top: 1.87rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1.87rem 5.5rem 0 5.5rem;
 
   ul {
     display: flex;
@@ -59,27 +74,43 @@ export const ConteinerMain = styled.div`
     &::-webkit-scrollbar-thumb:hover {
       background-color: rgba(163, 163, 163, 0.7);
     }
+
+    @media (max-width: 1020px) {
+      height: 24.5rem;
+    }
+
+    @media (min-width: 687px) and (max-width: 1020px) {
+      padding: 0 5rem;
+    }
+
+    @media (min-width: 767px) and (max-width: 1020px) {
+      padding: 0 7rem;
+    }
   }
 
-  @media screen and (max-width: 450px) {
+  @media (max-width: 1020px) {
     flex-direction: column-reverse;
-    padding-top: 0;
+    padding: 1rem 1rem 0 1rem;
+    gap: 2rem;
 
     ${Map} {
-      max-width: 95%;
+      max-width: 100%;
       max-height: 12.5rem;
       margin-left: 0;
-      padding: 1rem;
     }
+  }
 
-    ${DivFilter} {
-      display: block;
-      margin: 0;
-      margin: 0 1rem;
-    }
+  @media (min-width: 600px) and (max-width: 1020px) {
+    padding: 1rem 4.5rem 0 4.5rem;
+    flex-wrap: nowrap;
 
-    ${Btn} {
-      order: 2;
+    ${Map} {
+      max-width: 100%;
+      max-height: 21rem;
     }
+  }
+
+  @media (min-width: 1021px) and (max-width: 1030px) {
+    flex-wrap: nowrap;
   }
 `;

@@ -1,11 +1,11 @@
-import { Li, Btn } from "./listCompaniesStyle";
+import { Li, BtnAgenda } from "./listCompaniesStyle";
 
 function ListLocations({ name, address }) {
   return (
     <Li>
       <h2>{name}</h2>
       <p>{address}</p> {/*possivel mundaça para link */}
-      <Btn>Agendar descarte</Btn>
+      <BtnAgenda>Agendar descarte</BtnAgenda>
     </Li>
   );
 }

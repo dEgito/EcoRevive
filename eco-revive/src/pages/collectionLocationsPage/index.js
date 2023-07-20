@@ -1,4 +1,4 @@
-import { Container, DivFilter, Map, ConteinerMain } from "./style";
+import { Container, Map, ConteinerMain } from "./style";
 import NavBarInner from "./components/navbar/navbar";
 import Button from "../../components/button/index";
 import ListLocations from "./components/listCompanies/listCompanies";
@@ -46,21 +46,19 @@ function ColletionLocations() {
   return (
     <Container>
       <NavBarInner />
+      <Button type="filter">Todos os filtros</Button>
       <ConteinerMain>
-        <DivFilter>
-          <Button type="filter">Todos os filtros</Button>
-          <ul>
-            {companies.map((company) => {
-              return (
-                <ListLocations
-                  key={company.id}
-                  name={company.name}
-                  address={company.address}
-                />
-              );
-            })}
-          </ul>
-        </DivFilter>
+        <ul>
+          {companies.map((company) => {
+            return (
+              <ListLocations
+                key={company.id}
+                name={company.name}
+                address={company.address}
+              />
+            );
+          })}
+        </ul>
         <Map
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2348.905759609186!2d-34.87211069223108!3d-8.06342139952157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab18a39e2f54e3%3A0x7a7c2545d48886c0!2sAccenture%20-%20Armaz%C3%A9m%2012%20Innovation%20Center!5e0!3m2!1spt-BR!2sbr!4v1689635105857!5m2!1spt-BR!2sbr"
           allowfullscreen=""
