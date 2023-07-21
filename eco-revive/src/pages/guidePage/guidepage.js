@@ -4,7 +4,9 @@ import BottomWhiteWave from "../../components/bottomWhiteWave";
 import BottomBlueWave from "../../components/bottomBlueWave";
 import TopBlueWave from "../../components/TopBlueWave";
 import TopGreenWave from "../../components/TopGreenWave";
-import ProcedureBox from "./components/ProcedureBox";
+import ProcedureBox from "./components/ProcedureBox/procedureBox";
+import ColaboratorSection from "../../components/colaboratorSection/colaboratorSection";
+import Copyright from "../../components/copyright/copyright";
 
 import Logo from "../../assets/Logo320.png"; //rever qualidade da imagem
 import RecycleSymbol from "../../assets/Recycle.png";
@@ -14,8 +16,6 @@ import Planet from "../../assets/planet.png";
 import Idea from "../../assets/Idea.png";
 
 import { Banner, Container, LogoImg, Section } from "./style";
-import ColaboratorSection from "../../components/colaboratorSection";
-import Copyright from "../../components/copyright";
 
 // import Trash from "@phosphor-icons/react"
 
@@ -72,7 +72,7 @@ function GuidePage() {
             Facilitando o processo de descarte responsável e colabora ativamente
             com a e-reciclagem.
           </p>
-          <Button type="accent">Saiba mais</Button>
+          <Button category="accent">Saiba mais</Button>
         </div>
 
         <img src={RecycleSymbol} />
@@ -137,7 +137,7 @@ function GuidePage() {
           <p>
             Conheça a <span>ECO REVIVE</span>
           </p>
-          <Button type="accent">Saiba mais</Button>
+          <Button category="accent">Saiba mais</Button>
         </div>
 
         <img src={Idea} />

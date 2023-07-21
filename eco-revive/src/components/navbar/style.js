@@ -7,13 +7,15 @@ export const Container = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 1rem 7.5rem;
-  //padding: 0 7.5rem; LEMBRETE: rever responsividade
 
   font-family: Montserrat, sans-serif;
 
   background: #f4f4f4;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
+  @media (max-width: 768px) {
+    padding: 1rem 2.5rem;
+  }
   img {
     width: 100%;
     max-width: 80px;
@@ -21,7 +23,7 @@ export const Container = styled.div`
 
   div {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
   }
 
   a {
@@ -36,4 +38,73 @@ export const Container = styled.div`
 `;
 
 export const BtnContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  width: 100%;
+  max-width: 25rem;
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    gap: 0rem;
+  }
+`;
+
+export const HamburgerIcon = styled.div`
+  cursor: pointer;
+  display: none;
+
+  @media (max-width: 1000px) {
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-color: #ffffff;
+  }
+`;
+
+export const Menu = styled.ul`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4rem;
+  list-style: none;
+
+  @media (max-width: 1000px) {
+    display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0.5rem;
+    background-color: #f4f4f4;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 1rem;
+
+    width: 100%;
+    max-width: 180px;
+  }
+
+  @media (max-width: 400px) {
+    align-items: center;
+    width: 100%;
+    max-width: none;
+    right: 0;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-direction: row;
+
+    @media (max-width: 1000px) {
+      flex-direction: column;
+    }
+  }
+`;
+
+export const MenuItem = styled.li``;
+
+export const MenuLink = styled.a`
+  color: #fff;
+  text-decoration: none;
 `;

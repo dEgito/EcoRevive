@@ -46,7 +46,7 @@ function ColletionLocations() {
   return (
     <Container>
       <NavBarInner />
-      <Button type="filter">Todos os filtros</Button>
+      <Button category="filter">Todos os filtros</Button>
       <ConteinerMain>
         <ul>
           {companies.map((company) => {
