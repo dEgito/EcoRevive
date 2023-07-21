@@ -5,6 +5,8 @@ import BottomBlueWave from "../../components/bottomBlueWave";
 import TopBlueWave from "../../components/TopBlueWave";
 import TopGreenWave from "../../components/TopGreenWave";
 import ProcedureBox from "./components/ProcedureBox";
+import ColaboratorSection from "../../components/colaboratorSection";
+import Copyright from "../../components/copyright";
 
 import Logo from "../../assets/Logo320.png"; //rever qualidade da imagem
 import RecycleSymbol from "../../assets/Recycle.png";
@@ -14,8 +16,6 @@ import Planet from "../../assets/planet.png";
 import Idea from "../../assets/Idea.png";
 
 import { Banner, Container, LogoImg, Section } from "./style";
-import ColaboratorSection from "../../components/colaboratorSection";
-import Copyright from "../../components/copyright";
 
 // import Trash from "@phosphor-icons/react"
 
