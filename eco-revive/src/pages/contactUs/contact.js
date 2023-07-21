@@ -1,5 +1,6 @@
 import Input from "../../components/input";
 import Navbar from "../../components/navbar";
+import MenuHamburguer from "../../components/navbar/testeIndex";
 import TopGreenWave from "../../components/TopGreenWave";
 import ColaboratorSection from "../../components/colaboratorSection/colaboratorSection";
 import Copyright from "../../components/copyright/copyright";
@@ -10,7 +11,7 @@ function ContactUs() {
   return (
     <Container>
       <Navbar />
-
+      {/* <MenuHamburguer /> */}
       <Section>
         <h2>Fale Conosco</h2>
         <p>Queremos ouvir suas perguntas e sugestões.</p>
