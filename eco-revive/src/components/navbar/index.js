@@ -38,8 +38,8 @@ function Navbar() {
         </div>
 
         <BtnContainer>
-          <Button type="primary">Cadastre-se</Button>
-          <Button type="secundary">Entrar</Button>
+          <Button category="primary">Cadastre-se</Button>
+          <Button category="secundary">Entrar</Button>
         </BtnContainer>
       </Menu>
     </Container>

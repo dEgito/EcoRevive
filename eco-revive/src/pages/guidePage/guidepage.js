@@ -72,7 +72,7 @@ function GuidePage() {
             Facilitando o processo de descarte responsável e colabora ativamente
             com a e-reciclagem.
           </p>
-          <Button type="accent">Saiba mais</Button>
+          <Button category="accent">Saiba mais</Button>
         </div>
 
         <img src={RecycleSymbol} />
@@ -137,7 +137,7 @@ function GuidePage() {
           <p>
             Conheça a <span>ECO REVIVE</span>
           </p>
-          <Button type="accent">Saiba mais</Button>
+          <Button category="accent">Saiba mais</Button>
         </div>
 
         <img src={Idea} />

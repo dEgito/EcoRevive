@@ -11,7 +11,7 @@ export const Container = styled.div`
     text-transform: uppercase;
 
     @media (max-width: 480px) {
-      font-size: 1rem; /* Porcentagem do tamanho da tela */
+      font-size: 1rem;
     }
   }
 
@@ -24,7 +24,7 @@ export const Container = styled.div`
   P {
     margin: 0;
     @media (max-width: 480px) {
-      font-size: 0.8rem; /* Porcentagem do tamanho da tela */
+      font-size: 0.8rem;
     }
   }
 `;
@@ -42,7 +42,7 @@ export const Section = styled.section`
 export const Content = styled.div`
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
   align-items: center;
   justify-content: center;
   column-gap: 3rem;
@@ -72,6 +72,10 @@ export const Content = styled.div`
       border: 1px solid #4eb969;
       border-radius: 0.25rem;
       resize: none;
+
+      @media (max-width: 600px) {
+        margin-bottom: 0;
+      }
     }
   }
 `;
@@ -80,7 +84,7 @@ export const InfoBox = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  padding: 2rem;
+  padding: 1.5rem 2rem;
   border-radius: 0.6875rem;
   background: rgba(111, 145, 61, 0.08);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -89,5 +93,9 @@ export const InfoBox = styled.div`
   p {
     font-size: 0.9rem;
     margin: 0;
+  }
+
+  @media (max-width: 550px) {
+    margin-top: 2rem;
   }
 `;

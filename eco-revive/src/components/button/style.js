@@ -12,10 +12,11 @@ export const Btn = styled.button`
   font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
+  transition: all 0.3s ease-out;
 
   border: 2px solid
     ${(props) => {
-      switch (props.type) {
+      switch (props.category) {
         case "primary":
           return "#4eb969";
 
@@ -30,7 +31,7 @@ export const Btn = styled.button`
       }
     }};
   background-color: ${(props) => {
-    switch (props.type) {
+    switch (props.category) {
       case "primary":
         return "#4eb969";
 
@@ -46,7 +47,7 @@ export const Btn = styled.button`
   }};
 
   color: ${(props) => {
-    switch (props.type) {
+    switch (props.category) {
       case "primary":
         return "#ffffff";
 
@@ -63,7 +64,7 @@ export const Btn = styled.button`
   &:hover {
     border: 2px solid
       ${(props) => {
-        switch (props.type) {
+        switch (props.category) {
           case "primary":
             return "#0E3973";
           case "secundary":
@@ -75,7 +76,7 @@ export const Btn = styled.button`
         }
       }};
     background-color: ${(props) => {
-      switch (props.type) {
+      switch (props.category) {
         case "primary":
           return "#0E3973";
         case "secundary":
@@ -87,7 +88,7 @@ export const Btn = styled.button`
       }
     }};
     color: ${(props) => {
-      switch (props.type) {
+      switch (props.category) {
         case "primary":
           return "#f2f2f2";
         case "secundary":

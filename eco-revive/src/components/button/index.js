@@ -1,7 +1,7 @@
 import { Btn } from "./style";
 
-function Button({ type, children }) {
-  return <Btn type={type}>{children}</Btn>;
+function Button({ category, children }) {
+  return <Btn category={category} >{children}</Btn>;
 }
 
 export default Button;

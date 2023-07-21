@@ -5,6 +5,7 @@ import ColaboratorSection from "../../components/colaboratorSection/colaboratorS
 import Copyright from "../../components/copyright/copyright";
 
 import { Container, Content, InfoBox, Section } from "./style";
+import Button from "../../components/button";
 
 function ContactUs() {
   return (
@@ -15,14 +16,17 @@ function ContactUs() {
         <p>Queremos ouvir suas perguntas e sugestões.</p>
 
         <Content>
-          <form>
-            <Input type="text" item="name" label="Nome:" />
-            <Input type="text" item="email" label="E-mail:" />
-            <Input type="text" item="subject" label="Assunto:" />
+          <div>
+            <form>
+              <Input type="text" item="name" label="Nome:" />
+              <Input type="text" item="email" label="E-mail:" />
+              <Input type="text" item="subject" label="Assunto:" />
 
-            <label for="message">Mensagem:</label>
-            <textarea id="message" />
-          </form>
+              <label for="message">Mensagem:</label>
+              <textarea id="message" />
+            </form>
+            <Button category="primary" type="submit">Enviar</Button>
+          </div>
 
           <InfoBox>
             <div>
