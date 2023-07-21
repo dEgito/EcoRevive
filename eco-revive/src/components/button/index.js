@@ -1,10 +1,13 @@
 import { Btn } from "./style";
 import { GoFilter } from "react-icons/go";
 
-function Button({type, children}) {
+function Button({ category, children }) {
   return (
-    <Btn type={type}>{children}</Btn>
-  )
+    <Btn category={category}>
+      {category === "filter" ? <GoFilter size={20} /> : ""}
+      {children}
+    </Btn>
+  );
 }
 
 export default Button;

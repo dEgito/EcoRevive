@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Btn = styled.button`
   width: 100%;
   max-width: ${(props) => {
-    return props.type === "filter" ? "11.4rem" : "9.5rem";
+    return props.category === "filter" ? "11.4rem" : "9.5rem";
   }};
 
   border-radius: 6.25rem;
@@ -13,7 +13,7 @@ export const Btn = styled.button`
   justify-content: center;
   align-items: center;
   padding: ${(props) => {
-    return props.type === "filter" ? "1rem 0" : "0.5rem 1.5rem";
+    return props.category === "filter" ? "1rem 0" : "0.5rem 1.5rem";
   }};
 
   font-family: Montserrat, sans-serif;
@@ -21,13 +21,13 @@ export const Btn = styled.button`
   font-weight: 700;
   text-transform: uppercase;
   font-weight: ${(props) => {
-    return props.type === "filter" ? "500" : "700";
+    return props.category === "filter" ? "500" : "700";
   }};
 
   cursor: pointer;
 
   border: ${(props) => {
-    switch (props.type) {
+    switch (props.category) {
       case "primary":
         return "2px solid #4eb969";
 
@@ -84,7 +84,7 @@ export const Btn = styled.button`
 
   &:hover {
     border: ${(props) => {
-      switch (props.type) {
+      switch (props.category) {
         case "2px solid primary":
           return "#0E3973";
         case "2px solid secundary":
