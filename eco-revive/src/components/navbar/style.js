@@ -5,6 +5,7 @@ export const Container = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   padding: 1rem 7.5rem;
 
   font-family: Montserrat, sans-serif;
