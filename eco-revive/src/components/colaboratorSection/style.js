@@ -8,20 +8,20 @@ export const Section = styled.section`
   padding: 2rem 0;
 
   flex-direction: ${(props) => {
-    switch(props.direction) {
+    switch (props.direction) {
       case "vertical":
-        return "column"
+        return "column";
       default:
-        return "row"
+        return "row";
     }
   }};
 
   color: ${(props) => {
-    switch(props.background) {
+    switch (props.background) {
       case "blue":
-        return "#ffffff"
+        return "#ffffff";
       default:
-        return "#002454"
+        return "#002454";
     }
   }};
 
@@ -40,14 +40,20 @@ export const Section = styled.section`
 
   h2 {
     font-size: 1.2rem;
-    margin: .5rem 0;
-  } 
+    margin: 0.5rem 0;
+
+    @media (max-width: 480px) {
+      font-size: 1rem; /* Porcentagem do tamanho da tela */
+    }
+  }
 `;
 
-export const TeamContent = styled.div `
+export const TeamContent = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   gap: 2rem;
 `;
 
@@ -57,13 +63,13 @@ export const Content = styled.div`
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  
+
   padding: 1%.5 0;
 
   div {
     display: flex;
     flex-direction: column;
-    gap: .5rem;
+    gap: 0.5rem;
   }
 
   img {
@@ -72,20 +78,20 @@ export const Content = styled.div`
     border-radius: 4px;
   }
 
-  h4, a {
+  h4,
+  a {
     margin: 0;
     text-align: center;
   }
 
   h4 {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 
   a {
-    font-size: .8rem;
-    color: #004BB0;
+    font-size: 0.8rem;
+    color: #004bb0;
     font-weight: bold;
     text-decoration: none;
   }
-
 `;
