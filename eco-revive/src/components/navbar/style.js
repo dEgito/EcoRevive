@@ -12,7 +12,7 @@ export const Container = styled.div`
 
   background: #f4f4f4;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  
+
   @media (max-width: 768px) {
     padding: 1rem 2.5rem;
   }
@@ -44,7 +44,7 @@ export const BtnContainer = styled.div`
   width: 100%;
   max-width: 25rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
     flex-direction: column;
     gap: 0rem;
   }
@@ -78,10 +78,27 @@ export const Menu = styled.ul`
     background-color: #f4f4f4;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     padding: 1rem;
+
+    width: 100%;
+    max-width: 180px;
+  }
+
+  @media (max-width: 400px) {
+    align-items: center;
+    width: 100%;
+    max-width: none;
+    right: 0;
   }
 
   div {
+    display: flex;
+    align-items: center;
     width: 100%;
+    flex-direction: row;
+
+    @media (max-width: 1000px) {
+      flex-direction: column;
+    }
   }
 `;
 

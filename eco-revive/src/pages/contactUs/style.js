@@ -24,9 +24,8 @@ export const Container = styled.div`
   P {
     margin: 0;
     @media (max-width: 480px) {
-      font-size: .8rem; /* Porcentagem do tamanho da tela */
+      font-size: 0.8rem; /* Porcentagem do tamanho da tela */
     }
-
   }
 `;
 
@@ -61,6 +60,10 @@ export const Content = styled.div`
     row-gap: 1rem;
     padding: 2rem 0;
 
+    color: #014538;
+    font-weight: 700;
+    gap: 0.4rem;
+
     label {
       font-size: 0.8rem;
     }
@@ -81,9 +84,10 @@ export const InfoBox = styled.div`
   border-radius: 0.6875rem;
   background: rgba(111, 145, 61, 0.08);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  color: #014538;
 
   p {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     margin: 0;
   }
 `;
