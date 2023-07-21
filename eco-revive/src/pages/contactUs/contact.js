@@ -1,8 +1,8 @@
 import Input from "../../components/input";
 import Navbar from "../../components/navbar";
 import TopGreenWave from "../../components/TopGreenWave";
-import ColaboratorSection from "../../components/colaboratorSection";
-import Copyright from "../../components/copyright";
+import ColaboratorSection from "../../components/colaboratorSection/colaboratorSection";
+import Copyright from "../../components/copyright/copyright";
 
 import { Container, Content, InfoBox, Section } from "./style";
 
