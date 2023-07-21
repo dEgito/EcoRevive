@@ -9,6 +9,10 @@ export const Container = styled.div`
     font-size: 1.5rem;
     letter-spacing: 0.14rem;
     text-transform: uppercase;
+
+    @media (max-width: 480px) {
+      font-size: 1rem; /* Porcentagem do tamanho da tela */
+    }
   }
 
   h3 {
@@ -19,6 +23,10 @@ export const Container = styled.div`
 
   P {
     margin: 0;
+    @media (max-width: 480px) {
+      font-size: .8rem; /* Porcentagem do tamanho da tela */
+    }
+
   }
 `;
 
@@ -35,6 +43,7 @@ export const Section = styled.section`
 export const Content = styled.div`
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   column-gap: 3rem;
@@ -47,6 +56,7 @@ export const Content = styled.div`
     gap: 1rem;
     width: 40%;
     max-width: 20rem;
+    min-width: 15rem;
     column-gap: 3rem;
     row-gap: 1rem;
     padding: 2rem 0;
@@ -73,7 +83,7 @@ export const InfoBox = styled.div`
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
   p {
-    font-size: .8rem;
+    font-size: 0.8rem;
     margin: 0;
   }
 `;
