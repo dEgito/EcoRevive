@@ -1,6 +1,6 @@
 import Button from "../../components/button";
 import Input from "../../components/input";
-import { Container,ContainerButton } from "./style";
+import { Container,ContainerButton, Div } from "./style";
 
 function DisposalSchedule() {
   return (
@@ -16,9 +16,12 @@ function DisposalSchedule() {
           <Input type="text" item="Unidade" children="Unidade:" />
           <Input type="date" item="data" children="Data:" />
         </div>
-        <div>
+        <Div>
           <Input type="text" item="resposavel" children="Responsável:" />
-        </div>
+        </Div>
+        <Div>
+          <Input type="text" item="status" children="Status:" />
+        </Div>
         <ContainerButton>
           <Button type="secundary">Cancelar </Button>
           <Button type="primary">Salvar</Button>
