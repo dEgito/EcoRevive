@@ -4,10 +4,9 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: auto;
 
   height: 100vh;
-  background-color: rgba(34, 34, 34, 0.80);
+  background-color: rgba(34, 34, 34, 0.8);
 `;
 
 export const Card = styled.div`
@@ -15,18 +14,22 @@ export const Card = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 1.5rem;
   font-family: Montserrat, sans-serif;
   width: 100%;
-  max-width: 45rem;
+  max-width: 35rem;
   background-color: #ffffff;
 
-  padding: 2rem;
+  padding: 4rem;
   border-radius: 0.8rem;
   box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.25);
 
   h1 {
     margin: 0;
+
+    @media (max-width: 500px) {
+      font-size: 1.5rem;
+    }
   }
 
   form {
@@ -41,6 +44,10 @@ export const Card = styled.div`
   div {
     display: flex;
     gap: 1rem;
+
+    @media (max-width: 500px) {
+      flex-direction: column;
+    }
   }
 `;
 export const ContainerButton = styled.div`

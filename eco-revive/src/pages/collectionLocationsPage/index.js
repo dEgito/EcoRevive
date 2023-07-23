@@ -2,7 +2,7 @@ import { Container, Map, ConteinerMain } from "./style";
 import NavBarInner from "./components/navbar/navbar";
 import Button from "../../components/button/index";
 import ListLocations from "./components/listCompanies/listCompanies";
-import Copyright from "../../components/copyright";
+import Copyright from "../../components/copyright/copyright";
 
 const companies = [
   {

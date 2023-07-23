@@ -22,10 +22,10 @@ import {
   Mission,
   Values,
 } from "./style";
-import ColaboratorSection from "../../components/colaboratorSection";
-import Copyright from "../../components/copyright";
+import ColaboratorSection from "../../components/colaboratorSection/colaboratorSection";
+import Copyright from "../../components/copyright/copyright";
 
-function QuemSomos() {
+function AboutUs() {
   return (
     <Container>
       <Navbar /> {/*Corrigir sobreposição de elementos */}
@@ -111,4 +111,4 @@ function QuemSomos() {
   );
 }
 
-export default QuemSomos;
+export default AboutUs;
