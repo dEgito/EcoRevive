@@ -1,43 +1,47 @@
 import { styled } from "styled-components";
 
-export const Container = styled.body`
+export const Card = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-left: 100px;
-  padding-top: 7%;
-  font-family: montserrat, sans-serif;
-  width: 80%;
-  height: 80%;
+  justify-content: center;
+  gap: 2rem;
+  font-family: Montserrat, sans-serif;
+  width: 100%;
+  max-width: 45rem;
+
+  padding: 2rem;
+  margin: auto;
+  border-radius: 0.8rem;
+
+  background-color: #4eb969;
+
   h1 {
-    text-align: center;
+    margin: 0;
   }
 
   form {
-    width: max-content;
-    margin: 0 auto;
-    padding-left: 10%;
-  }
-  div {
     display: flex;
-    padding: 10px;
-    input[type="text"],
-    input[type="date"] {
-      padding: 5px;
-      border: 1px solid #4eb969;
-      border-radius: 5px;
-      box-sizing: border-box;
-      width: 100%;
-      height: 30px;
-    }
+    flex-direction: column;
+    background-color: aqua;
+    gap: 1rem;
+    padding: 1rem;
+    width: 100%;
+    max-width: 30rem;
+  }
+
+  div {
+    background-color: aliceblue;
+    display: flex;
+    gap: 1rem;
   }
 `;
 export const ContainerButton = styled.div`
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: row;
-  gap: 16rem;
+  gap: 2rem;
 `;
 
- export const Div = styled.div`
-  width: 40rem;
- `;
+export const Div = styled.div``;
