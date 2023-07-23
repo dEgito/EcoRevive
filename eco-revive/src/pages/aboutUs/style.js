@@ -5,31 +5,43 @@ export const Container = styled.body`
   font-family: Montserrat, sans-serif;
   color: #002454;
   margin: 0;
-  flex-wrap: wrap;
 
   h2 {
     font-size: 1.5rem;
     letter-spacing: 0.14rem;
     text-transform: uppercase;
     color: #f2f2f2;
+
+    @media (max-width: 480px) {
+      font-size: 1.1rem;
+    }
   }
 
   h3 {
     font-size: 1rem;
     letter-spacing: 0.14rem;
     text-transform: uppercase;
+
+    @media (max-width: 480px) {
+      font-size: 0.9rem;
+    }
   }
 
-  p {
-    font-family: Montserrat, sans-serif;
-    font-size: 1rem;
-    letter-spacing: 0.09rem;
-    width: 100%;
-    max-width: 34rem;
+  //Não mexer, está afetando o copyright
+  P {
+    margin: 0;
+    @media (max-width: 480px) {
+      font-size: 0.8rem;
+    }
+  }
+
+  @media (max-width: 800px) {
+    align-items: center;
+    text-align: center;
   }
 `;
 
-export const Inicio = styled.section`
+export const Banner = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,19 +49,30 @@ export const Inicio = styled.section`
   flex-wrap: wrap;
   padding: 6rem 0;
   gap: 0.5rem;
+  background-color: #4eb969;
   background-image: url(${Background});
   background-position: center;
-  background-size: auto;
+  background-size: cover;
   flex-wrap: wrap;
   background-repeat: no-repeat;
-  background-size: 100%;
   color: #f2f2f2;
 
   h1 {
     font-size: 2rem;
   }
   p {
+    font-family: Montserrat, sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.09rem;
+    line-height: 1.5rem;
     text-align: center;
+    font-weight: 600;
+    width: 100%;
+    max-width: 32rem;
+
+    @media (max-width: 480px) {
+      font-size: 0.9rem;
+    }
   }
   span {
     color: #4eb969;
@@ -58,24 +81,29 @@ export const Inicio = styled.section`
 `;
 
 export const Mission = styled.div`
-  h2{
+  h2 {
     color: #52d874;
     font-weight: bold;
   }
 
-  p{
+  p {
+    max-width: 30rem;
     font-weight: medium;
+    
+    line-height: 1.5rem;
+    font-weight: 500;
   }
 `;
 
 export const Values = styled.div`
-h2{
-  color: #52d874;
-  font-weight: bold;
-}
-p{
-  font-weight: medium;
-}
+  h2 {
+    color: #52d874;
+    font-weight: bold;
+  }
+  p {
+    max-width: 30rem;
+    font-weight: medium;
+  }
 `;
 
 export const Content = styled.div`
@@ -86,7 +114,7 @@ export const Content = styled.div`
   justify-content: center;
   padding: 1rem;
 
-  img{
+  img {
     padding: 1rem;
   }
 `;
@@ -94,8 +122,9 @@ export const Content = styled.div`
 export const Presentation = styled.div`
   p {
     color: #52d874;
-    font-size: xx-large;
+    font-size: 2rem;
     font-weight: bolder;
+    text-align: center;
   }
 `;
 
@@ -103,10 +132,8 @@ export const Section = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
   column-gap: 3rem;
-  row-gap: 1rem;
-  padding: 2rem 0;
+  padding: 2rem 1rem;
 
   flex-direction: ${(props) => {
     switch (props.direction) {
@@ -114,6 +141,15 @@ export const Section = styled.section`
         return "column";
       default:
         return "row";
+    }
+  }};
+
+  flex-wrap: ${(props) => {
+    switch (props.wrap) {
+      case "wrap":
+        return "wrap";
+      default:
+        return "wrap-reverse";
     }
   }};
 
@@ -143,16 +179,32 @@ export const Section = styled.section`
     margin: 2rem 0;
   }
 
-  img {
-    max-width: 24rem;
-  }
-
-  p {
-    max-width: 30rem;
-  }
-
   span {
     color: #004bb0;
     font-weight: 700;
+  }
+
+  img {
+    width: 80%;
+    max-width: 26rem;
+    min-width: 16rem;
+  }
+
+  p {
+    font-family: Montserrat, sans-serif;
+    letter-spacing: 0.09rem;
+    max-width: 30rem;
+    margin-bottom: 1rem;
+
+    @media (max-width: 480px) {
+      font-size: 0.9rem;
+    }
+  }
+
+  li {
+    letter-spacing: 0.09rem;
+    line-height: 1.5rem;
+    list-style: circle;
+    list-style-position: in;
   }
 `;
