@@ -63,6 +63,7 @@ export const HamburgerIcon = styled.div`
 `;
 
 export const Menu = styled.ul`
+  margin: 0;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -93,7 +94,7 @@ export const Menu = styled.ul`
   div {
     display: flex;
     align-items: center;
-    width: 100%;
+    max-width: 15rem;
     flex-direction: row;
 
     @media (max-width: 1000px) {
@@ -102,7 +103,9 @@ export const Menu = styled.ul`
   }
 `;
 
-export const MenuItem = styled.li``;
+export const MenuItem = styled.li`
+  text-decoration: none;
+`;
 
 export const MenuLink = styled.a`
   color: #fff;
