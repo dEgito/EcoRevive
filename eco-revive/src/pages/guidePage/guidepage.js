@@ -65,11 +65,11 @@ function GuidePage() {
   return (
     <Container>
       <Navbar /> {/*Corrigir sobreposição de elementos */}
-      <Banner>
+      <Banner wrap={"wrap-reverse"}>
         <div>
           <LogoImg src={Logo} />
           <p>
-            Facilitando o processo de descarte responsável e colabora ativamente
+            Facilita com o processo de descarte responsável e colabora ativamente
             com a e-reciclagem.
           </p>
           <Button category="accent">Saiba mais</Button>
@@ -78,7 +78,7 @@ function GuidePage() {
         <img src={RecycleSymbol} />
       </Banner>
       <BottomWhiteWave />
-      <Section>
+      <Section wrap={"wrap"}>
         <div>
           <h2>O que é?</h2>
           <p>
@@ -109,7 +109,7 @@ function GuidePage() {
         </div>
       </Section>
       <TopBlueWave /> {/*remover linha fantasma */}
-      <Section background="blue">
+      <Section background={"blue"} wrap={"wrap"}>
         <div>
           <h2>Como é o procedimento?</h2>
 
@@ -126,7 +126,7 @@ function GuidePage() {
         <img src={Planet} /> {/* jogar imagem pro final */}
       </Section>
       <BottomBlueWave />
-      <Section>
+      <Section wrap={"wrap"}>
         <div>
           <h2>Tá, mas onde descartar?</h2>
           <p>

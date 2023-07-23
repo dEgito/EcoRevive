@@ -16,7 +16,7 @@ import Company from "../../assets/Company.png";
 import {
   Container,
   Content,
-  Inicio,
+  Banner,
   Section,
   Presentation,
   Mission,
@@ -29,15 +29,15 @@ function AboutUs() {
   return (
     <Container>
       <Navbar /> {/*Corrigir sobreposição de elementos */}
-      <Inicio>
+      <Banner>
         <h1>Quem somos?</h1>
         <p>
           Somos o <span>ECO REVIVE RECIFE</span>, nosso principal objetivo é
           promover o reaproveitamento de dispositivos eletrônicos descartáveis,
           dando-lhes um novo destino.
         </p>
-      </Inicio>
-      <Section>
+      </Banner>
+      <Section wrap={"wrap"}>
         <Mission>
           <h2>Nossa missão</h2>
           <p>
@@ -49,6 +49,7 @@ function AboutUs() {
           <img src={OurMission} />
         </div>
       </Section>
+      <TopGreenWave />
       <Section background="green">
         <div>
           <img src={OurVision} />
@@ -62,7 +63,7 @@ function AboutUs() {
         </div>
       </Section>
       <BottomGreenWave />
-      <Section>
+      <Section wrap={"wrap"}>
         <Values>
           <h2>Nossos valores</h2>
           <ul>
@@ -76,6 +77,7 @@ function AboutUs() {
           <img src={OurValues} />
         </div>
       </Section>
+      <TopBlueWave />
       <Section direction="vertical" background="blue">
         <h2>O que nos motiva?</h2>
         <Content>
@@ -105,6 +107,7 @@ function AboutUs() {
           </p>
         </Presentation>
       </Section>
+      <TopGreenWave />
       <ColaboratorSection />
       <Copyright />
     </Container>
