@@ -10,16 +10,24 @@ export const Content = styled.div`
   label {
     font-size: 0.8rem;
     font-weight: 600;
+
+    color: ${(props) => {
+      return props.category === "secundary" ? "#fff" : "#014538";
+    }};
   }
 
   input {
     border: 1px solid #4eb969;
-    border-radius: 0.25rem;
     min-height: 1.4rem;
     resize: none;
+    padding: 0.2rem 1rem;
 
     @media (max-width: 600px) {
       margin-bottom: 0;
     }
+
+    border-radius: ${(props) => {
+      return props.category === "secundary" ? "8rem" : ".25rem";
+    }};
   }
 `;

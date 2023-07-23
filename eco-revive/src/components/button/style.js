@@ -83,6 +83,7 @@ export const Btn = styled.button`
   }};
 
   &:hover {
+    transition: all ease-in-out .5s;
     border: ${(props) => {
       switch (props.category) {
         case "2px solid primary":

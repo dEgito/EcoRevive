@@ -1,34 +1,28 @@
-import { Container } from "./style";
+import { ButtonBox, Container, Content } from "./style";
+import Button from "../../components/button/index";
+import Input from "../../components/input/index";
 import Logo from "../../assets/Logo320.png";
 function Login() {
   return (
     <Container>
       <img src={Logo} />
 
-      <div>
+      <Content>
         <h1>Login</h1>
         <form>
-          <label for="email">Email:</label>
-          <br />
-          <input type="email" id="email" name="email" />
-          <br />
-          <br />
+          <Input category="secundary" type={"text"} item={"user"} label={"Usuário:"} />
+          <Input category="secundary" type={"password"} item={"password"} label={"Senha:"} />
 
-          <label for="senha">Senha:</label>
-          <br />
-          <input type="password" id="senha" name="senha" />
-          <br />
-          <br />
-
-          <button type="submit">Entrar</button>
-
-          <br />
-
-          <a href="#">Esqueci minha senha</a>
-          <br />
-          <a href="#">Crie uma conta</a>
+          <Button category={"primary"} type={"submit"}>
+            Entrar
+          </Button>
         </form>
-      </div>
+
+        <ButtonBox>
+          <a href="#">Esqueci minha senha</a>
+          <a href="#">Crie uma conta</a>
+        </ButtonBox>
+      </Content>
     </Container>
   );
 }
