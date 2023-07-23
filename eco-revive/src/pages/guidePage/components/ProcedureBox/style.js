@@ -14,6 +14,10 @@ export const InfoBox = styled.div`
     line-height: 1.5rem;
     max-width: 30rem;
   }
+
+  @media (max-width: 800px) {
+    margin-bottom: 2rem;
+  }
 `;
 
 export const IconBox = styled.div`

@@ -4,7 +4,9 @@ import BottomWhiteWave from "../../components/bottomWhiteWave";
 import BottomBlueWave from "../../components/bottomBlueWave";
 import TopBlueWave from "../../components/TopBlueWave";
 import TopGreenWave from "../../components/TopGreenWave";
-import ProcedureBox from "./components/ProcedureBox";
+import ProcedureBox from "./components/ProcedureBox/procedureBox";
+import ColaboratorSection from "../../components/colaboratorSection/colaboratorSection";
+import Copyright from "../../components/copyright/copyright";
 
 import Logo from "../../assets/Logo320.png"; //rever qualidade da imagem
 import RecycleSymbol from "../../assets/Recycle.png";
@@ -14,8 +16,6 @@ import Planet from "../../assets/planet.png";
 import Idea from "../../assets/Idea.png";
 
 import { Banner, Container, LogoImg, Section } from "./style";
-import ColaboratorSection from "../../components/colaboratorSection";
-import Copyright from "../../components/copyright";
 
 // import Trash from "@phosphor-icons/react"
 
@@ -65,20 +65,20 @@ function GuidePage() {
   return (
     <Container>
       <Navbar /> {/*Corrigir sobreposição de elementos */}
-      <Banner>
+      <Banner wrap={"wrap-reverse"}>
         <div>
           <LogoImg src={Logo} />
           <p>
-            Facilitando o processo de descarte responsável e colabora ativamente
+            Facilita com o processo de descarte responsável e colabora ativamente
             com a e-reciclagem.
           </p>
-          <Button type="accent">Saiba mais</Button>
+          <Button category="accent">Saiba mais</Button>
         </div>
 
         <img src={RecycleSymbol} />
       </Banner>
       <BottomWhiteWave />
-      <Section>
+      <Section wrap={"wrap"}>
         <div>
           <h2>O que é?</h2>
           <p>
@@ -109,7 +109,7 @@ function GuidePage() {
         </div>
       </Section>
       <TopBlueWave /> {/*remover linha fantasma */}
-      <Section background="blue">
+      <Section background={"blue"} wrap={"wrap"}>
         <div>
           <h2>Como é o procedimento?</h2>
 
@@ -126,7 +126,7 @@ function GuidePage() {
         <img src={Planet} /> {/* jogar imagem pro final */}
       </Section>
       <BottomBlueWave />
-      <Section>
+      <Section wrap={"wrap"}>
         <div>
           <h2>Tá, mas onde descartar?</h2>
           <p>
@@ -137,7 +137,7 @@ function GuidePage() {
           <p>
             Conheça a <span>ECO REVIVE</span>
           </p>
-          <Button type="accent">Saiba mais</Button>
+          <Button category="accent">Saiba mais</Button>
         </div>
 
         <img src={Idea} />

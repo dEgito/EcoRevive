@@ -9,10 +9,10 @@ export const Copy = styled.div`
 
   p {
     color: #ffffff;
-    width: auto;
     margin: 0;
     padding: 0;
     font-size: .6rem;
     font-weight: bolder;
+    align-items: center;
   }
 `;
