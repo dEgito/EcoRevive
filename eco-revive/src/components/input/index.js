@@ -1,10 +1,10 @@
 import { Content } from "./style";
 
-function Input({item, type, label, placeholder}) {
+function Input({ type, item, label }) {
   return (
     <Content>
       <label for={item}>{label}</label>
-      <input type={type} id={item} placeholder={placeholder}/>
+      <input type={type} item={item} />
     </Content>
   );
 }
