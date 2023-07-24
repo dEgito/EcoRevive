@@ -42,6 +42,17 @@ export const Content = styled.div`
     width: 50%;
   }
 
+  img {
+    display: flex;
+    width: 20%;
+    min-width: 8rem;
+    margin: 0 0 3rem 0;
+
+    @media (min-width: 800px) {
+      display: none;
+    }
+  }
+
   @media (max-width: 800px) {
     width: 100%;
   }

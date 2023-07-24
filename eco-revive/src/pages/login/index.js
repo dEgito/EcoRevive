@@ -1,5 +1,6 @@
 import { ButtonBox, Container, Content } from "./style";
 import Button from "../../components/button/index";
+import Navbar from "../../components/navbar/index";
 import Input from "../../components/input/index";
 import Logo from "../../assets/Logo320.png";
 
@@ -9,10 +10,21 @@ function Login() {
       <img src={Logo} />
 
       <Content>
+        <img src={Logo} />
         <h1>Login</h1>
         <form>
-          <Input category="secundary" type={"text"} item={"user"} label={"Usuário:"} />
-          <Input category="secundary" type={"password"} item={"password"} label={"Senha:"} />
+          <Input
+            category="secundary"
+            type={"text"}
+            item={"user"}
+            label={"Usuário:"}
+          />
+          <Input
+            category="secundary"
+            type={"password"}
+            item={"password"}
+            label={"Senha:"}
+          />
 
           <Button category={"primary"} type={"submit"}>
             Entrar
