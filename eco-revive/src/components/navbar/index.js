@@ -45,8 +45,12 @@ function Navbar() {
         </div>
 
         <BtnContainer>
-          <Button category="primary">Cadastrar</Button>
-          <Button category="secundary">Entrar</Button>
+          <Link to={"/cadastro"}>
+            <Button category="primary">Cadastrar</Button>
+          </Link>
+          <Link to={"/login"}>
+            <Button category="secundary">Entrar</Button>
+          </Link>
         </BtnContainer>
       </Menu>
     </Container>
