@@ -1,8 +1,8 @@
 import { Content } from "./style";
 
-function Input({ type, item, label }) {
+function Input({ category, type, item, label }) {
   return (
-    <Content>
+    <Content category={category}>
       <label for={item}>{label}</label>
       <input type={type} item={item} />
     </Content>
