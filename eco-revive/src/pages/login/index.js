@@ -2,6 +2,7 @@ import { ButtonBox, Container, Content } from "./style";
 import Button from "../../components/button/index";
 import Input from "../../components/input/index";
 import Logo from "../../assets/Logo320.png";
+
 function Login() {
   return (
     <Container>

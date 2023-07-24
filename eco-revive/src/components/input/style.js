@@ -4,6 +4,7 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+  min-width: 250px;
   gap: 0.5rem;
   color: #014538;
 

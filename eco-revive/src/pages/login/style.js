@@ -1,5 +1,4 @@
 import { styled } from "styled-components";
-
 import Background from "../../assets/Login_Background.png"
 
 export const Container = styled.div`
@@ -8,14 +7,18 @@ export const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   gap: 4rem;
+  flex-wrap: wrap-reverse;
   font-family: Monteserrat, sans-serif;
   height: 100vh;
   color: #ffffff;
 
   img {
     margin: auto;
+
+    @media (max-width:800px) {
+      display: none;
+    }
   }
-  
 `;
 
 export const Content = styled.div`
@@ -37,6 +40,10 @@ export const Content = styled.div`
     justify-content: center;
     gap: 1rem;
     width: 50%;
+  }
+
+  @media (max-width: 800px) {
+    width: 100%;
   }
 `;
 
