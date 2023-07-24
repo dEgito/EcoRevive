@@ -10,9 +10,6 @@ import {
 import React, { useState } from "react";
 import Logo from "../../assets/Logo-nav.png";
 import { Link } from "react-router-dom";
-import GuidePage from "../../pages/guidePage/guidepage";
-import AboutUs from "../../pages/aboutUs";
-import ContactUs from "../../pages/contactUs/contact";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
