@@ -11,7 +11,6 @@ function Faqs() {
       <Section>
 
         <h2>Dúvidas frequentes</h2>
-        <p>Visão geral</p>
        
         <Details>
           <details>

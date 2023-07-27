@@ -8,20 +8,16 @@ export const Container = styled.body`
   margin: 0;
 
   h2 {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     letter-spacing: 0.14rem;
     text-transform: uppercase;
   }
 
-  p{
-    font-size: 0.8;
-
-  }
 `;
 
 export const Section = styled.section`
   max-width: 45rem;
-  padding: 6rem;
+  padding: 4rem;
   align-items: center;
   text-align: center;
   margin-left: auto;
@@ -37,17 +33,18 @@ export const Details = styled.div`
   border-radius: 0.6875rem;
   padding: 2rem;
   display: flex;
-  flex-direction: column;
-  gap: 5rem;
+  gap: 1rem;
   padding: 1.5rem 2rem;
   display: flex;
-
-
+  margin-top: 2rem;
+  margin-left: 1rem;
+  
   p {
     padding: 3%;
     transition: all 0.5s;
   }
 `;
+
 
 
 
