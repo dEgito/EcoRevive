@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Container, Map, ConteinerMain, Cont } from "./style";
-import NavBarInner from "./components/navbar/navbar";
+import NavBarInner from "../../components/navbarSimple/navbar";
 import FiltersModal from "./components/filter/filter";
 import Button from "../../components/button/index";
 import ListLocations from "./components/listCompanies/listCompanies";
