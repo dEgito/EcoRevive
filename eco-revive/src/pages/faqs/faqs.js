@@ -1,5 +1,5 @@
 import Navbar from "../../components/navbar";
-import { Container, Section } from "./style";
+import { Container, Section,Details } from "./style";
 import ColaboratorSection from "../../components/colaboratorSection/colaboratorSection";
 import Copyright from "../../components/copyright/copyright";
 
@@ -11,7 +11,7 @@ function Faqs() {
         <h2>DÚVIDAS FREQUENTES</h2>
         <p>Visão geral</p>
 
-        <div>
+        <Details>
           <details>
             <summary>Como funciona o descarte?</summary>
             <p>
@@ -20,21 +20,21 @@ function Faqs() {
               dos pontos de descarte.
             </p>
           </details>
-        </div>
+        </Details>
 
-        <div>
+        <Details>
           <details>
             <summary>Como posso descartar meu eletrônico?</summary>
             <p>
-              Faça seu cadastro -> entre na sua conta -> selecione a opção
-              "agendar meu descarte" -> selecione o local desejado para o
-              descarte -> agende o dia e o horário -> e na data marcada, se
+              Faça seu cadastro - entre na sua conta - selecione a opção
+              "agendar meu descarte" - selecione o local desejado para o
+              descarte - agende o dia e o horário - e na data marcada, se
               direcione até o ponto de coleta.
             </p>
           </details>
-        </div>
+        </Details>
 
-        <div>
+        <Details>
           <details>
             <summary>É possível acompanhar o processo de descarte?</summary>
             <p>
@@ -42,9 +42,9 @@ function Faqs() {
               descarte".
             </p>
           </details>
-        </div>
+        </Details>
 
-        <div>
+        <Details>
           <details>
             <summary>
               Como posso me inscrever para ser ponto de descarte?
@@ -54,9 +54,9 @@ function Faqs() {
               ser um ponto de descarte"
             </p>
           </details>
-        </div>
+        </Details>
 
-        <div>
+        <Details>
           <details>
             <summary>Como posso apoiar o processo?</summary>
             <p>
@@ -64,7 +64,7 @@ function Faqs() {
               assunto "quero apoiar" para mais informações.
             </p>
           </details>
-        </div>
+        </Details>
       </Section>
 
       <ColaboratorSection />
