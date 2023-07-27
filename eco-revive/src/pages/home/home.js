@@ -80,7 +80,7 @@ function GuidePage() {
       <BottomWhiteWave />
       <Section wrap={"wrap"}>
         <div>
-          <h2>O que é?</h2>
+          <h2>O que é e-reciclagem?</h2>
           <p>
             É o processo de recuperação e reutilização de materiais presentes em
             dispositivos eletrônicos descartados.
@@ -111,7 +111,7 @@ function GuidePage() {
       <TopBlueWave /> {/*remover linha fantasma */}
       <Section background={"blue"} wrap={"wrap"}>
         <div>
-          <h2>Como é o procedimento?</h2>
+          <h2>Como funciona?</h2>
 
           {procedures.map((procedure) => {
             return (

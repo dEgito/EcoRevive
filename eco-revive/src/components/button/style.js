@@ -1,15 +1,14 @@
 import styled from "styled-components";
 
 export const Btn = styled.button`
+  border-radius: 6.25rem;
   width: 100%;
   max-width: ${(props) => {
     return props.category === "filter" ? "11.4rem" : "9.5rem";
   }};
 
-  border-radius: 6.25rem;
   display: flex;
   gap: 0.25rem;
-
   justify-content: center;
   align-items: center;
   padding: ${(props) => {
@@ -44,6 +43,7 @@ export const Btn = styled.button`
         return "2px solid #4eb969";
     }
   }};
+
   background-color: ${(props) => {
     switch (props.category) {
       case "primary":
@@ -83,6 +83,7 @@ export const Btn = styled.button`
   }};
 
   &:hover {
+    transition: all ease-in-out 0.5s;
     border: ${(props) => {
       switch (props.category) {
         case "2px solid primary":
@@ -97,6 +98,7 @@ export const Btn = styled.button`
           return "2px solid #4EB969";
       }
     }};
+
     background-color: ${(props) => {
       switch (props.category) {
         case "primary":
@@ -107,10 +109,13 @@ export const Btn = styled.button`
           return "#0E3973";
         case "filter":
           return "none";
+        case "filter":
+          return "none";
         default:
           return "#4EB969";
       }
     }};
+
     color: ${(props) => {
       switch (props.category) {
         case "primary":
