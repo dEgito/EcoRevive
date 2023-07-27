@@ -1,4 +1,4 @@
-import LogoNav from "../../../../assets/LogoNavSvg.svg";
+import LogoNav from "../../assets/LogoNavSvg.svg";
 import { Header } from "./navbarStyle";
 function NavBarInner() {
   return (
