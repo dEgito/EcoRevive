@@ -7,6 +7,7 @@ import AboutUs from "./pages/aboutUs/index";
 import CollectionLocations from "./pages/collectionLocationsPage/index";
 import Login from "./pages/login/login"
 import Register from "./pages/register/register"
+import Faqs from "./pages/faqs/faqs"
 
 export const routes = () => {
   return (
@@ -19,6 +20,7 @@ export const routes = () => {
         <Route path="/agendamento" element={<DisposalSchedule/>}/>
         <Route path="login" element={<Login />} />
         <Route path="cadastro" element={<Register />}/>
+        <Route path="duvidas" element={<Faqs />}/>
       </Routes>
     </BrowserRouter>
   );
