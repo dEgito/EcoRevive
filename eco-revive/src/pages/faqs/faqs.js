@@ -1,5 +1,6 @@
 import Navbar from "../../components/navbar";
-import { Container, Section,Details } from "./style";
+import { Container, Section, Details} from "./style";
+import TopGreenWave from "../../components/TopGreenWave";
 import ColaboratorSection from "../../components/colaboratorSection/colaboratorSection";
 import Copyright from "../../components/copyright/copyright";
 
@@ -7,13 +8,14 @@ function Faqs() {
   return (
     <Container>
       <Navbar />
-         <Section>
-        <h2>DÚVIDAS FREQUENTES</h2>
-        <p>Visão geral</p>
+      <Section>
 
+        <h2>Dúvidas frequentes</h2>
+        <p>Visão geral</p>
+       
         <Details>
           <details>
-            <summary>Como funciona o descarte?</summary>
+           <summary>Como funciona o descarte?</summary>
             <p>
               É simples! Nós ajudamos você a ser direcionado a um ponto de
               descarte conveniado. Clicando aqui você pode ter acesso a lista
@@ -67,6 +69,7 @@ function Faqs() {
         </Details>
       </Section>
 
+      <TopGreenWave />
       <ColaboratorSection />
       <Copyright />
     </Container>

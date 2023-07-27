@@ -11,29 +11,44 @@ export const Container = styled.body`
     font-size: 1.5rem;
     letter-spacing: 0.14rem;
     text-transform: uppercase;
-    color: #002454;
+  }
+
+  p{
+    font-size: 0.8;
+
   }
 `;
 
 export const Section = styled.section`
-  width: 70%;
-  max-width: 30rem;
+  max-width: 45rem;
+  padding: 6rem;
+  align-items: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 export const Details = styled.div`
-  font-size: 18px;
-  padding: 1rem;
+  background: rgba(111, 145, 61, 0.08);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  color: #014538;
   border-bottom: 1px solid #3ab032;
   border-radius: 6.5rem;
-  padding: 5rem;
+  border-radius: 0.6875rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   gap: 5rem;
   padding: 1.5rem 2rem;
-  border-radius: 0.6875rem;
-  background: rgba(111, 145, 61, 0.08);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  color: #014538;
-  padding: 3%;
-  transition: all .5s;
+  display: flex;
+
+
+  p {
+    padding: 3%;
+    transition: all 0.5s;
+  }
 `;
+
+
+
+
