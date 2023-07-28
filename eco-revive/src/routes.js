@@ -10,6 +10,7 @@ import Login from "./pages/login/login";
 import Register from "./pages/register/register";
 import Home from "./pages/home/home";
 import History from "./pages/history/history";
+import Follow from "./pages/follow/follow";
 
 export const routes = () => {
   return (
@@ -25,6 +26,7 @@ export const routes = () => {
         <Route path="/duvidas" element={<Faqs />}/>
         <Route path="/home" element={<Home />} />
         <Route path="/historico" element={<History/>} />
+        <Route path="/acompanhar" element={<Follow />} />
       </Routes>
     </BrowserRouter>
   );
