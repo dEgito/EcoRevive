@@ -1,5 +1,5 @@
 import Header from "./components/header/header";
-import Navbar from "../../components/navbar";
+import Navbar from "../../components/navbar/navbar";
 import Schedule from "./components/schedule/schedule";
 import { Container, Content, Section } from "./style";
 

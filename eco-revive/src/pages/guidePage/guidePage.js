@@ -1,5 +1,5 @@
-import Button from "../../components/button";
-import Navbar from "../../components/navbar";
+import Button from "../../components/button/index";
+import Navbar from "../../components/navbar/navbar";
 import BottomWhiteWave from "../../components/bottomWhiteWave";
 import BottomBlueWave from "../../components/bottomBlueWave";
 import TopBlueWave from "../../components/TopBlueWave";

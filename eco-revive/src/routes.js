@@ -9,7 +9,7 @@ import Faqs from "./pages/faqs/faqs"
 import Login from "./pages/login/login";
 import Register from "./pages/register/register";
 import Home from "./pages/home/home";
-import ControlPanel from "./pages/controlPanel/controlPanel";
+import History from "./pages/history/history";
 
 export const routes = () => {
   return (
@@ -24,7 +24,7 @@ export const routes = () => {
         <Route path="/cadastro" element={<Register />}/>
         <Route path="/duvidas" element={<Faqs />}/>
         <Route path="/home" element={<Home />} />
-        <Route path="/painel" element={<ControlPanel/>} />
+        <Route path="/historico" element={<History/>} />
       </Routes>
     </BrowserRouter>
   );

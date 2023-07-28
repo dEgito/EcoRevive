@@ -37,19 +37,6 @@ export const Container = styled.div`
   }
 `;
 
-export const BtnContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  width: 100%;
-  max-width: 25rem;
-
-  @media (max-width: 1000px) {
-    flex-direction: column;
-    gap: 0rem;
-  }
-`;
-
 export const HamburgerIcon = styled.div`
   cursor: pointer;
   display: none;
@@ -69,6 +56,7 @@ export const Menu = styled.ul`
   align-items: center;
   gap: 4rem;
   list-style: none;
+  width: 55%;
 
   @media (max-width: 1000px) {
     display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
@@ -93,8 +81,6 @@ export const Menu = styled.ul`
 
   div {
     display: flex;
-    align-items: center;
-    max-width: 15rem;
     flex-direction: row;
 
     @media (max-width: 1000px) {
@@ -110,4 +96,16 @@ export const MenuItem = styled.li`
 export const MenuLink = styled.a`
   color: #fff;
   text-decoration: none;
+`;
+
+export const BtnContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  width: 10rem;
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    gap: 0rem;
+  }
 `;

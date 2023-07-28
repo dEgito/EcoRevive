@@ -32,7 +32,7 @@ function Home() {
             <Link to={"/"} style={{ textDecoration: "none" }}>
               <BoxLinks
                 color="orange"
-                children={"Atualizar dados cadastrais"}
+                children={"Histórico de agendamentos"}
               />
             </Link>
             <Link to={"/"} style={{ textDecoration: "none" }}>
