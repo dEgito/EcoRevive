@@ -27,7 +27,7 @@ function Home() {
               <BoxLinks color="green" children={"Agendar descarte"} />
             </Link>
             <Link to={"/"} style={{ textDecoration: "none" }}>
-              <BoxLinks color="blue" children={"Acompanhar meu descarte"} />
+              <BoxLinks color="blue" children={"Cadastrar novos pontos de coleta"} />
             </Link>
             <Link to={"/historico"} style={{ textDecoration: "none" }}>
               <BoxLinks
@@ -38,7 +38,7 @@ function Home() {
             <Link to={"/"} style={{ textDecoration: "none" }}>
               <BoxLinks
                 color="purple"
-                children={"Cadastrar novos pontos de coleta"}
+                children={"Acompanhar meu descarte"}
               />
             </Link>
           </Boxes>
