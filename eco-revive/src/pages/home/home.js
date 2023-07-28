@@ -35,7 +35,7 @@ function Home() {
             <Link to={"/erro"} style={{ textDecoration: "none" }}>
               <BoxLinks
                 color="purple"
-                children={"Cadastrar novos pontos de coleta"}
+                children={"Acompanhar meu descarte"}
               />
             </Link>
           </Boxes>

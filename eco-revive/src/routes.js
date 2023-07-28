@@ -1,9 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import DisposalSchedule from "./pages/disposalSchedule/index";
-import ContactUs from "./pages/contactUs/contact";
 import GuidePage from "./pages/guidePage/guidePage";
 import AboutUs from "./pages/aboutUs/index";
+import ContactUs from "./pages/contactUs/contact";
 import CollectionLocations from "./pages/collectionLocationsPage/index";
 import Faqs from "./pages/faqs/faqs";
 import Login from "./pages/login/login";
@@ -19,12 +18,11 @@ export const routes = () => {
         <Route path="/" exact element={<GuidePage />} />
         <Route path="/sobre" element={<AboutUs />} />
         <Route path="/contato" element={<ContactUs />} />
-        <Route path="/locais" element={<CollectionLocations />} />
-        <Route path="/agendamento" element={<DisposalSchedule />} />
+        <Route path="/duvidas" element={<Faqs />} />
         <Route path="login" element={<Login />} />
         <Route path="/cadastro" element={<Register />} />
-        <Route path="/duvidas" element={<Faqs />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/locais" element={<CollectionLocations />} />
         <Route path="/historico" element={<History />} />
         <Route path="/erro" element={<Error />} />
       </Routes>

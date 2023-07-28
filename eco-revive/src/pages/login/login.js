@@ -26,7 +26,7 @@ function Login() {
             label={"Senha:"}
           />
 
-          <Link to={"/locais"} style={{ textDecoration: "none" }}>
+          <Link to={"/home"} style={{ textDecoration: "none" }}>
             <Button category={"primary"} type={"submit"}>
               Entrar
             </Button>
