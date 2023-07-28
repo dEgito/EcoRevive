@@ -168,7 +168,7 @@ export const Section = styled.section`
         return "#004BB0";
 
       case "green":
-        return "#52D874";
+        return "#65D781";
 
       default:
         return "#ffffff";

@@ -28,7 +28,7 @@ import Copyright from "../../components/copyright/copyright";
 function AboutUs() {
   return (
     <Container>
-      <Navbar /> {/*Corrigir sobreposição de elementos */}
+      <Navbar /> 
       <Banner>
         <h1>Quem somos?</h1>
         <p>
