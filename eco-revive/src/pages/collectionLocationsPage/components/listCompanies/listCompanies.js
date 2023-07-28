@@ -1,11 +1,11 @@
 import { Li, BtnAgenda } from "./listCompaniesStyle";
 
-function ListLocations({ name, address }) {
+function ListLocations({ name, address, openModalSchedule }) {
   return (
     <Li>
       <h2>{name}</h2>
       <p>{address}</p> {/*possivel mundaça para link */}
-      <BtnAgenda>Agendar descarte</BtnAgenda>
+      <BtnAgenda onClick={openModalSchedule}>Agendar descarte</BtnAgenda>
     </Li>
   );
 }

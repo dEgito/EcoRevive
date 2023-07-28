@@ -26,7 +26,7 @@ function Register() {
             category="secundary"
             type={"password"}
             item={"password"}
-            label={"Senha::"}
+            label={"Senha:"}
           />
           <Input
             category="secundary"

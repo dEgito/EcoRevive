@@ -5,8 +5,10 @@ import ContactUs from "./pages/contactUs/contact";
 import GuidePage from "./pages/home/home";
 import AboutUs from "./pages/aboutUs/index";
 import CollectionLocations from "./pages/collectionLocationsPage/index";
-import Login from "./pages/login/login"
-import Register from "./pages/register/register"
+import Faqs from "./pages/faqs/faqs"
+import Login from "./pages/login/login";
+import Register from "./pages/register/register";
+import WaitPage from "./pages/waitPage/wait";
 import ControlPanel from "./pages/controlPanel/controlPanel";
 
 export const routes = () => {
@@ -17,11 +19,13 @@ export const routes = () => {
         <Route path="/sobre" element={<AboutUs />} />
         <Route path="/contato" element={<ContactUs />} />
         <Route path="/locais" element={<CollectionLocations />} />
-        <Route path="/agendamento" element={<DisposalSchedule/>}/>
+        <Route path="/agendamento" element={<DisposalSchedule />} />
         <Route path="login" element={<Login />} />
         <Route path="cadastro" element={<Register />}/>
+        <Route path="duvidas" element={<Faqs />}/>
+        <Route path="inicio" element={<WaitPage />} />
         <Route path="/painel" element={<ControlPanel/>} />
       </Routes>
     </BrowserRouter>
   );
-}
+};

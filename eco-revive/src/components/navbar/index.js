@@ -28,27 +28,32 @@ function Navbar() {
       <Menu isOpen={isOpen}>
         <div>
           <MenuItem>
-            <Link to={"/"}>
+            <Link to={"/"} style={{ textDecoration: "none" }}>
               <MenuLink>Home</MenuLink>
             </Link>
           </MenuItem>
           <MenuItem>
-            <Link to={"/sobre"}>
+            <Link to={"/sobre"} style={{ textDecoration: "none" }}>
               <MenuLink>Sobre nós</MenuLink>
             </Link>
           </MenuItem>
           <MenuItem>
-            <Link to={"/contato"}>
+            <Link to={"/contato"} style={{ textDecoration: "none" }}>
               <MenuLink>Contato</MenuLink>
+            </Link>
+          </MenuItem>
+          <MenuItem>
+            <Link to={"/duvidas"} style={{ textDecoration: "none" }}>
+              <MenuLink>Dúvidas frequentes</MenuLink>
             </Link>
           </MenuItem>
         </div>
 
         <BtnContainer>
-          <Link to={"/cadastro"}>
+          <Link to={"/cadastro"} style={{ textDecoration: "none" }}>
             <Button category="primary">Cadastrar</Button>
           </Link>
-          <Link to={"/login"}>
+          <Link to={"/login"} style={{ textDecoration: "none" }}>
             <Button category="secundary">Entrar</Button>
           </Link>
         </BtnContainer>
