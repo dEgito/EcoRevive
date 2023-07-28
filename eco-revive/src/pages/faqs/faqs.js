@@ -11,13 +11,13 @@ function Faqs() {
       <Section>
 
         <h2>Dúvidas frequentes</h2>
-       
+
         <Details>
           <details>
            <summary>Como funciona o descarte?</summary>
             <p>
               É simples! Nós ajudamos você a ser direcionado a um ponto de
-              descarte conveniado. Clicando aqui você pode ter acesso a lista
+              descarte conveniado. <a href="http://localhost:3000/locais" >Clicando aqui </a> você pode ter acesso a lista
               dos pontos de descarte.
             </p>
           </details>
@@ -28,7 +28,7 @@ function Faqs() {
             <summary>Como posso descartar meu eletrônico?</summary>
             <p>
               Faça seu cadastro - entre na sua conta - selecione a opção
-              "agendar meu descarte" - selecione o local desejado para o
+              <a href="http://localhost:3000/locais" >"agendar meu descarte"</a> - selecione o local desejado para o
               descarte - agende o dia e o horário - e na data marcada, se
               direcione até o ponto de coleta.
             </p>
