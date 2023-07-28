@@ -45,7 +45,8 @@ export const HamburgerIcon = styled.div`
     display: block;
     width: 16px;
     height: 16px;
-    background-color: #ffffff;
+    border-radius: 100%;
+    background-color: #000;
   }
 `;
 

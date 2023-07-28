@@ -95,7 +95,7 @@ export const Banner = styled.section`
 
 export const LogoImg = styled.img`
 display: flex;
-  @media (max-width: 800px) {
+  @media (max-width: 1000px) {
     display: none;
   }
 `;

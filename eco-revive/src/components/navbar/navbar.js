@@ -20,7 +20,6 @@ function Navbar() {
   return (
     <Container>
       <img src={Logo} />
-      {/* LEMBRETE: CHAMAR ICON */}
       <HamburgerIcon onClick={toggleMenu}>
         <i className={`fa ${isOpen ? "fa-times" : "fa-bars"}`} />
       </HamburgerIcon>
