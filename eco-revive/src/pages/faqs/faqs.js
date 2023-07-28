@@ -1,8 +1,8 @@
-import Navbar from "../../components/navbar";
-import { Container, Section, Details} from "./style";
+import Navbar from "../../components/navbar/navbar";
 import TopGreenWave from "../../components/TopGreenWave";
 import ColaboratorSection from "../../components/colaboratorSection/colaboratorSection";
 import Copyright from "../../components/copyright/copyright";
+import { Container, Section, Details} from "./style";
 
 function Faqs() {
   return (
