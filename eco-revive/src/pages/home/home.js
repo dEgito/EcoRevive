@@ -29,7 +29,7 @@ function Home() {
             <Link to={"/"} style={{ textDecoration: "none" }}>
               <BoxLinks color="blue" children={"Acompanhar meu descarte"} />
             </Link>
-            <Link to={"/"} style={{ textDecoration: "none" }}>
+            <Link to={"/historico"} style={{ textDecoration: "none" }}>
               <BoxLinks
                 color="orange"
                 children={"Histórico de agendamentos"}
