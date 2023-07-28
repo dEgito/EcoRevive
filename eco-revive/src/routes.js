@@ -8,7 +8,6 @@ import Faqs from "./pages/faqs/faqs";
 import Login from "./pages/login/login";
 import Register from "./pages/register/register";
 import Home from "./pages/home/home";
-import CollectionLocations from "./pages/collectionLocationsPage/index";
 import History from "./pages/history/history";
 import Error from "./pages/error/error";
 
