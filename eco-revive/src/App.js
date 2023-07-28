@@ -1,9 +1,8 @@
-import './App.css';
+import { routes as RoutesReact } from './routes';
 
 function App() {
   return (
-    <h1>Eco Revive</h1>
+    <RoutesReact />
   );
 }
-
 export default App;
