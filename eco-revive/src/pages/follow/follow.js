@@ -8,8 +8,8 @@ import {
   BtnSubmit,
 } from "./style";
 
-function Follow ({ isOpen, closeModalSchedule }) {
-
+function Follow ({ isOpen, closeModalFollow }) {
+  if (isOpen) {
     return (
       <Container>
         <Card>
@@ -31,8 +31,8 @@ function Follow ({ isOpen, closeModalSchedule }) {
               <Input type="text" item="status" label="Status:" />
             </Div>
             <ContainerButton>
-              <BtnExit onClick={closeModalSchedule}>cancelar</BtnExit>
-              <BtnSubmit type="submit" onClick={closeModalSchedule}>
+            <BtnExit onClick={closeModalFollow}>cancelar</BtnExit>
+              <BtnSubmit type="submit" onClick={closeModalFollow}>
                 {/* onclick close provisório */}
                 Salvar
               </BtnSubmit>
@@ -41,5 +41,8 @@ function Follow ({ isOpen, closeModalSchedule }) {
         </Card>
       </Container>
     );
+  } else {
+    return null;
+  }
 }
 export default Follow ;

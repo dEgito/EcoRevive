@@ -1,6 +1,8 @@
+import { useState } from "react";
+
 import { Item } from "./style";
 
-function Schedule({id_schedule, item}) {
+function Schedule({ id_schedule, item, openModalFollow }) {
   return (
     <Item>
       <div>
@@ -8,7 +10,7 @@ function Schedule({id_schedule, item}) {
         <p>{item}</p>
       </div>
 
-      <button>Detalhes</button>
+      <button onClick={openModalFollow}>Detalhes</button>
     </Item>
   );
 }
