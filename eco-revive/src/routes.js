@@ -5,6 +5,7 @@ import ContactUs from "./pages/contactUs/contact";
 import GuidePage from "./pages/home/home";
 import AboutUs from "./pages/aboutUs/index";
 import CollectionLocations from "./pages/collectionLocationsPage/index";
+import Faqs from "./pages/faqs/faqs"
 import Login from "./pages/login/login";
 import Register from "./pages/register/register";
 import WaitPage from "./pages/waitPage/wait";
@@ -19,7 +20,8 @@ export const routes = () => {
         <Route path="/locais" element={<CollectionLocations />} />
         <Route path="/agendamento" element={<DisposalSchedule />} />
         <Route path="login" element={<Login />} />
-        <Route path="cadastro" element={<Register />} />
+        <Route path="cadastro" element={<Register />}/>
+        <Route path="duvidas" element={<Faqs />}/>
         <Route path="inicio" element={<WaitPage />} />
       </Routes>
     </BrowserRouter>

@@ -16,7 +16,7 @@ function Login() {
             category="secundary"
             type={"text"}
             item={"user"}
-            label={"Usuário:"}
+            label={"Email:"}
           />
           <Input
             category="secundary"

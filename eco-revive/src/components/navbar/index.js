@@ -42,6 +42,11 @@ function Navbar() {
               <MenuLink>Contato</MenuLink>
             </Link>
           </MenuItem>
+          <MenuItem>
+            <Link to={"/duvidas"} style={{ textDecoration: "none" }}>
+              <MenuLink>Dúvidas frequentes</MenuLink>
+            </Link>
+          </MenuItem>
         </div>
 
         <BtnContainer>
