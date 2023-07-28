@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-
 import GuidePage from "./pages/guidePage/guidePage";
 import AboutUs from "./pages/aboutUs/index";
 import ContactUs from "./pages/contactUs/contact";
