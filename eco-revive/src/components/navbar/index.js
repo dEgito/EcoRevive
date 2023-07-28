@@ -43,7 +43,7 @@ function Navbar() {
             </Link>
           </MenuItem>
           <MenuItem>
-            <Link to={"/duvidas"}>
+            <Link to={"/duvidas"} style={{ textDecoration: "none" }}>
               <MenuLink>Dúvidas frequentes</MenuLink>
             </Link>
           </MenuItem>
