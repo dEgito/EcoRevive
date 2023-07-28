@@ -2,6 +2,7 @@ import { ButtonBox, Container, Content } from "./style";
 import Button from "../../components/button/index";
 import Input from "../../components/input/index";
 import Logo from "../../assets/Logo320.png";
+import { Link } from "react-router-dom";
 
 function Login() {
   return (
@@ -16,7 +17,7 @@ function Login() {
             category="secundary"
             type={"text"}
             item={"user"}
-            label={"Usuário:"}
+            label={"Email:"}
           />
           <Input
             category="secundary"
@@ -25,14 +26,17 @@ function Login() {
             label={"Senha:"}
           />
 
-          <Button category={"primary"} type={"submit"}>
-            Entrar
-          </Button>
+          <Link to={"/locais"} style={{ textDecoration: "none" }}>
+            <Button category={"primary"} type={"submit"}>
+              Entrar
+            </Button>
+          </Link>
         </form>
 
         <ButtonBox>
-          <a href="#">Esqueci minha senha</a>
-          <a href="#">Crie uma conta</a>
+          <Link to={"/cadastro"}>
+            <a href="#">Crie uma conta</a>
+          </Link>
         </ButtonBox>
       </Content>
     </Container>
