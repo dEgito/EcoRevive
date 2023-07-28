@@ -5,6 +5,16 @@ export const Container = styled.div`
   color: #002454;
   margin: 0;
 
+  h1 {
+    font-size: 1.8rem;
+    letter-spacing: 0.14rem;
+    text-transform: uppercase;
+
+    @media (max-width: 800px) {
+      font-size: 1.2rem;
+    }
+  }
+
   h2 {
     font-size: 1.5rem;
     letter-spacing: 0.14rem;
@@ -26,20 +36,16 @@ export const Container = styled.div`
 export const Section = styled.section`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem 0;
-
+  padding: 2rem 2;
   width: 100%;
 `;
 
 export const Content = styled.div`
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap-reverse;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  column-gap: 3rem;
-  width: 100%;
+  gap: 0.5rem;
 
+  padding: 1rem;
 `;
