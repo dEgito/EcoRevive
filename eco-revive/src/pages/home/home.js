@@ -26,16 +26,13 @@ function Home() {
             <Link to={"/locais"} style={{ textDecoration: "none" }}>
               <BoxLinks color="green" children={"Agendar descarte"} />
             </Link>
-            <Link to={"/"} style={{ textDecoration: "none" }}>
-              <BoxLinks color="blue" children={"Cadastrar novos pontos de coleta"} />
+            <Link to={"/erro"} style={{ textDecoration: "none" }}>
+              <BoxLinks color="blue" children={"Acompanhar meu descarte"} />
             </Link>
             <Link to={"/historico"} style={{ textDecoration: "none" }}>
-              <BoxLinks
-                color="orange"
-                children={"Histórico de agendamentos"}
-              />
+              <BoxLinks color="orange" children={"Histórico de agendamentos"} />
             </Link>
-            <Link to={"/"} style={{ textDecoration: "none" }}>
+            <Link to={"/erro"} style={{ textDecoration: "none" }}>
               <BoxLinks
                 color="purple"
                 children={"Acompanhar meu descarte"}

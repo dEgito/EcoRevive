@@ -3,12 +3,14 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import GuidePage from "./pages/guidePage/guidePage";
 import AboutUs from "./pages/aboutUs/index";
 import ContactUs from "./pages/contactUs/contact";
+import CollectionLocations from "./pages/collectionLocationsPage/index";
 import Faqs from "./pages/faqs/faqs";
 import Login from "./pages/login/login";
 import Register from "./pages/register/register";
 import Home from "./pages/home/home";
 import CollectionLocations from "./pages/collectionLocationsPage/index";
 import History from "./pages/history/history";
+import Error from "./pages/error/error";
 
 export const routes = () => {
   return (
@@ -23,6 +25,7 @@ export const routes = () => {
         <Route path="/home" element={<Home />} />
         <Route path="/locais" element={<CollectionLocations />} />
         <Route path="/historico" element={<History />} />
+        <Route path="/erro" element={<Error />} />
       </Routes>
     </BrowserRouter>
   );
