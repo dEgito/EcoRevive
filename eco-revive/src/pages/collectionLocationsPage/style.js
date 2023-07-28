@@ -5,7 +5,9 @@ export const Container = styled.body`
   font-family: Montserrat, sans-serif;
   margin: 0;
   background: #f4f4f4;
-  overflow: hidden;
+  overflow-y: hidden;
+  position: relative;
+
   li {
     list-style: none;
   }
@@ -19,7 +21,7 @@ export const Container = styled.body`
       width: 100%;
       width: 3.3rem;
       height: 2.3rem;
-      font-size: 0rem; /* Falta: remover o texto de corretamente  */
+      font-size: 0rem; /* Falta remover o texto de corretamente  */
       gap: 0;
       padding: 0;
       border-radius: 2rem;
@@ -40,11 +42,15 @@ export const Map = styled.iframe`
   height: 45.06rem;
 `;
 
+export const Cont = styled.div``;
+
 export const ConteinerMain = styled.div`
+  max-width: 90rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
-  padding: 1.87rem 5.5rem 0 5.5rem;
+  gap: 6rem;
+  padding: 1rem;
 
   ul {
     display: flex;
