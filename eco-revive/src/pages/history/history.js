@@ -4,6 +4,7 @@ import Navbar from "../../components/navbar/navbar";
 import Schedule from "./components/schedule/schedule";
 import { Container, Content, Section } from "./style";
 import Follow from "../../pages/follow/follow";
+import NavBarInner from "../../components/navbarSimple/navbar";
 
 const schedules = [
   {
@@ -34,7 +35,7 @@ function ControlPanel() {
 
   return (
     <Container>
-      <Navbar />
+      <NavBarInner />
       <Follow
         isOpen={openFollow}
         closeModalFollow={() => setOpenModalFollow(!openFollow)}
