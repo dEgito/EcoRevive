@@ -2,6 +2,7 @@ import { ButtonBox, Container, Content } from "./style";
 import Button from "../../components/button/index";
 import Input from "../../components/input/index";
 import Logo from "../../assets/Logo320.png";
+import { Link } from "react-router-dom";
 
 function Register() {
   return (
@@ -26,7 +27,7 @@ function Register() {
             category="secundary"
             type={"password"}
             item={"password"}
-            label={"Senha::"}
+            label={"Senha:"}
           />
           <Input
             category="secundary"
@@ -41,7 +42,8 @@ function Register() {
         </form>
 
         <ButtonBox>
-          <a href="#">Já possuo conta! Entrar</a>
+          <Link to={"/login"}><a href="#">Já possuo conta! Entrar</a></Link>
+          
         </ButtonBox>
       </Content>
 

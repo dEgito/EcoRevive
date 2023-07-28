@@ -1,4 +1,4 @@
-import Navbar from "../../components/navbar";
+import Navbar from "../../components/navbar/navbar";
 import TopBlueWave from "../../components/TopBlueWave";
 import TopGreenWave from "../../components/TopGreenWave";
 import BottomGreenWave from "../../components/bottomGreenWave";
@@ -28,7 +28,7 @@ import Copyright from "../../components/copyright/copyright";
 function AboutUs() {
   return (
     <Container>
-      <Navbar /> {/*Corrigir sobreposição de elementos */}
+      <Navbar /> 
       <Banner>
         <h1>Quem somos?</h1>
         <p>

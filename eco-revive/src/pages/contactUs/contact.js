@@ -1,5 +1,5 @@
-import Input from "../../components/input";
-import Navbar from "../../components/navbar";
+import Input from "../../components/input/index";
+import Navbar from "../../components/navbar/navbar";
 import TopGreenWave from "../../components/TopGreenWave";
 import ColaboratorSection from "../../components/colaboratorSection/colaboratorSection";
 import Copyright from "../../components/copyright/copyright";
