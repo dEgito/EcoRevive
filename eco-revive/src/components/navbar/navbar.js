@@ -20,7 +20,6 @@ function Navbar() {
   return (
     <Container>
       <img src={Logo} />
-      {/* LEMBRETE: CHAMAR ICON */}
       <HamburgerIcon onClick={toggleMenu}>
         <i className={`fa ${isOpen ? "fa-times" : "fa-bars"}`} />
       </HamburgerIcon>
@@ -44,7 +43,7 @@ function Navbar() {
           </MenuItem>
           <MenuItem>
             <Link to={"/duvidas"} style={{ textDecoration: "none" }}>
-              <MenuLink>Dúvidas frequentes</MenuLink>
+              <MenuLink>Faq</MenuLink>
             </Link>
           </MenuItem>
         </div>
