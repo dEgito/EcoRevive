@@ -37,6 +37,5 @@ export const BoxLink = styled.div`
     font-weight: 700;
     line-height: 1.25rem;
     text-align: center;
-    padding: 1rem;
   }
 `;
