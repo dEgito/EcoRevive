@@ -8,6 +8,7 @@ import {
 } from "./homeStyle";
 import NavBarInner from "../../components/navbarSimple/navbar";
 import BoxLinks from "../../components/boxLinks/boxLinks";
+import BackArrow from "../../assets/backArrow.png";
 import { Link } from "react-router-dom";
 
 function Home() {
@@ -33,13 +34,13 @@ function Home() {
               <BoxLinks color="orange" children={"Histórico de agendamentos"} />
             </Link>
             <Link to={"/erro"} style={{ textDecoration: "none" }}>
-              <BoxLinks
-                color="purple"
-                children={"Cadastrar ponto de coleta"}
-              />
+              <BoxLinks color="purple" children={"Cadastrar ponto de coleta"} />
             </Link>
           </Boxes>
-        </SectionLinks>
+          <Link to={"/"} style={{ textDecoration: "none" }}>
+            <img src={BackArrow}></img>
+          </Link>
+        </SectionLinks>  
       </Content>
     </Conteiner>
   );

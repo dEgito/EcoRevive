@@ -7,8 +7,7 @@ import { Link } from "react-router-dom";
 function Login() {
   return (
     <Container>
-      <img src={Logo} />
-
+        <img src={Logo} />
       <Content>
         <img src={Logo} />
         <h1>Login</h1>
