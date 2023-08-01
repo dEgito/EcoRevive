@@ -1,10 +1,12 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom"; // Importe o componente Link aqui
 import Header from "./components/header/header";
 import Navbar from "../../components/navbar/navbar";
 import Schedule from "./components/schedule/schedule";
 import { Container, Content, Section } from "./style";
 import Follow from "../../pages/follow/follow";
 import NavBarInner from "../../components/navbarSimple/navbar";
+import BackArrow from "../../assets/backArrow.png";
 
 const schedules = [
   {
@@ -56,6 +58,9 @@ function ControlPanel() {
             );
           })}
         </Content>
+        <Link to={"/"} style={{ textDecoration: "none" }}>
+          <img src={BackArrow} alt="Back" />
+        </Link>
       </Section>
     </Container>
   );
