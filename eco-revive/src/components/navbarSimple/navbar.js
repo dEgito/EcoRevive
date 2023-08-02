@@ -9,6 +9,9 @@ function NavBarInner() {
         <img src={LogoNav} alt="imagem logo" />
       </Link>
       <nav>
+      <Link to={"/home"} style={{ textDecoration: "none" }}>
+          <NavButton>Home</NavButton>
+        </Link>
         <Link to={"/locais"} style={{ textDecoration: "none" }}>
           <NavButton>Agendar</NavButton>
         </Link>
