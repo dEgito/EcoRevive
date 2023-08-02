@@ -21,7 +21,6 @@ function Register() {
       .required("*Campo obrigatório!"),
     password: yup
       .string()
-      .min(8, "A senha deve ter no mínimo 8 caracteres.")
       .required("*Campo obrigatório!"),
     passwordConfirmation: yup
       .string()
