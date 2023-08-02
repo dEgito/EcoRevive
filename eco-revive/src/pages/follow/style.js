@@ -70,6 +70,7 @@ export const BtnExit = styled.button`
   font-weight: 600;
   text-transform: uppercase;
   cursor: pointer;
+  
 
   &:hover {
     background-color: var(--gray-300);
@@ -82,6 +83,8 @@ export const BtnSubmit = styled.button`
   height: 3rem;
   border-radius: 4.98rem;
   border: none;
+  background: var(--green-500);
+  border: 1.058px solid var(--black-700);
   background: var(--green-500);
   font-size: 0.9rem;
   font-weight: 600;

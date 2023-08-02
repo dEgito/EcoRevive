@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Btn = styled.button`
-  border-radius: 6.25rem;
+  border-radius: 0.6rem;
   width: 100%;
   max-width: ${(props) => {
     return props.category === "filter" ? "11.4rem" : "9.5rem";

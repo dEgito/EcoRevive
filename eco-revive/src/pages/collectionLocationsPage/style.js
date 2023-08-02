@@ -23,7 +23,7 @@ export const Container = styled.body`
       font-size: 0rem; /* Falta remover o texto de corretamente  */
       gap: 0;
       padding: 0;
-      border-radius: 2rem;
+      border-radius: 0.6rem;
     }
   }
 

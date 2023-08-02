@@ -28,7 +28,7 @@ export const Content = styled.div`
     }
 
     border-radius: ${(props) => {
-      return props.category === "secundary" ? "8rem" : ".25rem";
+      return props.category === "secundary" ? "0.6rem" : ".25rem";
     }};
   }
 `;

@@ -81,7 +81,7 @@ export const BtnSubmit = styled.button`
   width: 10rem;
   height: 3rem;
   border-radius: 4.98rem;
-  border: none;
+  border: 1.058px solid var(--black-700);
   background: var(--green-500);
   font-size: 0.9rem;
   font-weight: 600;

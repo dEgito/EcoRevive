@@ -71,8 +71,8 @@ export const ConteinerButton = styled.div`
 export const BtnExit = styled.button`
   width: 5.1rem;
   height: 2.2rem;
-  border-radius: 4.98rem;
   border: 1.058px solid var(--black-700);
+  border-radius: 4.98rem;
   background-color: transparent;
   font-size: 0.7rem;
   font-weight: 600;
@@ -88,15 +88,15 @@ export const BtnExit = styled.button`
 export const BtnSubmit = styled.button`
   width: 5.1rem;
   height: 2.2rem;
-  border-radius: 4.98rem;
   border: none;
   background: var(--green-500);
-  font-family: Montserrat, sans-serif;
+  border-radius: 4.98rem;
+  border: 1.058px solid var(--black-700);
+  background: var(--green-500);
   font-size: 0.7rem;
   font-weight: 600;
   color: var(--white);
   text-transform: uppercase;
-  cursor: pointer;
 
   &:hover {
     background-color: var(--green-500);

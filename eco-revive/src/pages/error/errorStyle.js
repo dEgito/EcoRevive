@@ -25,6 +25,21 @@ export const Erro = styled.div`
   img {
     width: 15rem;
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .responsive-paragraph {
+      font-size: 10rem;
+    }
+
+    .responsive-image {
+      width: 10rem;
+      height: auto;
+    }
+  }
 `;
 
 export const Msg = styled.div`

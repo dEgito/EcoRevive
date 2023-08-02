@@ -7,9 +7,8 @@ import { Link } from "react-router-dom";
 function Login() {
   return (
     <Container>
-      <img src={Logo} />
-
-      <Content>
+        <img src={Logo} />
+      <Content> 
         <img src={Logo} />
         <h1>Login</h1>
         <form>
@@ -17,13 +16,13 @@ function Login() {
             category="secundary"
             type={"text"}
             item={"user"}
-            label={"Email:"}
+            label={"Email"}
           />
           <Input
             category="secundary"
             type={"password"}
             item={"password"}
-            label={"Senha:"}
+            label={"Senha"}
           />
 
           <Link to={"/home"} style={{ textDecoration: "none" }}>
