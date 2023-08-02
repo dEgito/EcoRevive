@@ -91,7 +91,7 @@ export const BtnSubmit = styled.button`
   width: 5.1rem;
   height: 2.2rem;
   border-radius: 0.6rem;
-  border: none;
+  border: 1.058px solid #1f1f1f;;
   background: #4eb969;
   font-family: Montserrat, sans-serif;
   font-size: 0.7rem;
