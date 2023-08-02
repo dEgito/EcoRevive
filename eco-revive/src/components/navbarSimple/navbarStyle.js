@@ -17,3 +17,27 @@ export const Header = styled.div`
     padding: 0.5rem 4.5rem;
   }
 `;
+
+export const NavButton = styled.button`
+  font-family: Montserrat, sans-serif;
+  background-color: transparent;
+  color: #000;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.3s;
+
+  &:hover {
+    color: #4eb969;
+  }
+
+  @media (max-width: 599px) {
+    font-size: 14px;
+    padding: 0.3rem 0.7rem;
+    margin-left: 0.5rem;
+  }
+`;
