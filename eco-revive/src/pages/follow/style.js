@@ -75,7 +75,6 @@ export const BtnExit = styled.button`
 
   &:hover {
     background-color: #CD4242;
-    transition: 0.2s;
     transition: 0.9s;
   }
 `;
