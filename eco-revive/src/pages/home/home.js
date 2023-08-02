@@ -36,7 +36,7 @@ function Home() {
               <BoxLinks color="purple" children={"Cadastrar ponto de coleta"} />
             </Link>
           </Boxes>
-        </SectionLinks>  
+        </SectionLinks>
       </Content>
     </Conteiner>
   );

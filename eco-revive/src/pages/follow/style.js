@@ -17,10 +17,9 @@ export const Card = styled.div`
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
-  font-family: Montserrat, sans-serif;
   width: 100%;
   max-width: 35rem;
-  background-color: #ffffff;
+  background-color: var(--white);
 
   padding: 4rem;
   border-radius: 0.8rem;
@@ -63,8 +62,8 @@ export const ContainerButton = styled.div`
 export const BtnExit = styled.button`
   width: 10rem;
   height: 3rem;
-  border-radius: 0.6rem;
-  border: 1.058px solid #1f1f1f;
+  border-radius: 4.98rem;
+  border: 1.058px solid var(--black-700);
   background-color: transparent;
   font-family: Montserrat, sans-serif;
   font-size: 0.9rem;
@@ -74,7 +73,7 @@ export const BtnExit = styled.button`
   
 
   &:hover {
-    background-color: #ebebeb;
+    background-color: var(--gray-300);
     transition: 0.2s;
   }
 `;
@@ -82,19 +81,19 @@ export const BtnExit = styled.button`
 export const BtnSubmit = styled.button`
   width: 10rem;
   height: 3rem;
-  border-radius: 0.6rem;
-  border: 1.058px solid #1f1f1f;
-  background: #4eb969;
-  font-family: Montserrat, sans-serif;
+  border-radius: 4.98rem;
+  border: none;
+  background: var(--green-500);
+  border: 1.058px solid var(--black-700);
+  background: var(--green-500);
   font-size: 0.9rem;
   font-weight: 600;
-  color: #fff;
+  color: var(--white);
   text-transform: uppercase;
   cursor: pointer;
 
   &:hover {
-    background-color: #46af60;
+    background-color: var(--green-600);
     transition: 0.5s;
   }
 `;
-export const Div = styled.div``;
