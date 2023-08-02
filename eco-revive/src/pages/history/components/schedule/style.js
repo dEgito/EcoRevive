@@ -35,7 +35,7 @@ export const Item = styled.div`
     background-color: #4eb969;
     color: #ffffff;
     border: 1px solid #4eb969;
-    border-radius: 7rem;
+    border-radius: 0.6rem;
     padding: 0.4rem 1.5rem;
     font-weight: 600;
 

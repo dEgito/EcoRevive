@@ -63,7 +63,7 @@ export const ContainerButton = styled.div`
 export const BtnExit = styled.button`
   width: 10rem;
   height: 3rem;
-  border-radius: 4.98rem;
+  border-radius: 0.6rem;
   border: 1.058px solid #1f1f1f;
   background-color: transparent;
   font-family: Montserrat, sans-serif;
@@ -81,7 +81,7 @@ export const BtnExit = styled.button`
 export const BtnSubmit = styled.button`
   width: 10rem;
   height: 3rem;
-  border-radius: 4.98rem;
+  border-radius: 0.6rem;
   border: none;
   background: #4eb969;
   font-family: Montserrat, sans-serif;
