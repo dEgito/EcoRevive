@@ -8,7 +8,6 @@ import {
 } from "./homeStyle";
 import NavBarInner from "../../components/navbarSimple/navbar";
 import BoxLinks from "../../components/boxLinks/boxLinks";
-import BackArrow from "../../assets/backArrow.png";
 import { Link } from "react-router-dom";
 
 function Home() {
@@ -37,9 +36,6 @@ function Home() {
               <BoxLinks color="purple" children={"Cadastrar ponto de coleta"} />
             </Link>
           </Boxes>
-          <Link to={"/"} style={{ textDecoration: "none" }}>
-            <img src={BackArrow}></img>
-          </Link>
         </SectionLinks>  
       </Content>
     </Conteiner>
