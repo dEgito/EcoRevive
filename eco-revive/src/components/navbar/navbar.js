@@ -19,7 +19,9 @@ function Navbar() {
   };
   return (
     <Container>
+      <Link to={"/"} style={{ textDecoration: "none" }}>
       <img src={Logo} />
+      </Link>
       <HamburgerIcon onClick={toggleMenu}>
         <i className={`fa ${isOpen ? "fa-times" : "fa-bars"}`} />
       </HamburgerIcon>

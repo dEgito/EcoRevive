@@ -15,25 +15,25 @@ function Register() {
             category="secundary"
             type={"text"}
             item={"name"}
-            label={"Nome completo:"}
+            label={"Nome completo"}
           />
           <Input
             category="secundary"
             type={"text"}
             item={"email"}
-            label={"E-mail:"}
+            label={"E-mail"}
           />
           <Input
             category="secundary"
             type={"password"}
             item={"password"}
-            label={"Senha:"}
+            label={"Senha"}
           />
           <Input
             category="secundary"
             type={"password"}
             item={"passwordConfirm"}
-            label={"Confirme a senha:"}
+            label={"Confirme a senha"}
           />
 
           <Button category={"primary"} type={"submit"}>
@@ -42,7 +42,7 @@ function Register() {
         </form>
 
         <ButtonBox>
-          <Link to={"/login"}><a href="#">Já possuo conta! Entrar</a></Link>
+          <Link to={"/login"}><a href="#">Já possuo uma conta! Entrar</a></Link>
           
         </ButtonBox>
       </Content>
