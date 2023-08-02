@@ -9,9 +9,7 @@ function Login() {
     <Container>
         <img src={Logo} />
       <Content> 
-      <Link to={"/"} style={{ textDecoration: "none" }}>
         <img src={Logo} />
-        </Link>
         <h1>Login</h1>
         <form>
           <Input
