@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Conteiner = styled.div`
-  font-family: Montserrat, sans-serif;
   margin: 0;
   width: 100%;
   height: 90vh;
@@ -19,7 +18,7 @@ export const Erro = styled.div`
 
   p {
     font-size: 15rem;
-    color: #02a02d;
+    color: var(--accent-green-700);
     margin: 0;
   }
 
@@ -30,5 +29,5 @@ export const Erro = styled.div`
 
 export const Msg = styled.div`
   font-size: 2rem;
-  color: #02a02d;
+  color: var(--accent-green-700);
 `;
