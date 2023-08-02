@@ -73,8 +73,8 @@ export const BtnExit = styled.button`
   cursor: pointer;
 
   &:hover {
-    background-color: #ebebeb;
-    transition: 0.2s;
+    background-color: #CD4242;
+    transition: 0.9s;
   }
 `;
 
