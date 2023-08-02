@@ -6,7 +6,7 @@ function Error() {
     <Conteiner>
       <Erro>
         <p>4</p>
-        <img src={planet} alt="lalala" />
+        <img src={planet} alt="Planeta" />
         <p>4</p>
       </Erro>
       <Msg>Ops! não encontramos essa pagina!</Msg>

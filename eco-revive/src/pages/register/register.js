@@ -1,4 +1,4 @@
-import { ButtonBox, Container, Content } from "./style";
+import { ButtonBox, Container, Content, InputContent } from "./style";
 import Button from "../../components/button/index";
 import Input from "../../components/input/index";
 import Logo from "../../assets/Logo320.png";
@@ -43,39 +43,39 @@ function Register() {
         <img src={Logo} />
         <h1>Cadastro</h1>
         <form onSubmit={handleSubmit((d) => console.log(d))}>
-          <span>{errors.name?.message}</span>
-          <Input
-            category="secundary"
-            type={"text"}
-            item={"name"}
-            label={"Nome completo:"}
-            {...register("name")}
-          />
-          <span>{errors.email?.message}</span>
-          <Input
-            category="secundary"
-            type={"text"}
-            item={"email"}
-            label={"E-mail:"}
-          />
-          <span>{errors.password?.message}</span>
-          <Input
-            category="secundary"
-            type={"password"}
-            item={"password"}
-            label={"Senha:"}
-          />
-          <span>{errors.passwordConfirmation?.message}</span>
-          <Input
-            category="secundary"
-            type={"password"}
-            item={"passwordConfirm"}
-            label={"Confirme a senha:"}
-          />
+          <InputContent category={"secundary"}>
+            <label for="name">Nome completo:</label>
+            <input type="text" id="name" {...register("name")} />
+            <span>{errors.name?.message}</span>
+          </InputContent>
 
-          <Button category={"primary"} type={"submit"}>
-            Cadastrar
-          </Button>
+          <InputContent category={"secundary"}>
+            <label for="email">E-mail:</label>
+            <input type="text" id="email" {...register("email")} />
+            <span>{errors.email?.message}</span>
+          </InputContent>
+
+          <InputContent category={"secundary"}>
+            <label for="password">Senha:</label>
+            <input type="password" id="password" {...register("password")} />
+            <span>{errors.password?.message}</span>
+          </InputContent>
+
+          <InputContent category={"secundary"}>
+            <label for="passwordConfirmation">Senha:</label>
+            <input
+              type="password"
+              id="passwordConfirmation"
+              {...register("passwordConfirmation")}
+            />
+            <span>{errors.passwordConfirmation?.message}</span>
+          </InputContent>
+
+          <Link to={"/home"}>
+            <Button category={"primary"} type={"submit"}>
+              Cadastrar
+            </Button>
+          </Link>
         </form>
 
         <ButtonBox>
@@ -85,7 +85,7 @@ function Register() {
         </ButtonBox>
       </Content>
 
-      <img src={Logo} />
+      <img src={Logo} alt="Eco Revive" />
     </Container>
   );
 }

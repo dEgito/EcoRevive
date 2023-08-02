@@ -67,7 +67,7 @@ function GuidePage() {
       <Navbar /> {/*Corrigir sobreposição de elementos */}
       <Banner wrap={"wrap-reverse"}>
         <div>
-          <LogoImg src={Logo} />
+          <LogoImg src={Logo} alt="Eco Revive"/>
           <p>
             Facilita com o processo de descarte responsável e colabora ativamente
             com a e-reciclagem.
@@ -75,7 +75,7 @@ function GuidePage() {
           <Button category="accent">Saiba mais</Button>
         </div>
 
-        <img src={RecycleSymbol} />
+        <img src={RecycleSymbol} alt="Reciclagem"/>
       </Banner>
       <BottomWhiteWave />
       <Section wrap={"wrap"}>
@@ -92,7 +92,7 @@ function GuidePage() {
           </p>
         </div>
 
-        <img src={QuestionBox} />
+        <img src={QuestionBox} alt="Saiba mais" />
       </Section>
       <Section>
         <img src={Benefits} />
