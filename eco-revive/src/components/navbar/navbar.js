@@ -45,7 +45,7 @@ function Navbar() {
           </MenuItem>
           <MenuItem>
             <Link to={"/duvidas"} style={{ textDecoration: "none" }}>
-              <MenuLink>Faq</MenuLink>
+              <MenuLink>FAQ</MenuLink>
             </Link>
           </MenuItem>
         </div>
