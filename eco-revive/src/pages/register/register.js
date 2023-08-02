@@ -37,32 +37,38 @@ function Register() {
     resolver: yupResolver(schema),
   });
 
+  const onSubmit = (data) => {
+    console.log(data)
+
+    //Adicionar lógica de armazenamento dos dados fornecidos no cadastro
+  }
+
   return (
     <Container>
       <Content>
         <img src={Logo} />
         <h1>Cadastro</h1>
-        <form onSubmit={handleSubmit((d) => console.log(d))}>
+        <form onSubmit={handleSubmit(onSubmit)}>
           <InputContent category={"secundary"}>
-            <label for="name">Nome completo:</label>
+            <label htmlFor="name">Nome completo:</label>
             <input type="text" id="name" {...register("name")} />
             <span>{errors.name?.message}</span>
           </InputContent>
 
           <InputContent category={"secundary"}>
-            <label for="email">E-mail:</label>
+            <label htmlFor="email">E-mail:</label>
             <input type="text" id="email" {...register("email")} />
             <span>{errors.email?.message}</span>
           </InputContent>
 
           <InputContent category={"secundary"}>
-            <label for="password">Senha:</label>
+            <label htmlFor="password">Senha:</label>
             <input type="password" id="password" {...register("password")} />
             <span>{errors.password?.message}</span>
           </InputContent>
 
           <InputContent category={"secundary"}>
-            <label for="passwordConfirmation">Senha:</label>
+            <label htmlFor="passwordConfirmation">Senha:</label>
             <input
               type="password"
               id="passwordConfirmation"
@@ -71,11 +77,9 @@ function Register() {
             <span>{errors.passwordConfirmation?.message}</span>
           </InputContent>
 
-          <Link to={"/home"}>
-            <Button category={"primary"} type={"submit"}>
-              Cadastrar
-            </Button>
-          </Link>
+          <Button category={"primary"} type={"submit"}>
+            Cadastrar
+          </Button>
         </form>
 
         <ButtonBox>
