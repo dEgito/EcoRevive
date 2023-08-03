@@ -2,9 +2,8 @@ import styled from "styled-components";
 import { Btn } from "../../components/button/style";
 
 export const Container = styled.body`
-  font-family: Montserrat, sans-serif;
   margin: 0;
-  background: #f4f4f4;
+  background: var(--gray-600);
   overflow-y: hidden;
   position: relative;
 

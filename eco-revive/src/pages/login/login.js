@@ -7,9 +7,10 @@ import { Link } from "react-router-dom";
 function Login() {
   return (
     <Container>
-        <img src={Logo} />
-      <Content> 
-        <img src={Logo} />
+      <img src={Logo} alt="Eco Revive"/>
+
+      <Content>
+        <img src={Logo} alt="Eco Revive"/>
         <h1>Login</h1>
         <form>
           <Input

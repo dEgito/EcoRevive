@@ -10,6 +10,7 @@ export const BoxLink = styled.div`
 
   display: flex;
   align-items: center;
+  justify-content: center;
 
   background-color: ${(props) => {
     switch (props.color) {
@@ -33,7 +34,7 @@ export const BoxLink = styled.div`
   p {
     font-family: Montserrat, sans-serif;
     color: #fff;
-    font-size: 1.4rem;
+    font-size: 1rem;
     font-weight: 700;
     line-height: 1.25rem;
     text-align: center;

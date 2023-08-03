@@ -46,13 +46,13 @@ function AboutUs() {
           </p>
         </Mission>
         <div>
-          <img src={OurMission} />
+          <img src={OurMission} alt="nossa missão"/>
         </div>
       </Section>
       <TopGreenWave />
       <Section background="green">
         <div>
-          <img src={OurVision} />
+          <img src={OurVision} alt="nossa visão"/>
         </div>
         <div>
           <h2>Nossa visão</h2>
@@ -74,7 +74,7 @@ function AboutUs() {
           </ul>
         </Values>
         <div>
-          <img src={OurValues} />
+          <img src={OurValues} alt="nossos valores"/>
         </div>
       </Section>
       <TopBlueWave />
@@ -82,19 +82,19 @@ function AboutUs() {
         <h2>O que nos motiva?</h2>
         <Content>
           <div>
-            <img src={Eco} />
+            <img src={Eco} alt="Preocupação com o futuro ambiental"/>
           </div>
           <div>
-            <img src={Tech} />
+            <img src={Tech} alt="Desenvolvimento tecnológico"/>
           </div>
           <div>
-            <img src={Eletronic} />
+            <img src={Eletronic} alt="Uma sociedade consciente sobre o descarte de eletrônicos"/>
           </div>
           <div>
-            <img src={Rec} />
+            <img src={Rec} alt="O descarte correto de eletrônicos na Grande Recife"/>
           </div>
           <div>
-            <img src={Company} />
+            <img src={Company} alt="Empresas com consciência ambiental"/>
           </div>
         </Content>
       </Section>

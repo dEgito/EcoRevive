@@ -4,7 +4,6 @@ import {
   Container,
   Card,
   ContainerButton,
-  Div,
   BtnExit,
   BtnSubmit,
 } from "./style";
@@ -25,12 +24,12 @@ function DisposalSchedule({ isOpen, closeModalSchedule }) {
               <Input type="text" item="Unidade" label="Unidade:" />
               <Input type="date" item="data" label="Data:" />
             </div>
-            <Div>
+            <div>
               <Input type="text" item="resposavel" label="Responsável:" />
-            </Div>
-            <Div>
+            </div>
+            <div>
               <Input type="text" item="status" label="Status:" />
-            </Div>
+            </div>
             <ContainerButton>
               <BtnExit onClick={closeModalSchedule}>cancelar</BtnExit>
               <BtnSubmit type="submit" onClick={closeModalSchedule}>
