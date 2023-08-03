@@ -1,34 +1,37 @@
-import Navbar from "../../components/navbar/navbar";
-import TopBlueWave from "../../components/TopBlueWave";
-import TopGreenWave from "../../components/TopGreenWave";
-import BottomGreenWave from "../../components/bottomGreenWave";
+// Components
 import BottomBlueWave from "../../components/bottomBlueWave";
-
-import OurMission from "../../assets/Our-mission.png";
-import OurVision from "../../assets/Our-vision.png";
-import OurValues from "../../assets/Our-values.png";
-import Eco from "../../assets/Eco.png";
-import Tech from "../../assets/Tech.png";
-import Eletronic from "../../assets/Eletronic.png";
-import Rec from "../../assets/Rec.png";
-import Company from "../../assets/Company.png";
-
-import {
-  Container,
-  Content,
-  Banner,
-  Section,
-  Presentation,
-  Mission,
-  Values,
-} from "./style";
+import BottomGreenWave from "../../components/bottomGreenWave";
 import ColaboratorSection from "../../components/colaboratorSection/colaboratorSection";
 import Copyright from "../../components/copyright/copyright";
+import DefaultNavbar from "../../components/defaultNavbar/navbar";
+import TopBlueWave from "../../components/TopBlueWave";
+import TopGreenWave from "../../components/TopGreenWave";
+
+// Assets
+import Company from "../../assets/Company.png";
+import Eco from "../../assets/Eco.png";
+import Eletronic from "../../assets/Eletronic.png";
+import OurMission from "../../assets/Our-mission.png";
+import OurValues from "../../assets/Our-values.png";
+import OurVision from "../../assets/Our-vision.png";
+import Rec from "../../assets/Rec.png";
+import Tech from "../../assets/Tech.png";
+
+// Style
+import {
+  Banner,
+  Container,
+  Content,
+  Mission,
+  Presentation,
+  Section,
+  Values,
+} from "./style";
 
 function AboutUs() {
   return (
     <Container>
-      <Navbar /> 
+      <DefaultNavbar />
       <Banner>
         <h1>Quem somos?</h1>
         <p>
@@ -46,13 +49,13 @@ function AboutUs() {
           </p>
         </Mission>
         <div>
-          <img src={OurMission} alt="nossa missão"/>
+          <img src={OurMission} alt="nossa missão" />
         </div>
       </Section>
       <TopGreenWave />
       <Section background="green">
         <div>
-          <img src={OurVision} alt="nossa visão"/>
+          <img src={OurVision} alt="nossa visão" />
         </div>
         <div>
           <h2>Nossa visão</h2>
@@ -74,7 +77,7 @@ function AboutUs() {
           </ul>
         </Values>
         <div>
-          <img src={OurValues} alt="nossos valores"/>
+          <img src={OurValues} alt="nossos valores" />
         </div>
       </Section>
       <TopBlueWave />
@@ -82,19 +85,25 @@ function AboutUs() {
         <h2>O que nos motiva?</h2>
         <Content>
           <div>
-            <img src={Eco} alt="Preocupação com o futuro ambiental"/>
+            <img src={Eco} alt="Preocupação com o futuro ambiental" />
           </div>
           <div>
-            <img src={Tech} alt="Desenvolvimento tecnológico"/>
+            <img src={Tech} alt="Desenvolvimento tecnológico" />
           </div>
           <div>
-            <img src={Eletronic} alt="Uma sociedade consciente sobre o descarte de eletrônicos"/>
+            <img
+              src={Eletronic}
+              alt="Uma sociedade consciente sobre o descarte de eletrônicos"
+            />
           </div>
           <div>
-            <img src={Rec} alt="O descarte correto de eletrônicos na Grande Recife"/>
+            <img
+              src={Rec}
+              alt="O descarte correto de eletrônicos na Grande Recife"
+            />
           </div>
           <div>
-            <img src={Company} alt="Empresas com consciência ambiental"/>
+            <img src={Company} alt="Empresas com consciência ambiental" />
           </div>
         </Content>
       </Section>

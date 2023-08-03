@@ -8,7 +8,7 @@ export const Container = styled.div`
   align-items: center;
   gap: 4rem;
   flex-wrap: wrap-reverse;
-  height: 100vh;
+  height: 90vh;
   color: var(--white);
 
   img {

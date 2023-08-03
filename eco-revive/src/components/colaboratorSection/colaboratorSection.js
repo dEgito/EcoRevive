@@ -45,9 +45,8 @@ function ColaboratorSection() {
       <TeamContent>
         {colaborators.map((colaborator) => {
           return (
-            <Content>
+            <Content key={colaborator.id}>
               <img src={colaborator.icon} />
-
               <div>
                 <h4>{colaborator.name}</h4>
                 <a href={colaborator.url}>{colaborator.github}</a>

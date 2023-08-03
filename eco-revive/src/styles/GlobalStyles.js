@@ -19,8 +19,11 @@ const GlobalStyle = createGlobalStyle`
     --yellow-700: #e86310;
     --yellow-500: #e89f10;
     --blue-700: #002454;
+    --blue-600: #0e3973;
     --blue-500: #004bb0;
+    --black-900: #000000;
     --black-700: #1f1f1f;
+    --black-500: #222222;
   }
 
   * {

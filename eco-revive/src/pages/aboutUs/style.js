@@ -159,7 +159,7 @@ export const Section = styled.section`
   background-color: ${(props) => {
     switch (props.background) {
       case "blue":
-        return "var(blue-500)";
+        return "var(--blue-500)";
 
       case "green":
         return "var(--green-400)";

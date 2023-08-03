@@ -1,13 +1,18 @@
+// Components
+import Select from "../inputSelect/select";
+
+// Style
 import {
-  Conteiner,
-  Modal,
-  Exit,
-  ConteinerButton,
   BtnExit,
   BtnSubmit,
+  Conteiner,
+  ConteinerButton,
+  Exit,
+  Modal,
 } from "./filterStyle";
+
+// Icons
 import { MdOutlineClose } from "react-icons/md";
-import Select from "../inputSelect/select";
 
 function FiltersModal({ isOpen, closeModalFilter }) {
   if (isOpen) {

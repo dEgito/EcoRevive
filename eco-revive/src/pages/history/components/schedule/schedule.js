@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import { Item } from "./style";
 
 function Schedule({ id_schedule, item, openModalFollow }) {

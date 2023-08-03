@@ -1,4 +1,7 @@
+// Component
 import Input from "../../components/input";
+
+// Style
 import {
   Container,
   Card,

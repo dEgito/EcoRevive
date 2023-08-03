@@ -1,28 +1,42 @@
-import Button from "../../components/button/index";
-import Navbar from "../../components/navbar/navbar";
-import BottomWhiteWave from "../../components/bottomWhiteWave";
+//Libs
+import { Link } from "react-router-dom";
+
+// Components
 import BottomBlueWave from "../../components/bottomBlueWave";
-import TopBlueWave from "../../components/TopBlueWave";
-import TopGreenWave from "../../components/TopGreenWave";
-import ProcedureBox from "./components/ProcedureBox/procedureBox";
+import BottomWhiteWave from "../../components/bottomWhiteWave";
+import Button from "../../components/button/index";
 import ColaboratorSection from "../../components/colaboratorSection/colaboratorSection";
 import Copyright from "../../components/copyright/copyright";
+import DefaultNavbar from "../../components/defaultNavbar/navbar";
+import ProcedureBox from "./components/ProcedureBox/procedureBox";
+import TopBlueWave from "../../components/TopBlueWave";
+import TopGreenWave from "../../components/TopGreenWave";
 
-import Logo from "../../assets/Logo320.png"; //rever qualidade da imagem
-import RecycleSymbol from "../../assets/Recycle.png";
-import QuestionBox from "../../assets/question-box.png";
+// Assets
 import Benefits from "../../assets/benefits.png";
-import Planet from "../../assets/planet.png";
 import Idea from "../../assets/Idea.png";
+import Logo from "../../assets/Logo320.png"; // rever qualidade da imagem
+import Planet from "../../assets/planet.png";
+import QuestionBox from "../../assets/question-box.png";
+import RecycleSymbol from "../../assets/Recycle.png";
 
+// Icons
+import {
+  BiTrash,
+  BiWrench,
+  BiSearch,
+  BiRecycle,
+  BiCheck,
+  BiChevronsRight,
+} from "react-icons/bi";
+
+// Style
 import { Banner, Container, LogoImg, Section } from "./style";
-
-// import Trash from "@phosphor-icons/react"
 
 const procedures = [
   {
     id: 1,
-    icon: "",
+    icon: <BiTrash size={32} />,
     title: "1. Coleta",
     description:
       "Os dispositivos eletrônicos são coletados em pontos de coleta específicos, como postos de reciclagem.",
@@ -30,7 +44,7 @@ const procedures = [
 
   {
     id: 2,
-    icon: "",
+    icon: <BiWrench size={32} />,
     title: "2. Desmontagem",
     description:
       "Os aparelhos eletrônicos são desmontados para separar os diferentes componentes. Isso é feito manualmente ou com o auxílio de máquinas.",
@@ -38,15 +52,15 @@ const procedures = [
 
   {
     id: 3,
-    icon: "",
+    icon: <BiSearch size={32} />,
     title: "3. Triagem",
     description:
       "Os materiais separados são classificados e organizados de acordo com sua natureza e qualidade.",
   },
 
   {
-    id: 1,
-    icon: "",
+    id: 4,
+    icon: <BiRecycle size={32} />,
     title: "4. Reciclagem",
     description:
       "Os materiais são processados, isso envolve: fusão de metais, trituração de plásticos ou outros processos específicos para cada tipo de material.",
@@ -54,7 +68,7 @@ const procedures = [
 
   {
     id: 5,
-    icon: "",
+    icon: <BiCheck size={32} />,
     title: "5. Descarte adequado",
     description:
       "Se houver resíduos ou materiais não recicláveis após o processo de reciclagem, eles devem ser descartados adequadamente",
@@ -64,18 +78,22 @@ const procedures = [
 function GuidePage() {
   return (
     <Container>
-      <Navbar /> {/*Corrigir sobreposição de elementos */}
+      <DefaultNavbar />
       <Banner wrap={"wrap-reverse"}>
         <div>
-          <LogoImg src={Logo} alt="Eco Revive"/>
+          <LogoImg src={Logo} alt="Eco Revive" />
           <p>
-            Facilita com o processo de descarte responsável e colabora ativamente
-            com a e-reciclagem.
+            Facilita com o processo de descarte responsável e colabora
+            ativamente com a e-reciclagem.
           </p>
-          <Button category="accent">Saiba mais</Button>
+          <Link to={"/sobre"} style={{ textDecoration: "none" }}>
+            <Button category="accent">
+              Saiba mais <BiChevronsRight size={20} />
+            </Button>
+          </Link>
         </div>
 
-        <img src={RecycleSymbol} alt="Reciclagem"/>
+        <img src={RecycleSymbol} alt="Reciclagem" />
       </Banner>
       <BottomWhiteWave />
       <Section wrap={"wrap"}>
@@ -119,6 +137,7 @@ function GuidePage() {
                 key={procedure.id}
                 title={procedure.title}
                 description={procedure.description}
+                icon={procedure.icon}
               />
             );
           })}
@@ -137,7 +156,11 @@ function GuidePage() {
           <p>
             Conheça a <span>ECO REVIVE</span>
           </p>
-          <Button category="accent">Saiba mais</Button>
+          <Link to={"/sobre"} style={{ textDecoration: "none" }}>
+            <Button category="accent">
+              Saiba mais <BiChevronsRight size={20} />
+            </Button>
+          </Link>
         </div>
 
         <img src={Idea} />

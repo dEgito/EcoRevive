@@ -1,10 +1,9 @@
 import styled from "styled-components";
 
 export const Li = styled.div`
-  font-family: Montserrat, sans-serif;
   width: 100%;
   max-width: 22.25rem;
-  border: 1px solid var(--gray-700);
+  border: 1px solid var(--black-700);
   border-radius: 0.6rem;
   display: flex;
   flex-direction: column;

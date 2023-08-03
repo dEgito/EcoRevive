@@ -9,7 +9,8 @@ export const Container = styled.div`
   gap: 4rem;
   flex-wrap: wrap-reverse;
   font-family: Monteserrat, sans-serif;
-  height: 100vh;
+  height: 90vh;
+  overflow: hidden;
   color: #ffffff;
 
   img {
