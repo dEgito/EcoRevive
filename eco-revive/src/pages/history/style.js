@@ -1,15 +1,11 @@
 import { styled } from "styled-components";
 
 export const Container = styled.div`
-  font-family: Montserrat, sans-serif;
-  color: #002454;
+  color: var(--blue-700);
   margin: 0;
 
   h1 {
     font-size: 1.8rem;
-    letter-spacing: 0.14rem;
-    text-transform: uppercase;
-
     @media (max-width: 800px) {
       font-size: 1.2rem;
     }
@@ -17,9 +13,6 @@ export const Container = styled.div`
 
   h2 {
     font-size: 1.5rem;
-    letter-spacing: 0.14rem;
-    text-transform: uppercase;
-
     @media (max-width: 480px) {
       font-size: 1rem;
     }

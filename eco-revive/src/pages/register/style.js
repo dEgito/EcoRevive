@@ -8,9 +8,8 @@ export const Container = styled.div`
   align-items: center;
   gap: 4rem;
   flex-wrap: wrap-reverse;
-  font-family: Monteserrat, sans-serif;
   height: 100vh;
-  color: #ffffff;
+  color: var(--white);
 
   img {
     margin: auto;
@@ -56,7 +55,7 @@ export const Content = styled.div`
   span {
     display: flex;
     width: 100%;
-    color: #E89F10;
+    color: var(--yellow-500);
     font-size: .8rem;
     font-weight: 700;
   }
@@ -75,12 +74,12 @@ export const ButtonBox = styled.div`
   padding: 2rem 0;
 
   a {
-    color: #ffffff;
+    color: var(--white);
     text-decoration: none;
     transition: all ease-in-out .5s;
 
     &:hover {
-      color: #E89F10;
+      color: var(--yellow-500);
     }
   }
 `;
@@ -91,19 +90,19 @@ export const InputContent = styled.div`
   width: 100%;
   min-width: 250px;
   gap: 0.5rem;
-  color: #014538;
+  color: var(--green-700);
 
   label {
     font-size: 0.8rem;
     font-weight: 600;
 
     color: ${(props) => {
-      return props.category === "secundary" ? "#fff" : "#014538";
+      return props.category === "secundary" ? "var(--white)" : "var(--green-700)";
     }};
   }
 
   input {
-    border: 1px solid #4eb969;
+    border: 1px solid var(--green-500);
     min-height: 1.4rem;
     resize: none;
     padding: 0.2rem 1rem;

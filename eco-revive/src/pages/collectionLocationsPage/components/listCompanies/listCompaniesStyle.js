@@ -4,11 +4,11 @@ export const Li = styled.div`
   font-family: Montserrat, sans-serif;
   width: 100%;
   max-width: 22.25rem;
-  border: 1px solid #014538;
+  border: 1px solid var(--gray-700);
   border-radius: 0.6rem;
   display: flex;
   flex-direction: column;
-  background: #f3f3f3;
+  background: var(--gray-800);
 
   p {
     margin: 0;
@@ -40,9 +40,9 @@ export const BtnAgenda = styled.button`
   min-height: 2.11rem;
   border: none;
   border-radius: 0.6rem;
-  background-color: #4eb969;
+  background-color: var(--green-500);
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--white);
   font-size: 0.7rem;
   letter-spacing: 0.02rem;
   align-self: center;
@@ -51,6 +51,6 @@ export const BtnAgenda = styled.button`
   transition: 0.3s;
 
   &:hover {
-    background-color: #e86310;
+    background-color: var(--yellow-700);
   }
 `;

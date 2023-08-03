@@ -17,13 +17,13 @@ function Login() {
             category="secundary"
             type={"text"}
             item={"user"}
-            label={"Email:"}
+            label={"Email"}
           />
           <Input
             category="secundary"
             type={"password"}
             item={"password"}
-            label={"Senha:"}
+            label={"Senha"}
           />
 
           <Link to={"/home"} style={{ textDecoration: "none" }}>

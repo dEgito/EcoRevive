@@ -1,4 +1,5 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom"; // Importe o componente Link aqui
 import Header from "./components/header/header";
 import Navbar from "../../components/navbar/navbar";
 import Schedule from "./components/schedule/schedule";

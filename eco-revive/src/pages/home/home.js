@@ -33,10 +33,7 @@ function Home() {
               <BoxLinks color="orange" children={"Histórico de agendamentos"} />
             </Link>
             <Link to={"/erro"} style={{ textDecoration: "none" }}>
-              <BoxLinks
-                color="purple"
-                children={"Cadastrar ponto de coleta"}
-              />
+              <BoxLinks color="purple" children={"Cadastrar ponto de coleta"} />
             </Link>
           </Boxes>
         </SectionLinks>

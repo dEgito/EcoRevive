@@ -9,8 +9,6 @@ export const Box = styled.header`
 
   h2 {
     font-size: 1.5rem;
-    letter-spacing: 0.14rem;
-    text-transform: uppercase;
 
     @media (max-width: 480px) {
       font-size: 1rem;
@@ -25,7 +23,7 @@ export const Box = styled.header`
   }
 
   span {
-    color: #004BB0;
+    color: var(--blue-500);
     font-weight: 800;
   }
 `;

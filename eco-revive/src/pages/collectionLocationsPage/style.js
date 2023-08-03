@@ -2,9 +2,8 @@ import styled from "styled-components";
 import { Btn } from "../../components/button/style";
 
 export const Container = styled.body`
-  font-family: Montserrat, sans-serif;
   margin: 0;
-  background: #f4f4f4;
+  background: var(--gray-600);
   overflow-y: hidden;
   position: relative;
 
@@ -24,7 +23,7 @@ export const Container = styled.body`
       font-size: 0rem; /* Falta remover o texto de corretamente  */
       gap: 0;
       padding: 0;
-      border-radius: 2rem;
+      border-radius: 0.6rem;
     }
   }
 
