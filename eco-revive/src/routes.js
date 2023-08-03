@@ -24,7 +24,7 @@ export const routes = () => {
         <Route path="/home" element={<Home />} />
         <Route path="/locais" element={<CollectionLocations />} />
         <Route path="/historico" element={<History />} />
-        <Route path="/erro" element={<Error />} />
+        <Route path="/*" element={<Error />} />
       </Routes>
     </BrowserRouter>
   );
