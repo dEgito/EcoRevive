@@ -22,11 +22,14 @@ function DefaultNavbar() {
   return (
     <Container>
       <Link to={"/"} style={{ textDecoration: "none" }}>
-      <img src={Logo} />
+        <img src={Logo} />
       </Link>
-      <HamburgerIcon onClick={toggleMenu}>
-        <AiOutlineMenu className={`fa ${isOpen ? "fa-times" : "fa-bars"}`} />
-      </HamburgerIcon>
+      {/* <HamburgerIcon > */}
+      <AiOutlineMenu
+        onClick={toggleMenu}
+        className={`fa ${isOpen ? "fa-times" : "fa-bars"}`}
+      />
+      {/* </HamburgerIcon> */}
 
       <Menu isOpen={isOpen}>
         <div>

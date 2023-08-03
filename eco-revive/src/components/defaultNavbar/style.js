@@ -11,6 +11,14 @@ export const Container = styled.div`
   background: var(--gray-600);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
+  svg {
+    display: none;
+
+    @media (max-width: 1000px) {
+      display: block;
+    }
+  }
+
   @media (max-width: 768px) {
     padding: 1rem 2.5rem;
   }
@@ -46,10 +54,6 @@ export const HamburgerIcon = styled.div`
 
   @media (max-width: 1000px) {
     display: block;
-
-    svg {
-      display: block;
-    }
   }
 `;
 
@@ -60,7 +64,6 @@ export const Menu = styled.ul`
   align-items: center;
   gap: 4rem;
   list-style: none;
-  width: 55%;
 
   @media (max-width: 1000px) {
     display: ${({ isOpen }) => (isOpen ? "flex" : "none")};

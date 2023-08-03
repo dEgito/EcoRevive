@@ -85,9 +85,9 @@ export const Btn = styled.button`
     transition: all ease-in-out 0.5s;
     border: ${(props) => {
       switch (props.category) {
-        case "2px solid primary":
-          return "var(--blue-600)";
-        case "2px solid secundary":
+        case "primary":
+          return "2px solid var(--blue-600)";
+        case "secundary":
           return "2px solid var(--blue-600)";
         case "accent":
           return "2px solid var(--blue-500)";
@@ -100,33 +100,19 @@ export const Btn = styled.button`
 
     background-color: ${(props) => {
       switch (props.category) {
-        case "primary":
-          return "var(--blue-600)";
-        case "secundary":
-          return "var(--blue-600)";
-        case "accent":
-          return "var(--blue-600)";
-        case "filter":
-          return "none";
         case "filter":
           return "none";
         default:
-          return "var(--green-500)";
+          return "var(--blue-700)";
       }
     }};
 
     color: ${(props) => {
       switch (props.category) {
-        case "primary":
-          return "var(--green-500)";
-        case "secundary":
-          return "var(--green-500)";
-        case "accent":
-          return "var(--green-500)";
         case "filter":
           return "var(--green-500)";
         default:
-          return "var(--green-500)";
+          return "var(--white)";
       }
     }};
   }
