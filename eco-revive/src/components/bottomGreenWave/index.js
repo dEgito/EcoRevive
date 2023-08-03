@@ -1,4 +1,7 @@
-import WaveImg from "../../assets/BottomGreenWave.png"
+// Assets
+import WaveImg from "../../assets/BottomGreenWave.png";
+
+// Style
 import { Wave } from "./style";
 
 function BottomGreenWave() {

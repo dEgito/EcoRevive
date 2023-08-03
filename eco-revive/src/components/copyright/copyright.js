@@ -1,5 +1,10 @@
+// Libs
 import React from "react";
+
+// Style
 import { Copy } from "./style";
+
+// Icons
 import { BiCopyright } from "react-icons/bi";
 
 function Copyright() {

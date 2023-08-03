@@ -11,6 +11,14 @@ export const Container = styled.div`
   background: var(--gray-600);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
+  svg {
+    display: none;
+
+    @media (max-width: 1000px) {
+      display: block;
+    }
+  }
+
   @media (max-width: 768px) {
     padding: 1rem 2.5rem;
   }
@@ -31,24 +39,6 @@ export const Container = styled.div`
     &:hover {
       color: var(--green-500);
       font-weight: 800;
-    }
-  }
-`;
-
-export const HamburgerIcon = styled.div`
-  cursor: pointer;
-  display: none;
-
-  sgv {
-    display: none;
-    color: var(--white);
-  }
-
-  @media (max-width: 1000px) {
-    display: block;
-
-    svg {
-      display: block;
     }
   }
 `;

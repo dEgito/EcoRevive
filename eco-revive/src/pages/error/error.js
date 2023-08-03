@@ -1,8 +1,12 @@
-import { Conteiner, Erro, Msg } from "./errorStyle";
-import planet from "../../assets/planet.png";
-import Button from "../../components/button";
-
+// Libs
 import { Link } from "react-router-dom";
+
+// Components
+import Button from "../../components/button";
+import { Conteiner, Erro, Msg } from "./errorStyle";
+
+// Assets
+import planet from "../../assets/planet.png";
 
 function Error() {
   return (

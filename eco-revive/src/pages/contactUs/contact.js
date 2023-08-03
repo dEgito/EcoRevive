@@ -1,12 +1,16 @@
-import Input from "../../components/input/index";
-import TopGreenWave from "../../components/TopGreenWave";
+// Components
+import Button from "../../components/button";
 import ColaboratorSection from "../../components/colaboratorSection/colaboratorSection";
 import Copyright from "../../components/copyright/copyright";
-
-import { Container, Content, InfoBox, Section } from "./style";
-import Button from "../../components/button";
-import { BiChevronsRight } from "react-icons/bi";
 import DefaultNavbar from "../../components/defaultNavbar/navbar";
+import Input from "../../components/input/index";
+import TopGreenWave from "../../components/TopGreenWave";
+
+// Style
+import { Container, Content, InfoBox, Section } from "./style";
+
+// Icons
+import { BiChevronsRight } from "react-icons/bi";
 
 function ContactUs() {
   return (
@@ -26,7 +30,9 @@ function ContactUs() {
               <label for="message">Mensagem:</label>
               <textarea id="message" />
             </form>
-            <Button category="primary" type="submit">Enviar <BiChevronsRight size={20} /></Button>
+            <Button category="primary" type="submit">
+              Enviar <BiChevronsRight size={20} />
+            </Button>
           </div>
 
           <InfoBox>

@@ -1,12 +1,9 @@
+// Components
 import Button from "../../components/button";
 import Input from "../../components/input";
-import {
-  Container,
-  Card,
-  ContainerButton,
-  BtnExit,
-  BtnSubmit,
-} from "./style";
+
+// Style
+import { BtnExit, BtnSubmit, Card, Container, ContainerButton } from "./style";
 
 function DisposalSchedule({ isOpen, closeModalSchedule }) {
   if (isOpen) {

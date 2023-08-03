@@ -1,8 +1,11 @@
-import TopGreenWave from "../../components/TopGreenWave";
+// Components
 import ColaboratorSection from "../../components/colaboratorSection/colaboratorSection";
 import Copyright from "../../components/copyright/copyright";
-import { Container, Section, Details } from "./style";
 import DefaultNavbar from "../../components/defaultNavbar/navbar";
+import TopGreenWave from "../../components/TopGreenWave";
+
+// Style
+import { Container, Section, Details } from "./style";
 
 function Faqs() {
   return (
@@ -28,10 +31,8 @@ function Faqs() {
             <summary>Como posso descartar meu eletrônico?</summary>
             <p>
               Faça seu cadastro - entre na sua conta - selecione a opção
-              <a href="http://localhost:3000/locais">
-                "agendar meu descarte"
-              </a>{" "}
-              - selecione o local desejado para o descarte - agende o dia e o
+              <a href="http://localhost:3000/locais">"agendar meu descarte"</a>-
+              selecione o local desejado para o descarte - agende o dia e o
               horário - e na data marcada, se direcione até o ponto de coleta.
             </p>
           </details>

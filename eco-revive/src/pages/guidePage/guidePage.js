@@ -1,21 +1,26 @@
-import Button from "../../components/button/index";
-import BottomWhiteWave from "../../components/bottomWhiteWave";
+//Libs
+import { Link } from "react-router-dom";
+
+// Components
 import BottomBlueWave from "../../components/bottomBlueWave";
-import TopBlueWave from "../../components/TopBlueWave";
-import TopGreenWave from "../../components/TopGreenWave";
-import ProcedureBox from "./components/ProcedureBox/procedureBox";
+import BottomWhiteWave from "../../components/bottomWhiteWave";
+import Button from "../../components/button/index";
 import ColaboratorSection from "../../components/colaboratorSection/colaboratorSection";
 import Copyright from "../../components/copyright/copyright";
+import DefaultNavbar from "../../components/defaultNavbar/navbar";
+import ProcedureBox from "./components/ProcedureBox/procedureBox";
+import TopBlueWave from "../../components/TopBlueWave";
+import TopGreenWave from "../../components/TopGreenWave";
 
-import Logo from "../../assets/Logo320.png"; //rever qualidade da imagem
-import RecycleSymbol from "../../assets/Recycle.png";
-import QuestionBox from "../../assets/question-box.png";
+// Assets
 import Benefits from "../../assets/benefits.png";
-import Planet from "../../assets/planet.png";
 import Idea from "../../assets/Idea.png";
+import Logo from "../../assets/Logo320.png"; // rever qualidade da imagem
+import Planet from "../../assets/planet.png";
+import QuestionBox from "../../assets/question-box.png";
+import RecycleSymbol from "../../assets/Recycle.png";
 
-import { Banner, Container, LogoImg, Section } from "./style";
-
+// Icons
 import {
   BiTrash,
   BiWrench,
@@ -24,7 +29,9 @@ import {
   BiCheck,
   BiChevronsRight,
 } from "react-icons/bi";
-import DefaultNavbar from "../../components/defaultNavbar/navbar";
+
+// Style
+import { Banner, Container, LogoImg, Section } from "./style";
 
 const procedures = [
   {
@@ -79,9 +86,11 @@ function GuidePage() {
             Facilita com o processo de descarte responsável e colabora
             ativamente com a e-reciclagem.
           </p>
-          <Button category="accent">
-            Saiba mais <BiChevronsRight size={20} />
-          </Button>
+          <Link to={"/sobre"} style={{ textDecoration: "none" }}>
+            <Button category="accent">
+              Saiba mais <BiChevronsRight size={20} />
+            </Button>
+          </Link>
         </div>
 
         <img src={RecycleSymbol} alt="Reciclagem" />
@@ -147,9 +156,11 @@ function GuidePage() {
           <p>
             Conheça a <span>ECO REVIVE</span>
           </p>
-          <Button category="accent">
-            Saiba mais <BiChevronsRight size={20} />
-          </Button>
+          <Link to={"/sobre"} style={{ textDecoration: "none" }}>
+            <Button category="accent">
+              Saiba mais <BiChevronsRight size={20} />
+            </Button>
+          </Link>
         </div>
 
         <img src={Idea} />

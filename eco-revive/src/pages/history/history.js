@@ -1,9 +1,16 @@
+// Libs
 import React, { useState } from "react";
+
+// Components
 import Header from "./components/header/header";
-import Schedule from "./components/schedule/schedule";
-import { Container, Content, Section } from "./style";
-import Follow from "../../pages/follow/follow";
 import InternalNavbar from "../../components/internalNavbar/navbar";
+import Schedule from "./components/schedule/schedule";
+
+// Pages
+import Follow from "../../pages/follow/follow";
+
+// Style
+import { Container, Content, Section } from "./style";
 
 const schedules = [
   {

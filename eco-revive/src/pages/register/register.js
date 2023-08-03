@@ -1,13 +1,18 @@
-import { ButtonBox, Container, Content, InputContent } from "./style";
-import Button from "../../components/button/index";
-import Input from "../../components/input/index";
-import Logo from "../../assets/Logo320.png";
-import { Link } from "react-router-dom";
-
+// Libs
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { SubmitHandler, useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
+
+// Components
+import Button from "../../components/button/index";
 import Navbar from "../../components/defaultNavbar/navbar";
+
+// Styles
+import { ButtonBox, Container, Content, InputContent } from "./style";
+
+// Assets
+import Logo from "../../assets/Logo320.png";
 
 function Register() {
   const schema = yup.object().shape({

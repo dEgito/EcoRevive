@@ -1,3 +1,11 @@
+// Libs
+import { Link } from "react-router-dom";
+
+// Components
+import BoxLinks from "./components/boxLinks/boxLinks";
+import InternalNavbar from "../../components/internalNavbar/navbar";
+
+// Styles
 import {
   Conteiner,
   Content,
@@ -6,9 +14,6 @@ import {
   Question,
   Boxes,
 } from "./homeStyle";
-import BoxLinks from "./components/boxLinks/boxLinks";
-import { Link } from "react-router-dom";
-import InternalNavbar from "../../components/internalNavbar/navbar";
 
 function Home() {
   return (
@@ -36,7 +41,7 @@ function Home() {
               <BoxLinks color="purple" children={"Cadastrar ponto de coleta"} />
             </Link>
           </Boxes>
-        </SectionLinks>  
+        </SectionLinks>
       </Content>
     </Conteiner>
   );

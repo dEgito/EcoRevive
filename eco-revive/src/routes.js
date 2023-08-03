@@ -2,14 +2,14 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import GuidePage from "./pages/guidePage/guidePage";
 import AboutUs from "./pages/aboutUs/index";
-import ContactUs from "./pages/contactUs/contact";
 import CollectionLocations from "./pages/collectionLocationsPage/index";
+import ContactUs from "./pages/contactUs/contact";
+import Error from "./pages/error/error";
 import Faqs from "./pages/faqs/faqs";
+import History from "./pages/history/history";
+import Home from "./pages/home/home";
 import Login from "./pages/login/login";
 import Register from "./pages/register/register";
-import Home from "./pages/home/home";
-import History from "./pages/history/history";
-import Error from "./pages/error/error";
 
 export const routes = () => {
   return (

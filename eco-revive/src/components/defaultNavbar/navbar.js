@@ -1,16 +1,24 @@
+// Libs
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+
+// Components
 import Button from "../button";
+
+// Assets
+import Logo from "../../assets/Logo-nav.png";
+
+// Style
 import {
-  Container,
   BtnContainer,
+  Container,
   HamburgerIcon,
   Menu,
   MenuItem,
   MenuLink,
 } from "./style";
-import React, { useState } from "react";
-import Logo from "../../assets/Logo-nav.png";
-import { Link } from "react-router-dom";
 
+// Icons
 import { AiOutlineMenu } from "react-icons/ai";
 
 function DefaultNavbar() {
@@ -24,12 +32,10 @@ function DefaultNavbar() {
       <Link to={"/"} style={{ textDecoration: "none" }}>
         <img src={Logo} />
       </Link>
-      {/* <HamburgerIcon > */}
       <AiOutlineMenu
         onClick={toggleMenu}
         className={`fa ${isOpen ? "fa-times" : "fa-bars"}`}
       />
-      {/* </HamburgerIcon> */}
 
       <Menu isOpen={isOpen}>
         <div>

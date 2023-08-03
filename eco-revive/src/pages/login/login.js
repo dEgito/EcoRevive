@@ -1,9 +1,17 @@
-import { ButtonBox, Container, Content } from "./style";
+// Libs
+import { Link } from "react-router-dom";
+
+// Components
 import Button from "../../components/button/index";
 import Input from "../../components/input/index";
-import Logo from "../../assets/Logo320.png";
-import { Link } from "react-router-dom";
 import DefaultNavbar from "../../components/defaultNavbar/navbar";
+
+// Styles
+import { ButtonBox, Container, Content } from "./style";
+
+// Assets
+import Logo from "../../assets/Logo320.png";
+
 
 function Login() {
   return (
