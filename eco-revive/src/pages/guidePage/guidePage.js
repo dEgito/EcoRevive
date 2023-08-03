@@ -52,7 +52,7 @@ const procedures = [
   },
 
   {
-    id: 1,
+    id: 4,
     icon: <BiRecycle size={32} />,
     title: "4. Reciclagem",
     description:
