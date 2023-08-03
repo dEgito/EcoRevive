@@ -4,7 +4,7 @@ export const Btn = styled.button`
   border-radius: 4.98rem;
   width: 100%;
   max-width: ${(props) => {
-    return props.category === "filter" ? "11.4rem" : "9.5rem";
+    return props.category === "filter" ? "11.4rem" : "10rem";
   }};
 
   display: flex;

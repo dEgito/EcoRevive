@@ -1,9 +1,9 @@
 import { IconBox, InfoBox } from "./style";
 
-function ProcedureBox({title, description}) {
+function ProcedureBox({icon, title, description}) {
   return (
     <InfoBox>
-      <IconBox>x</IconBox>
+      <IconBox>{icon}</IconBox>
       <div>
         <h3>{title}</h3>
         <p> {description}</p>

@@ -17,12 +17,19 @@ import Idea from "../../assets/Idea.png";
 
 import { Banner, Container, LogoImg, Section } from "./style";
 
-// import Trash from "@phosphor-icons/react"
+import {
+  BiTrash,
+  BiWrench,
+  BiSearch,
+  BiRecycle,
+  BiCheck,
+  BiChevronsRight,
+} from "react-icons/bi";
 
 const procedures = [
   {
     id: 1,
-    icon: "",
+    icon: <BiTrash size={32} />,
     title: "1. Coleta",
     description:
       "Os dispositivos eletrônicos são coletados em pontos de coleta específicos, como postos de reciclagem.",
@@ -30,7 +37,7 @@ const procedures = [
 
   {
     id: 2,
-    icon: "",
+    icon: <BiWrench size={32} />,
     title: "2. Desmontagem",
     description:
       "Os aparelhos eletrônicos são desmontados para separar os diferentes componentes. Isso é feito manualmente ou com o auxílio de máquinas.",
@@ -38,7 +45,7 @@ const procedures = [
 
   {
     id: 3,
-    icon: "",
+    icon: <BiSearch size={32} />,
     title: "3. Triagem",
     description:
       "Os materiais separados são classificados e organizados de acordo com sua natureza e qualidade.",
@@ -46,7 +53,7 @@ const procedures = [
 
   {
     id: 1,
-    icon: "",
+    icon: <BiRecycle size={32} />,
     title: "4. Reciclagem",
     description:
       "Os materiais são processados, isso envolve: fusão de metais, trituração de plásticos ou outros processos específicos para cada tipo de material.",
@@ -54,7 +61,7 @@ const procedures = [
 
   {
     id: 5,
-    icon: "",
+    icon: <BiCheck size={32} />,
     title: "5. Descarte adequado",
     description:
       "Se houver resíduos ou materiais não recicláveis após o processo de reciclagem, eles devem ser descartados adequadamente",
@@ -64,18 +71,20 @@ const procedures = [
 function GuidePage() {
   return (
     <Container>
-      <Navbar /> {/*Corrigir sobreposição de elementos */}
+      <Navbar />
       <Banner wrap={"wrap-reverse"}>
         <div>
-          <LogoImg src={Logo} alt="Eco Revive"/>
+          <LogoImg src={Logo} alt="Eco Revive" />
           <p>
-            Facilita com o processo de descarte responsável e colabora ativamente
-            com a e-reciclagem.
+            Facilita com o processo de descarte responsável e colabora
+            ativamente com a e-reciclagem.
           </p>
-          <Button category="accent">Saiba mais</Button>
+          <Button category="accent">
+            Saiba mais <BiChevronsRight size={20} />
+          </Button>
         </div>
 
-        <img src={RecycleSymbol} alt="Reciclagem"/>
+        <img src={RecycleSymbol} alt="Reciclagem" />
       </Banner>
       <BottomWhiteWave />
       <Section wrap={"wrap"}>
@@ -119,6 +128,7 @@ function GuidePage() {
                 key={procedure.id}
                 title={procedure.title}
                 description={procedure.description}
+                icon={procedure.icon}
               />
             );
           })}
@@ -137,7 +147,9 @@ function GuidePage() {
           <p>
             Conheça a <span>ECO REVIVE</span>
           </p>
-          <Button category="accent">Saiba mais</Button>
+          <Button category="accent">
+            Saiba mais <BiChevronsRight size={20} />
+          </Button>
         </div>
 
         <img src={Idea} />

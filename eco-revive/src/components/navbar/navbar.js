@@ -11,6 +11,8 @@ import React, { useState } from "react";
 import Logo from "../../assets/Logo-nav.png";
 import { Link } from "react-router-dom";
 
+import { AiOutlineMenu } from "react-icons/ai";
+
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -23,7 +25,7 @@ function Navbar() {
       <img src={Logo} />
       </Link>
       <HamburgerIcon onClick={toggleMenu}>
-        <i className={`fa ${isOpen ? "fa-times" : "fa-bars"}`} />
+        <AiOutlineMenu className={`fa ${isOpen ? "fa-times" : "fa-bars"}`} />
       </HamburgerIcon>
 
       <Menu isOpen={isOpen}>

@@ -39,12 +39,16 @@ export const HamburgerIcon = styled.div`
   cursor: pointer;
   display: none;
 
-  @media (max-width: 1000px) {
+  sgv {
+    display: none;
+  }
+
+  @media (min-width: 1000px) {
     display: block;
-    width: 16px;
-    height: 16px;
-    border-radius: 100%;
-    background-color: var(--black-900);
+
+    svg {
+      display: block;
+    }
   }
 `;
 
@@ -57,7 +61,7 @@ export const Menu = styled.ul`
   list-style: none;
   width: 55%;
 
-  @media (max-width: 1000px) {
+  @media (min-width: 1000px) {
     display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
     flex-direction: column;
     position: absolute;
@@ -82,7 +86,7 @@ export const Menu = styled.ul`
     display: flex;
     flex-direction: row;
 
-    @media (max-width: 1000px) {
+    @media (min-width: 1000px) {
       flex-direction: column;
     }
   }
@@ -103,7 +107,7 @@ export const BtnContainer = styled.div`
   gap: 1rem;
   width: 10rem;
 
-  @media (max-width: 1000px) {
+  @media (min-width: 1000px) {
     flex-direction: column;
     gap: 0rem;
   }
