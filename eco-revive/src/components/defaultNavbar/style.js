@@ -41,9 +41,10 @@ export const HamburgerIcon = styled.div`
 
   sgv {
     display: none;
+    color: var(--white);
   }
 
-  @media (min-width: 1000px) {
+  @media (max-width: 1000px) {
     display: block;
 
     svg {
@@ -61,7 +62,7 @@ export const Menu = styled.ul`
   list-style: none;
   width: 55%;
 
-  @media (min-width: 1000px) {
+  @media (max-width: 1000px) {
     display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
     flex-direction: column;
     position: absolute;
@@ -85,8 +86,9 @@ export const Menu = styled.ul`
   div {
     display: flex;
     flex-direction: row;
+    width: 100%;
 
-    @media (min-width: 1000px) {
+    @media (max-width: 1000px) {
       flex-direction: column;
     }
   }
@@ -107,7 +109,7 @@ export const BtnContainer = styled.div`
   gap: 1rem;
   width: 10rem;
 
-  @media (min-width: 1000px) {
+  @media (max-width: 1000px) {
     flex-direction: column;
     gap: 0rem;
   }

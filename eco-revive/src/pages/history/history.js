@@ -1,11 +1,9 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom"; // Importe o componente Link aqui
 import Header from "./components/header/header";
-import Navbar from "../../components/navbar/navbar";
 import Schedule from "./components/schedule/schedule";
 import { Container, Content, Section } from "./style";
 import Follow from "../../pages/follow/follow";
-import NavBarInner from "../../components/navbarSimple/navbar";
+import InternalNavbar from "../../components/internalNavbar/navbar";
 
 const schedules = [
   {
@@ -30,13 +28,12 @@ const schedules = [
   },
 ];
 
-// Painel de controle | Rota "/painel"
 function ControlPanel() {
   const [openFollow, setOpenModalFollow] = useState(false);
 
   return (
     <Container>
-      <NavBarInner />
+      <InternalNavbar />
       <Follow
         isOpen={openFollow}
         closeModalFollow={() => setOpenModalFollow(!openFollow)}

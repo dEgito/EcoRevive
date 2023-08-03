@@ -1,16 +1,17 @@
 import Input from "../../components/input/index";
-import Navbar from "../../components/navbar/navbar";
 import TopGreenWave from "../../components/TopGreenWave";
 import ColaboratorSection from "../../components/colaboratorSection/colaboratorSection";
 import Copyright from "../../components/copyright/copyright";
 
 import { Container, Content, InfoBox, Section } from "./style";
 import Button from "../../components/button";
+import { BiChevronsRight } from "react-icons/bi";
+import DefaultNavbar from "../../components/defaultNavbar/navbar";
 
 function ContactUs() {
   return (
     <Container>
-      <Navbar />
+      <DefaultNavbar />
       <Section>
         <h2>Fale Conosco</h2>
         <p>Queremos ouvir suas perguntas e sugestões.</p>
@@ -25,7 +26,7 @@ function ContactUs() {
               <label for="message">Mensagem:</label>
               <textarea id="message" />
             </form>
-            <Button category="primary" type="submit">Enviar</Button>
+            <Button category="primary" type="submit">Enviar <BiChevronsRight size={20} /></Button>
           </div>
 
           <InfoBox>

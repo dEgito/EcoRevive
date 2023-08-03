@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { SubmitHandler, useForm } from "react-hook-form";
+import Navbar from "../../components/defaultNavbar/navbar";
 
 function Register() {
   const schema = yup.object().shape({
@@ -18,9 +19,7 @@ function Register() {
       .string()
       .email("Insira um e-mail válido!")
       .required("*Campo obrigatório!"),
-    password: yup
-      .string()
-      .required("*Campo obrigatório!"),
+    password: yup.string().required("*Campo obrigatório!"),
     passwordConfirmation: yup
       .string()
       .required("*Campo obrigatório!")
@@ -36,59 +35,61 @@ function Register() {
   });
 
   const onSubmit = (data) => {
-    console.log(data)
+    console.log(data);
 
     //Adicionar lógica de armazenamento dos dados fornecidos no cadastro
-  }
+  };
 
   return (
-    <Container>
-      <Content>
-        <img src={Logo} />
-        <h1>Cadastro</h1>
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <InputContent category={"secundary"}>
-            <label htmlFor="name">Nome completo:</label>
-            <input type="text" id="name" {...register("name")} />
-            <span>{errors.name?.message}</span>
-          </InputContent>
+    <>
+      <Navbar />
+      <Container>
+        <Content>
+          <h1>Cadastro</h1>
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <InputContent category={"secundary"}>
+              <label htmlFor="name">Nome completo:</label>
+              <input type="text" id="name" {...register("name")} />
+              <span>{errors.name?.message}</span>
+            </InputContent>
 
-          <InputContent category={"secundary"}>
-            <label htmlFor="email">E-mail:</label>
-            <input type="text" id="email" {...register("email")} />
-            <span>{errors.email?.message}</span>
-          </InputContent>
+            <InputContent category={"secundary"}>
+              <label htmlFor="email">E-mail:</label>
+              <input type="text" id="email" {...register("email")} />
+              <span>{errors.email?.message}</span>
+            </InputContent>
 
-          <InputContent category={"secundary"}>
-            <label htmlFor="password">Senha:</label>
-            <input type="password" id="password" {...register("password")} />
-            <span>{errors.password?.message}</span>
-          </InputContent>
+            <InputContent category={"secundary"}>
+              <label htmlFor="password">Senha:</label>
+              <input type="password" id="password" {...register("password")} />
+              <span>{errors.password?.message}</span>
+            </InputContent>
 
-          <InputContent category={"secundary"}>
-            <label htmlFor="passwordConfirmation">Confirmar senha:</label>
-            <input
-              type="password"
-              id="passwordConfirmation"
-              {...register("passwordConfirmation")}
-            />
-            <span>{errors.passwordConfirmation?.message}</span>
-          </InputContent>
+            <InputContent category={"secundary"}>
+              <label htmlFor="passwordConfirmation">Confirmar senha:</label>
+              <input
+                type="password"
+                id="passwordConfirmation"
+                {...register("passwordConfirmation")}
+              />
+              <span>{errors.passwordConfirmation?.message}</span>
+            </InputContent>
 
-          <Button category={"primary"} type={"submit"}>
-            Cadastrar
-          </Button>
-        </form>
+            <Button category={"primary"} type={"submit"}>
+              Cadastrar
+            </Button>
+          </form>
 
-        <ButtonBox>
-          <Link to={"/login"}>
-            <a href="#">Já possuo conta! Entrar</a>
-          </Link>
-        </ButtonBox>
-      </Content>
+          <ButtonBox>
+            <Link to={"/login"}>
+              <a href="#">Já possuo conta! Entrar</a>
+            </Link>
+          </ButtonBox>
+        </Content>
 
-      <img src={Logo} alt="Eco Revive" />
-    </Container>
+        <img src={Logo} alt="Eco Revive" />
+      </Container>
+    </>
   );
 }
 export default Register;

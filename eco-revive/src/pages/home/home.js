@@ -6,14 +6,14 @@ import {
   Question,
   Boxes,
 } from "./homeStyle";
-import NavBarInner from "../../components/navbarSimple/navbar";
 import BoxLinks from "./components/boxLinks/boxLinks";
 import { Link } from "react-router-dom";
+import InternalNavbar from "../../components/internalNavbar/navbar";
 
 function Home() {
   return (
     <Conteiner>
-      <NavBarInner />
+      <InternalNavbar />
 
       <Content>
         <Title>

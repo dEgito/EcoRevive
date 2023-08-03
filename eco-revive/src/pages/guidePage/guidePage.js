@@ -1,5 +1,4 @@
 import Button from "../../components/button/index";
-import Navbar from "../../components/navbar/navbar";
 import BottomWhiteWave from "../../components/bottomWhiteWave";
 import BottomBlueWave from "../../components/bottomBlueWave";
 import TopBlueWave from "../../components/TopBlueWave";
@@ -25,6 +24,7 @@ import {
   BiCheck,
   BiChevronsRight,
 } from "react-icons/bi";
+import DefaultNavbar from "../../components/defaultNavbar/navbar";
 
 const procedures = [
   {
@@ -71,7 +71,7 @@ const procedures = [
 function GuidePage() {
   return (
     <Container>
-      <Navbar />
+      <DefaultNavbar />
       <Banner wrap={"wrap-reverse"}>
         <div>
           <LogoImg src={Logo} alt="Eco Revive" />

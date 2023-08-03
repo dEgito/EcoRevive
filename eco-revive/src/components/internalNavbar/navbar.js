@@ -6,14 +6,14 @@ import {
   Menu,
   MenuItem,
   MenuLink,
-} from "./style";
+} from "./navbarStyle";
 import React, { useState } from "react";
 import Logo from "../../assets/Logo-nav.png";
 import { Link } from "react-router-dom";
 
 import { AiOutlineMenu } from "react-icons/ai";
 
-function Navbar() {
+function InternalNavbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -31,33 +31,30 @@ function Navbar() {
       <Menu isOpen={isOpen}>
         <div>
           <MenuItem>
-            <Link to={"/"} style={{ textDecoration: "none" }}>
+            <Link to={"/home"} style={{ textDecoration: "none" }}>
               <MenuLink>Home</MenuLink>
             </Link>
           </MenuItem>
           <MenuItem>
-            <Link to={"/sobre"} style={{ textDecoration: "none" }}>
-              <MenuLink>Sobre nós</MenuLink>
+            <Link to={"/locais"} style={{ textDecoration: "none" }}>
+              <MenuLink>Agendar</MenuLink>
             </Link>
           </MenuItem>
           <MenuItem>
-            <Link to={"/contato"} style={{ textDecoration: "none" }}>
-              <MenuLink>Contato</MenuLink>
+            <Link to={"/historico"} style={{ textDecoration: "none" }}>
+              <MenuLink>Histórico</MenuLink>
             </Link>
           </MenuItem>
           <MenuItem>
-            <Link to={"/duvidas"} style={{ textDecoration: "none" }}>
-              <MenuLink>FAQ</MenuLink>
+            <Link to={"/*"} style={{ textDecoration: "none" }}>
+              <MenuLink>Coleta</MenuLink>
             </Link>
           </MenuItem>
         </div>
 
         <BtnContainer>
-          <Link to={"/cadastro"} style={{ textDecoration: "none" }}>
-            <Button category="primary">Cadastrar</Button>
-          </Link>
           <Link to={"/login"} style={{ textDecoration: "none" }}>
-            <Button category="secundary">Entrar</Button>
+            <Button category="secundary">Sair</Button>
           </Link>
         </BtnContainer>
       </Menu>
@@ -65,4 +62,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default InternalNavbar;
