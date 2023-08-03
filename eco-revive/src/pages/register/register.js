@@ -13,7 +13,6 @@ function Register() {
     name: yup
       .string()
       .max(99, "Limite de caracteres atingido.")
-      .matches(/^[a-zA-Z0-9]+$/, "Não pode possuir caracteres especiais.")
       .required("*Campo obrigatório!"),
     email: yup
       .string()
