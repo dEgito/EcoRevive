@@ -7,7 +7,7 @@ import {
   Boxes,
 } from "./homeStyle";
 import NavBarInner from "../../components/navbarSimple/navbar";
-import BoxLinks from "../../components/boxLinks/boxLinks";
+import BoxLinks from "./components/boxLinks/boxLinks";
 import { Link } from "react-router-dom";
 
 function Home() {
@@ -17,7 +17,7 @@ function Home() {
 
       <Content>
         <Title>
-          Seja bem vindo, <strong>MARLENA</strong>!
+          Olá, <strong>MARLENA</strong>!
         </Title>
 
         <SectionLinks>

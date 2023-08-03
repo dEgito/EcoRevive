@@ -8,9 +8,7 @@ export const Container = styled.div`
   flex-wrap: wrap;
   padding: 1rem 7.5rem;
 
-  font-family: Montserrat, sans-serif;
-
-  background: #f4f4f4;
+  background: var(--gray-600);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
   @media (max-width: 768px) {
@@ -28,10 +26,10 @@ export const Container = styled.div`
 
   a {
     font-weight: 600;
-    color: #222222;
+    color: var(--black-500);
 
     &:hover {
-      color: #4eb969;
+      color: var(--green-500);
       font-weight: 800;
     }
   }
@@ -46,7 +44,7 @@ export const HamburgerIcon = styled.div`
     width: 16px;
     height: 16px;
     border-radius: 100%;
-    background-color: #000;
+    background-color: var(--black-900);
   }
 `;
 
@@ -65,7 +63,7 @@ export const Menu = styled.ul`
     position: absolute;
     top: 70px;
     right: 0.5rem;
-    background-color: #f4f4f4;
+    background-color: var(--gray-600);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     padding: 1rem;
 
@@ -95,7 +93,7 @@ export const MenuItem = styled.li`
 `;
 
 export const MenuLink = styled.a`
-  color: #fff;
+  color: var(--white);
   text-decoration: none;
 `;
 

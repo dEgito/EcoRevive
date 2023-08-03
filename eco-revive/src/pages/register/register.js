@@ -66,7 +66,7 @@ function Register() {
           </InputContent>
 
           <InputContent category={"secundary"}>
-            <label htmlFor="passwordConfirmation">Senha:</label>
+            <label htmlFor="passwordConfirmation">Confirmar senha:</label>
             <input
               type="password"
               id="passwordConfirmation"

@@ -5,10 +5,10 @@ export const Copy = styled.div`
   align-items: center;
   justify-content: center;
   padding: .5rem;
-  background-color: #222222;
+  background-color: var(--black-500);
 
   p, a {
-    color: #ffffff;
+    color: var(--white);
     margin: 0;
     padding: 0;
     font-size: .6rem;

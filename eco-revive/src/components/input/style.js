@@ -6,19 +6,19 @@ export const Content = styled.div`
   width: 100%;
   min-width: 250px;
   gap: 0.5rem;
-  color: #014538;
+  color: var(--green-700);
 
   label {
     font-size: 0.8rem;
     font-weight: 600;
 
     color: ${(props) => {
-      return props.category === "secundary" ? "#fff" : "#014538";
+      return props.category === "secundary" ? "var(--white)" : "var(--green-700)";
     }};
   }
 
   input {
-    border: 1px solid #4eb969;
+    border: 1px solid var(--green-500);
     min-height: 1.4rem;
     resize: none;
     padding: 0.2rem 1rem;
