@@ -61,7 +61,7 @@ function InternalNavbar() {
         </div>
 
         <BtnContainer>
-          <Link to={"/login"} style={{ textDecoration: "none" }}>
+          <Link to={"/"} style={{ textDecoration: "none" }}>
             <Button category="secundary">Sair</Button>
           </Link>
         </BtnContainer>

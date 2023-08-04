@@ -7,6 +7,7 @@ export const Container = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 1rem 7.5rem;
+  
 
   background: var(--gray-600);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -111,6 +112,7 @@ export const BtnContainer = styled.div`
   flex-direction: row;
   gap: 1rem;
   width: 10rem;
+  
 
   @media (max-width: 1000px) {
     flex-direction: column;

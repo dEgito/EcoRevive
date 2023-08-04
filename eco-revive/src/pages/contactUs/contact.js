@@ -29,9 +29,10 @@ function ContactUs() {
 
               <label for="message">Mensagem:</label>
               <textarea id="message" />
+
             </form>
             <Button category="primary" type="submit">
-              Enviar <BiChevronsRight size={20} />
+             Enviar<BiChevronsRight size={20} />
             </Button>
           </div>
 
