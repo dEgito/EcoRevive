@@ -12,7 +12,7 @@ import Button from "../../components/button/index";
 import DefaultNavbar from "../../components/defaultNavbar/navbar";
 
 // Styles
-import { ButtonBox, Container, Content } from "./style";
+import { ButtonBox, Container, Content, InputContent } from "./style";
 
 // Assets
 import Logo from "../../assets/Logo320.png";
