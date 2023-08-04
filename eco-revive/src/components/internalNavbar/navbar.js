@@ -1,6 +1,6 @@
 // Libs
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 // Components
 import Button from "../button";
@@ -22,10 +22,17 @@ import { AiOutlineMenu } from "react-icons/ai";
 
 function InternalNavbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const history = useNavigate()
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  function handleLogout(){
+    localStorage.removeItem('token')
+    history('/')
+  }
+
   return (
     <Container>
       <Link to={"/"} style={{ textDecoration: "none" }}>
@@ -61,9 +68,9 @@ function InternalNavbar() {
         </div>
 
         <BtnContainer>
-          <Link to={"/"} style={{ textDecoration: "none" }}>
-            <Button category="secundary">Sair</Button>
-          </Link>
+          
+          <Button category="secundary" onClick={handleLogout()}>Sair</Button>
+          
         </BtnContainer>
       </Menu>
     </Container>

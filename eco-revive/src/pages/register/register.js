@@ -4,6 +4,12 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 
+//Hooks useStates
+import { useState } from "react";
+
+//api
+import { api } from "../../Services/Api";
+
 // Components
 import Button from "../../components/button/index";
 import Navbar from "../../components/defaultNavbar/navbar";
@@ -15,6 +21,10 @@ import { ButtonBox, Container, Content, InputContent } from "./style";
 import Logo from "../../assets/Logo320.png";
 
 function Register() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
   const schema = yup.object().shape({
     name: yup
       .string()
@@ -33,17 +43,30 @@ function Register() {
 
   const {
     register,
-    handleSubmit,
     formState: { errors },
-  } = useForm({
-    resolver: yupResolver(schema),
-  });
+  } = useForm({ resolver: yupResolver(schema) });
 
-  const onSubmit = (data) => {
-    console.log(data);
+  function handleSubmit(e) {
+    e.preventDefault();
+    api
+      .post("/users", {
+        user_name: name,
+        user_email: email,
+        user_password: password,
+      })
+      .then((response) => {
+        if (response.data.message.errors) {
+          return alert("Falha ao cadastrar Usuario");
+        }
+        return alert("Usuario Cadastrado com Sucesso");
+      })
+      .catch((error) => {
+        console.log(error);
+        return alert("Usuario Não Cadastrado");
+      });
 
     //Adicionar lógica de armazenamento dos dados fornecidos no cadastro
-  };
+  }
 
   return (
     <>
@@ -51,33 +74,41 @@ function Register() {
       <Container>
         <Content>
           <h1>Cadastro</h1>
-          <form onSubmit={handleSubmit(onSubmit)}>
+          <form onSubmit={handleSubmit}>
             <InputContent category={"secundary"}>
               <label htmlFor="name">Nome completo:</label>
-              <input type="text" id="name" {...register("name")} />
+              <input
+                type="text"
+                id="name"
+                name="name"
+                {...register("name")}
+                onChange={(e) => setName(e.target.value)}
+              />
               <span>{errors.name?.message}</span>
             </InputContent>
 
             <InputContent category={"secundary"}>
               <label htmlFor="email">E-mail:</label>
-              <input type="text" id="email" {...register("email")} />
+              <input
+                type="text"
+                id="email"
+                name="email"
+                {...register("email")}
+                onChange={(e) => setEmail(e.target.value)}
+              />
               <span>{errors.email?.message}</span>
             </InputContent>
 
             <InputContent category={"secundary"}>
               <label htmlFor="password">Senha:</label>
-              <input type="password" id="password" {...register("password")} />
-              <span>{errors.password?.message}</span>
-            </InputContent>
-
-            <InputContent category={"secundary"}>
-              <label htmlFor="passwordConfirmation">Confirmar senha:</label>
               <input
                 type="password"
-                id="passwordConfirmation"
-                {...register("passwordConfirmation")}
+                id="password"
+                name="password"
+                {...register("password")}
+                onChange={(e) => setPassword(e.target.value)}
               />
-              <span>{errors.passwordConfirmation?.message}</span>
+              <span>{errors.password?.message}</span>
             </InputContent>
 
             <Button category={"primary"} type={"submit"}>
