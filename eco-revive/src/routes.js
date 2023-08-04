@@ -10,6 +10,7 @@ import History from "./pages/history/history";
 import Home from "./pages/home/home";
 import Login from "./pages/login/login";
 import Register from "./pages/register/register";
+import RegisterCompany from "./pages/registerCompany/company";
 
 export const routes = () => {
   return (
@@ -24,6 +25,7 @@ export const routes = () => {
         <Route path="/home" element={<Home />} />
         <Route path="/locais" element={<CollectionLocations />} />
         <Route path="/historico" element={<History />} />
+        <Route path="/empresas" element={<RegisterCompany />} />
         <Route path="/*" element={<Error />} />
       </Routes>
     </BrowserRouter>
