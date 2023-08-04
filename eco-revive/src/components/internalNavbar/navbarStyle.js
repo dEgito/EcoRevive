@@ -6,7 +6,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 1rem 7.5rem;
+  padding: 0.5rem 7.5rem;
 
   background: var(--gray-600);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -20,7 +20,7 @@ export const Container = styled.div`
   }
 
   @media (max-width: 768px) {
-    padding: 1rem 2.5rem;
+    padding: 0.5rem 2.5rem;
   }
   img {
     width: 100%;

@@ -21,9 +21,7 @@ function Home() {
       <InternalNavbar />
 
       <Content>
-        <Title>
-          Olá, <strong>MARLENA</strong>!
-        </Title>
+        <Title>Olá, seja bem-vindo(a)!</Title>
 
         <SectionLinks>
           <Question> O que você deseja fazer hoje?</Question>
