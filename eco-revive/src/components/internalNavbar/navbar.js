@@ -22,15 +22,16 @@ import { AiOutlineMenu } from "react-icons/ai";
 
 function InternalNavbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const history = useNavigate()
+  const history = useNavigate();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  function handleLogout(){
-    localStorage.removeItem('token')
-    history('/')
+  function handleLogout() {
+    // DEU CONFLITO NOS MODAIS =>
+    // localStorage.removeItem("token");
+    // history("/");
   }
 
   return (
@@ -68,9 +69,9 @@ function InternalNavbar() {
         </div>
 
         <BtnContainer>
-          
-          <Button category="secundary" onClick={handleLogout()}>Sair</Button>
-          
+          <Button category="secundary" onClick={handleLogout()}>
+            Sair
+          </Button>
         </BtnContainer>
       </Menu>
     </Container>

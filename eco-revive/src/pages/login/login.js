@@ -9,7 +9,6 @@ import { api } from "../../Services/Api";
 
 // Components
 import Button from "../../components/button/index";
-import Input from "../../components/input/index";
 import DefaultNavbar from "../../components/defaultNavbar/navbar";
 
 // Styles
@@ -17,28 +16,26 @@ import { ButtonBox, Container, Content } from "./style";
 
 // Assets
 import Logo from "../../assets/Logo320.png";
-import { set } from "react-hook-form";
-
 
 function Login() {
-
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState("")
-  const history = useNavigate()
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const history = useNavigate();
 
   function handleSubmit(e) {
-    e.preventDefault()
-    api.post('/login', {
-      'user_email': email,
-      'user_password': password
-    
-    }).then((response)=>{
-      localStorage.setItem('token', response.data.token)
-      history("/home")
-
-    }).catch((error)=>{
-      return alert("Erro inesperado")
-    })
+    e.preventDefault();
+    api
+      .post("/login", {
+        user_email: email,
+        user_password: password,
+      })
+      .then((response) => {
+        localStorage.setItem("token", response.data.token);
+        history("/home");
+      })
+      .catch((error) => {
+        return alert("Senha incorreta!");
+      });
   }
 
   return (
@@ -50,7 +47,7 @@ function Login() {
         <Content>
           <h1>Login</h1>
           <form onSubmit={handleSubmit}>
-            <input              
+            <input
               type="text"
               label="Email"
               name="email"
@@ -60,14 +57,12 @@ function Login() {
               type="password"
               label="Senha"
               name="password"
-              onChange = {(e) => setPassword(e.target.value)}
+              onChange={(e) => setPassword(e.target.value)}
             />
 
-            
             <Button category={"primary"} type={"submit"}>
               Entrar
             </Button>
-            
           </form>
 
           <ButtonBox>
