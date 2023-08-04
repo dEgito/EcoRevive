@@ -2,14 +2,11 @@ import styled from "styled-components";
 
 export const Container = styled.body`
   font-family: Montserrat, sans-serif;
-  color: #002454;
+  color: var(--blue-700);
   margin: 0;
 
   h2 {
     font-size: 1.5rem;
-    letter-spacing: 0.14rem;
-    text-transform: uppercase;
-
     @media (max-width: 480px) {
       font-size: 1.1rem;
     }
@@ -17,16 +14,13 @@ export const Container = styled.body`
 
   h3 {
     font-size: 1rem;
-    letter-spacing: 0.14rem;
-    text-transform: uppercase;
-
     @media (max-width: 480px) {
       font-size: .9rem;
     }
   }
 
   //Não mexer, está afetando o copyright
-  P {
+  p {
     margin: 0;
     @media (max-width: 480px) {
       font-size: 0.8rem;
@@ -46,7 +40,7 @@ export const Banner = styled.section`
   justify-content: center;
   gap: 4rem;
   padding: 0 2rem;
-  background-color: #f8f8f8;
+  background-color: var(--gray-500);
 
   flex-wrap: ${(props) => {
     switch (props.wrap) {
@@ -64,7 +58,6 @@ export const Banner = styled.section`
   }
 
   p {
-    font-family: Montserrat, sans-serif;
     font-size: 1rem;
     letter-spacing: 0.09rem;
     width: 100%;
@@ -84,7 +77,6 @@ export const Banner = styled.section`
       display: flex;
       flex-direction: column;
       align-items: center;
-      /* text-align: start; */
     }
 
     p {
@@ -129,22 +121,22 @@ export const Section = styled.section`
   color: ${(props) => {
     switch (props.background) {
       case "blue":
-        return "#ffffff";
+        return "var(--white)";
       default:
-        return "#002454";
+        return "var(--blue-700)";
     }
   }};
 
   background-color: ${(props) => {
     switch (props.background) {
       case "blue":
-        return "#004BB0";
+        return "var(--blue-500)";
 
       case "green":
-        return "#65D781";
+        return "var(--green-400)";
 
       default:
-        return "#ffffff";
+        return "var(--white)";
     }
   }};
 
@@ -172,7 +164,7 @@ export const Section = styled.section`
   }
 
   span {
-    color: #004bb0;
+    color: var(--blue-500);
     font-weight: 700;
   }
 
@@ -181,7 +173,6 @@ export const Section = styled.section`
       display: flex;
       flex-direction: column;
       align-items: center;
-      /* text-align: start; */
     }
   }
 `;

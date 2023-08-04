@@ -1,17 +1,27 @@
+// Libs
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+
+// Components
 import Button from "../button";
+
+// Assets
+import Logo from "../../assets/Logo-nav.png";
+
+// Style
 import {
-  Container,
   BtnContainer,
+  Container,
   HamburgerIcon,
   Menu,
   MenuItem,
   MenuLink,
 } from "./style";
-import React, { useState } from "react";
-import Logo from "../../assets/Logo-nav.png";
-import { Link } from "react-router-dom";
 
-function Navbar() {
+// Icons
+import { AiOutlineMenu } from "react-icons/ai";
+
+function DefaultNavbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -20,11 +30,12 @@ function Navbar() {
   return (
     <Container>
       <Link to={"/"} style={{ textDecoration: "none" }}>
-      <img src={Logo} />
+        <img src={Logo} />
       </Link>
-      <HamburgerIcon onClick={toggleMenu}>
-        <i className={`fa ${isOpen ? "fa-times" : "fa-bars"}`} />
-      </HamburgerIcon>
+      <AiOutlineMenu
+        onClick={toggleMenu}
+        className={`fa ${isOpen ? "fa-times" : "fa-bars"}`}
+      />
 
       <Menu isOpen={isOpen}>
         <div>
@@ -35,7 +46,7 @@ function Navbar() {
           </MenuItem>
           <MenuItem>
             <Link to={"/sobre"} style={{ textDecoration: "none" }}>
-              <MenuLink>Sobre nós</MenuLink>
+              <MenuLink>Sobre</MenuLink>
             </Link>
           </MenuItem>
           <MenuItem>
@@ -63,4 +74,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default DefaultNavbar;

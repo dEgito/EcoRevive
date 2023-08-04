@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Conteiner = styled.div`
-  font-family: Montserrat, sans-serif;
   top: 0;
   width: 100%;
   height: 100%;
@@ -17,7 +16,7 @@ export const Modal = styled.div`
   width: 100%;
   max-width: 24rem;
   height: 18rem;
-  background-color: #f3f3f3;
+  background-color: var(--gray-800);
   border-radius: 0.46rem;
 
   header {
@@ -53,7 +52,7 @@ export const Exit = styled.div`
   svg {
     width: 1.125rem;
     height: 1.125rem;
-    color: #1f1f1f;
+    color: var(--black-700);
   }
 
   &:hover {
@@ -72,17 +71,16 @@ export const ConteinerButton = styled.div`
 export const BtnExit = styled.button`
   width: 5.1rem;
   height: 2.2rem;
+  border: 1.058px solid var(--black-700);
   border-radius: 4.98rem;
-  border: 1.058px solid #1f1f1f;
   background-color: transparent;
-  font-family: Montserrat, sans-serif;
   font-size: 0.7rem;
   font-weight: 600;
   text-transform: uppercase;
   cursor: pointer;
 
   &:hover {
-    background-color: #ebebeb;
+    background-color: var(--gray-300);
     transition: 0.2s;
   }
 `;
@@ -90,18 +88,18 @@ export const BtnExit = styled.button`
 export const BtnSubmit = styled.button`
   width: 5.1rem;
   height: 2.2rem;
-  border-radius: 4.98rem;
   border: none;
-  background: #4eb969;
-  font-family: Montserrat, sans-serif;
+  background: var(--green-500);
+  border-radius: 4.98rem;
+  border: 1.058px solid var(--black-700);
+  background: var(--green-500);
   font-size: 0.7rem;
   font-weight: 600;
-  color: #fff;
+  color: var(--white);
   text-transform: uppercase;
-  cursor: pointer;
 
   &:hover {
-    background-color: #46af60;
+    background-color: var(--green-500);
     transition: 0.5s;
   }
 `;

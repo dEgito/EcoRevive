@@ -1,13 +1,12 @@
 import { styled } from "styled-components";
 
-
 export const InfoBox = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 2rem;
 
-  color: #ffffff;
+  color: var(--white);
 
   p {
     font-size: .9rem;

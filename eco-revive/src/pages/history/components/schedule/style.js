@@ -12,15 +12,15 @@ export const Item = styled.div`
 
   padding: 0.5rem 1rem;
   border-radius: 8px;
-  border: 1px solid #4eb969;
-  background-color: #ffffff;
+  border: 1px solid var(--green-500);
+  background-color: var(--white);
 
   &:hover button {
     display: block;
   }
 
   &:hover {
-    border: 2px solid #4eb969;
+    border: 2px solid var(--green-500);
   }
 
   div {
@@ -32,18 +32,18 @@ export const Item = styled.div`
   button {
     display: none;
 
-    background-color: #4eb969;
-    color: #ffffff;
-    border: 1px solid #4eb969;
+    background-color: var(--green-500);
+    color: var(--white);
+    border: 1px solid var(--green-500);
     border-radius: 7rem;
     padding: 0.4rem 1.5rem;
     font-weight: 600;
 
     &:hover {
       font-weight: 600;
-      color: #4eb969;
-      border: 1px solid #4eb969;
-      background: rgba(78, 185, 105, 0.12);
+      color: var(--green-500);
+      border: 1px solid var(--green-500);
+      background: var(--green-300);
     }
   }
 `;

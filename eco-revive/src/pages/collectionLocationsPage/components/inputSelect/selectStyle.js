@@ -11,11 +11,10 @@ export const Conteiner = styled.div`
     width: 19.25rem;
     height: 2.62238rem;
     margin: auto;
-    color: #1f1f1f;
-    font-family: Montserrat;
+    color: var(--black-700);
     font-size: 1rem;
     font-weight: 500;
-    border-color: #4eb969;
+    border-color: var(--green-500);
     border-radius: 0.18731rem;
 
     svg {

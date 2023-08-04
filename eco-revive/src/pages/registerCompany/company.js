@@ -14,7 +14,7 @@ import { ButtonBox, Container, Content, InputContent } from "./style";
 // Assets
 import Logo from "../../assets/Logo320.png";
 
-function Register() {
+function RegisterCompany() {
   const schema = yup.object().shape({
     name: yup
       .string()
@@ -97,4 +97,4 @@ function Register() {
     </>
   );
 }
-export default Register;
+export default RegisterCompany;

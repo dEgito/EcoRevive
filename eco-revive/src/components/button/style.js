@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const Btn = styled.button`
-  border-radius: 6.25rem;
+  border-radius: 4.98rem;
   width: 100%;
   max-width: ${(props) => {
-    return props.category === "filter" ? "11.4rem" : "9.5rem";
+    return props.category === "filter" ? "11.4rem" : "10rem";
   }};
 
   display: flex;
@@ -15,7 +15,6 @@ export const Btn = styled.button`
     return props.category === "filter" ? "1rem 0" : "0.5rem 1.5rem";
   }};
 
-  font-family: Montserrat, sans-serif;
   font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -28,57 +27,57 @@ export const Btn = styled.button`
   border: ${(props) => {
     switch (props.category) {
       case "primary":
-        return "2px solid #4eb969";
+        return "2px solid var(--green-500)";
 
       case "secundary":
-        return "2px solid #4eb969";
+        return "2px solid var(--green-500)";
 
       case "accent":
-        return "2px solid #004BB0";
+        return "2px solid var(--blue-500)";
 
       case "filter":
-        return "1px solid #000000";
+        return "1px solid var(--black-900)";
 
       default:
-        return "2px solid #4eb969";
+        return "2px solid var(--green-500)";
     }
   }};
 
   background-color: ${(props) => {
     switch (props.category) {
       case "primary":
-        return "#4eb969";
+        return "var(--green-500)";
 
       case "secundary":
-        return "#ffffff";
+        return "var(--white)";
 
       case "accent":
-        return "#004BB0";
+        return "var(--blue-500)";
 
       case "filter":
         return "none";
 
       default:
-        return "#4eb969";
+        return "var(--green-500)";
     }
   }};
 
   color: ${(props) => {
     switch (props.category) {
       case "primary":
-        return "#ffffff";
+        return "var(--white)";
 
       case "secundary":
-        return "#4eb969";
+        return "var(--green-500)";
 
       case "accent":
-        return "#ffffff";
+        return "var(--white)";
 
       case "filter":
-        return "#000000";
+        return "var(--black-900)";
 
       default:
-        return "#ffffff";
+        return "var(--white)";
     }
   }};
 
@@ -86,48 +85,34 @@ export const Btn = styled.button`
     transition: all ease-in-out 0.5s;
     border: ${(props) => {
       switch (props.category) {
-        case "2px solid primary":
-          return "#0E3973";
-        case "2px solid secundary":
-          return "2px solid #0E3973";
+        case "primary":
+          return "2px solid var(--blue-600)";
+        case "secundary":
+          return "2px solid var(--blue-600)";
         case "accent":
-          return "2px solid #004BB0";
+          return "2px solid var(--blue-500)";
         case "filter":
-          return "1px solid #4eb969 ";
+          return "1px solid var(--green-500) ";
         default:
-          return "2px solid #4EB969";
+          return "2px solid var(--green-500)";
       }
     }};
 
     background-color: ${(props) => {
       switch (props.category) {
-        case "primary":
-          return "#0E3973";
-        case "secundary":
-          return "#0E3973";
-        case "accent":
-          return "#0E3973";
-        case "filter":
-          return "none";
         case "filter":
           return "none";
         default:
-          return "#4EB969";
+          return "var(--blue-700)";
       }
     }};
 
     color: ${(props) => {
       switch (props.category) {
-        case "primary":
-          return "#f2f2f2";
-        case "secundary":
-          return "#f2f2f2";
-        case "accent":
-          return "#f2f2f2";
         case "filter":
-          return "#4eb969";
+          return "var(--green-500)";
         default:
-          return "#f2f2f2";
+          return "var(--white)";
       }
     }};
   }

@@ -1,11 +1,16 @@
+// Libs
 import { useState } from "react";
-import { Container, Map, ConteinerMain, Cont } from "./style";
-import NavBarInner from "../../components/navbarSimple/navbar";
-import FiltersModal from "./components/filter/filter";
+
+// Components
 import Button from "../../components/button/index";
-import ListLocations from "./components/listCompanies/listCompanies";
 import Copyright from "../../components/copyright/copyright";
 import DisposalSchedule from "../disposalSchedule";
+import FiltersModal from "./components/filter/filter";
+import InternalNavbar from "../../components/internalNavbar/navbar";
+import ListLocations from "./components/listCompanies/listCompanies";
+
+// Style
+import { Container, ConteinerMain, Cont, Map } from "./style";
 
 const companies = [
   {
@@ -59,7 +64,7 @@ function ColletionLocations() {
         isOpen={openSchedule}
         closeModalSchedule={() => setOpenModalSchedule(!openSchedule)}
       />
-      <NavBarInner />
+      <InternalNavbar />
 
       <Cont>
         <Button category="filter" openModalFilter={() => setOpenModal(true)}>

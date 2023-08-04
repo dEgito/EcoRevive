@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Conteiner = styled.div`
   height: 100vh;
   margin: 0;
-  font-family: Monteserrat, sans-serif;
 `;
 
 export const Content = styled.div`
@@ -24,7 +23,7 @@ export const Title = styled.p`
   margin-bottom: 4rem;
 
   strong {
-    color: #004bb0;
+    color: var(--blue-500);
   }
 
   @media (max-width: 470px) {
@@ -55,7 +54,7 @@ export const SectionLinks = styled.div`
 `;
 
 export const Question = styled.div`
-  color: #1f1f1f;
+  color: var(--black-700);
   /* text-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25); */
   font-size: 2rem;
   font-weight: 500;
