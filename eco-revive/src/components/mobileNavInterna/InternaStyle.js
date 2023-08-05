@@ -43,3 +43,22 @@ export const BtnContainer = styled.div`
   gap: 1rem;
   flex-direction: column;
 `;
+export const ButtonExit = styled.button`
+  width: 100%;
+  max-width: 10rem;
+  padding: 0.5rem 1.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 2px solid var(--green-500);
+  background-color: var(--white);
+  color: var(--green-500);
+  border-radius: 4.98rem;
+
+  &:hover {
+    transition: all ease-in-out 0.5s;
+    border: 2px solid var(--blue-600);
+    background-color: var(--blue-700);
+    color: var(--white);
+  }
+`;

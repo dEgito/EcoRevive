@@ -7,7 +7,7 @@ import BottomWhiteWave from "../../components/bottomWhiteWave";
 import Button from "../../components/button/index";
 import ColaboratorSection from "../../components/colaboratorSection/colaboratorSection";
 import Copyright from "../../components/copyright/copyright";
-import DefaultNavbar from "../../components/defaultNavbar/navbar";
+import InternalNavbar from "../../components/internalNavbar/navbar";
 import ProcedureBox from "./components/ProcedureBox/procedureBox";
 import TopBlueWave from "../../components/TopBlueWave";
 import TopGreenWave from "../../components/TopGreenWave";
@@ -78,7 +78,7 @@ const procedures = [
 function GuidePage() {
   return (
     <Container>
-      <DefaultNavbar />
+      <InternalNavbar />
       <Banner wrap={"wrap-reverse"}>
         <div>
           <LogoImg src={Logo} alt="Eco Revive" />
