@@ -26,12 +26,12 @@ function Register() {
   const [password, setPassword] = useState("");
   const [phone, setPhone] = useState("");
   const [addressCep, setAddressCep] = useState("");
-  const [userAddressRoad, setUserAddressRoad] = useState("")
-  const [userAddressNumber, setUserAddressNumber] = useState("")
-  const [userAddressDiscrict, setUserAddressDiscrict] = useState("")
-  const [userAddressCity, setUserAddressCity] = useState("")
-  const [userAddressState, setUserAddressState] = useState("")
-  const [userAddressComplement, setUserAddressComplement] = useState("")
+  const [userAddressRoad, setUserAddressRoad] = useState("");
+  const [userAddressNumber, setUserAddressNumber] = useState("");
+  const [userAddressDiscrict, setUserAddressDiscrict] = useState("");
+  const [userAddressCity, setUserAddressCity] = useState("");
+  const [userAddressState, setUserAddressState] = useState("");
+  const [userAddressComplement, setUserAddressComplement] = useState("");
 
   const schema = yup.object().shape({
     name: yup
@@ -254,6 +254,12 @@ function Register() {
               </Button>
             </ButtonBox>
           </form>
+
+          <ButtonBox>
+            <Link to={"/empresas"}>
+              <a href="#">Cadastrar Empresa</a>
+            </Link>
+          </ButtonBox>
 
           <ButtonBox>
             <Link to={"/login"}>
