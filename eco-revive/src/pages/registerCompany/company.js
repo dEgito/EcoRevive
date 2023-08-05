@@ -9,7 +9,7 @@ import Button from "../../components/button/index";
 import Navbar from "../../components/defaultNavbar/navbar";
 
 // Styles
-import { ButtonBox, Container, Content, InputContent } from "./style";
+import { Div, ButtonBox, Container, Content, InputContent } from "./style";
 
 // Assets
 import Logo from "../../assets/Logo320.png";
@@ -53,7 +53,7 @@ function RegisterCompany() {
           <h1>Cadastro</h1>
           <form onSubmit={handleSubmit(onSubmit)}>
             <InputContent category={"secundary"}>
-              <label htmlFor="name">Nome completo:</label>
+              <label htmlFor="name">Nome:</label>
               <input type="text" id="name" {...register("name")} />
               <span>{errors.name?.message}</span>
             </InputContent>
@@ -80,6 +80,102 @@ function RegisterCompany() {
               <span>{errors.passwordConfirmation?.message}</span>
             </InputContent>
 
+            <InputContent category={"secundary"}>
+              <label htmlFor="name">Telefone:</label>
+              <input type="text" id="name" {...register("name")} />
+              <span>{errors.name?.message}</span>
+            </InputContent>
+
+            <InputContent category={"secundary"}>
+              <label htmlFor="name">Tipo de empresa:</label>
+              <input type="text" id="name" {...register("name")} />
+              <span>{errors.name?.message}</span>
+            </InputContent>
+
+            <InputContent category={"secundary"}>
+              <label htmlFor="password">Cep:</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                {...register("password")}
+              />
+              <span>{errors.password?.message}</span>
+            </InputContent>
+
+            <InputContent category={"secundary"}>
+              <label htmlFor="password">Rua/ Avenida:</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                {...register("password")}
+              />
+              <span>{errors.password?.message}</span>
+            </InputContent>
+
+            <Div size={"small"}>
+              <InputContent category={"secundary"}>
+                <label htmlFor="password">Número:</label>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  {...register("password")}
+
+                />
+                <span>{errors.password?.message}</span>
+              </InputContent>
+
+              <InputContent category={"secundary"}>
+                <label htmlFor="password">Complemento:</label>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  {...register("password")}
+
+                />
+                <span>{errors.password?.message}</span>
+              </InputContent>
+            </Div>
+
+            <InputContent category={"secundary"}>
+              <label htmlFor="password">Bairro:</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                {...register("password")}
+              />
+              <span>{errors.password?.message}</span>
+            </InputContent>
+
+            <Div size={"small"}>
+              <InputContent category={"secundary"}>
+                <label htmlFor="password">Cidade:</label>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  {...register("password")}
+
+                />
+                <span>{errors.password?.message}</span>
+              </InputContent>
+
+              <InputContent category={"secundary"}>
+                <label htmlFor="password">Estado:</label>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  {...register("password")}
+
+                />
+                <span>{errors.password?.message}</span>
+              </InputContent>
+            </Div>
             <Button category={"primary"} type={"submit"}>
               Cadastrar
             </Button>

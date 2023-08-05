@@ -112,6 +112,16 @@ function Register() {
             </InputContent>
 
             <InputContent category={"secundary"}>
+              <label htmlFor="passwordConfirmation">Confirmar senha:</label>
+              <input
+                type="password"
+                id="passwordConfirmation"
+                {...register("passwordConfirmation")}
+              />
+              <span>{errors.passwordConfirmation?.message}</span>
+            </InputContent>
+
+            <InputContent category={"secundary"}>
               <label htmlFor="password">Telefone:</label>
               <input
                 type="password"
