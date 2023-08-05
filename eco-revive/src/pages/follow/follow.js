@@ -2,15 +2,9 @@
 import Input from "../../components/input";
 
 // Style
-import {
-  Container,
-  Card,
-  ContainerButton,
-  BtnExit,
-  BtnSubmit,
-} from "./style";
+import { Container, Card, ContainerButton, BtnExit, BtnSubmit } from "./style";
 
-function Follow ({ isOpen, closeModalFollow }) {
+function Follow({ isOpen, closeModalFollow }) {
   if (isOpen) {
     return (
       <Container>
@@ -20,7 +14,6 @@ function Follow ({ isOpen, closeModalFollow }) {
           <form>
             <div>
               <Input type="text" item="item" label="Item:" />
-              <Input type="text" item="tipo" label="Tipo:" />
             </div>
             <div>
               <Input type="text" item="Unidade" label="Unidade:" />
@@ -33,7 +26,7 @@ function Follow ({ isOpen, closeModalFollow }) {
               <Input type="text" item="status" label="Status:" />
             </div>
             <ContainerButton>
-            <BtnExit onClick={closeModalFollow}>cancelar</BtnExit>
+              <BtnExit onClick={closeModalFollow}>cancelar</BtnExit>
               <BtnSubmit type="submit" onClick={closeModalFollow}>
                 {/* onclick close provisório */}
                 Salvar
@@ -47,4 +40,4 @@ function Follow ({ isOpen, closeModalFollow }) {
     return null;
   }
 }
-export default Follow ;
+export default Follow;

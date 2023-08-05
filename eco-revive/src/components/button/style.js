@@ -13,7 +13,6 @@ export const Btn = styled.button`
   font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
-  font-weight: 700;
 
   cursor: pointer;
 

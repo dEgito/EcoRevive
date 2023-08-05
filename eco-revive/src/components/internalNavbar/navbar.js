@@ -2,9 +2,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-// Components
-import Button from "../button";
-
 // Assets
 import Logo from "../../assets/Logo-nav.png";
 
@@ -15,6 +12,7 @@ import {
   Menu,
   MenuItem,
   MenuLink,
+  ButtonExit,
 } from "./navbarStyle";
 
 // Icons
@@ -29,9 +27,8 @@ function InternalNavbar() {
   };
 
   function handleLogout() {
-    // DEU CONFLITO NOS MODAIS =>
-    // localStorage.removeItem("token");
-    // history("/");
+    localStorage.removeItem("token");
+    history("/");
   }
 
   return (
@@ -69,9 +66,7 @@ function InternalNavbar() {
         </div>
 
         <BtnContainer>
-          <Button category="secundary" onClick={handleLogout()}>
-            Sair
-          </Button>
+          <ButtonExit onClick={() => handleLogout()}>Sair</ButtonExit>
         </BtnContainer>
       </Menu>
     </Container>
