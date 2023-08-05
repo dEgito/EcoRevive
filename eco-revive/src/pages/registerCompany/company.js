@@ -122,7 +122,6 @@ function RegisterCompany() {
                   id="password"
                   name="password"
                   {...register("password")}
-
                 />
                 <span>{errors.password?.message}</span>
               </InputContent>
@@ -134,7 +133,6 @@ function RegisterCompany() {
                   id="password"
                   name="password"
                   {...register("password")}
-
                 />
                 <span>{errors.password?.message}</span>
               </InputContent>
@@ -159,7 +157,6 @@ function RegisterCompany() {
                   id="password"
                   name="password"
                   {...register("password")}
-
                 />
                 <span>{errors.password?.message}</span>
               </InputContent>
@@ -171,14 +168,15 @@ function RegisterCompany() {
                   id="password"
                   name="password"
                   {...register("password")}
-
                 />
                 <span>{errors.password?.message}</span>
               </InputContent>
             </Div>
-            <Button category={"primary"} type={"submit"}>
-              Cadastrar
-            </Button>
+            <ButtonBox>
+              <Button category={"primary"} type={"submit"}>
+                Cadastrar
+              </Button>
+            </ButtonBox>
           </form>
 
           <ButtonBox>

@@ -42,7 +42,6 @@ export const Content = styled.div`
     gap: 1rem;
     padding: 0 1rem;
     margin-bottom: 2rem;
-
     overflow-y: scroll;
 
     &::-webkit-scrollbar-track {
@@ -131,8 +130,7 @@ export const ButtonBox = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  padding: 2rem 0;
+  padding: 1rem 0 0 0;
 
   a {
     color: var(--white);

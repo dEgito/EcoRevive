@@ -39,6 +39,15 @@ function Register() {
       .string()
       .required("*Campo obrigatório!")
       .oneOf([yup.ref("password")], "Senhas não correspondentes!"),
+
+    phone: yup.string().max(11),
+    addressCep: yup.string().max(255),
+    userAddressRoad: yup.string().max(255),
+    userAddressNumber: yup.string().max(255),
+    userAddressDiscrict: yup.string().max(255),
+    userAddressCity: yup.string().max(255),
+    userAddressState: yup.string().max(255),
+    userAddressComplement: yup.string().max(255),
   });
 
   const {
@@ -122,109 +131,114 @@ function Register() {
             </InputContent>
 
             <InputContent category={"secundary"}>
-              <label htmlFor="password">Telefone:</label>
+              <label htmlFor="phone">Telefone:</label>
               <input
-                type="password"
-                id="password"
-                name="password"
-                {...register("password")}
+                type="text"
+                id="phone"
+                name="phone"
+                {...register("phone")}
                 onChange={(e) => setPassword(e.target.value)}
               />
-              <span>{errors.password?.message}</span>
+              <span>{errors.phone?.message}</span>
             </InputContent>
 
             <InputContent category={"secundary"}>
-              <label htmlFor="password">Cep:</label>
+              <label htmlFor="addressCep">Cep:</label>
               <input
-                type="password"
-                id="password"
-                name="password"
-                {...register("password")}
+                type="text"
+                id="addressCep"
+                name="addressCep"
+                {...register("addressCep")}
                 onChange={(e) => setPassword(e.target.value)}
               />
-              <span>{errors.password?.message}</span>
+              <span>{errors.addressCep?.message}</span>
             </InputContent>
 
             <InputContent category={"secundary"}>
-              <label htmlFor="password">Rua/ Avenida:</label>
+              <label htmlFor="userAddressRoad">Rua/ Avenida:</label>
               <input
-                type="password"
-                id="password"
-                name="password"
-                {...register("password")}
+                type="text"
+                id="userAddressRoad"
+                name="userAddressRoad"
+                {...register("userAddressRoad")}
                 onChange={(e) => setPassword(e.target.value)}
               />
-              <span>{errors.password?.message}</span>
+              <span>{errors.userAddressRoad?.message}</span>
             </InputContent>
 
             <Div size={"small"}>
               <InputContent category={"secundary"}>
-                <label htmlFor="password">Número:</label>
+                <label htmlFor="userAddressNumber">Número:</label>
                 <input
-                  type="password"
-                  id="password"
-                  name="password"
-                  {...register("password")}
+                  type="text"
+                  id="userAddressNumber"
+                  name="userAddressNumber"
+                  {...register("userAddressNumber")}
                   onChange={(e) => setPassword(e.target.value)}
                 />
-                <span>{errors.password?.message}</span>
+                <span>{errors.userAddressNumber?.message}</span>
               </InputContent>
 
               <InputContent category={"secundary"}>
-                <label htmlFor="password">Complemento:</label>
+                <label htmlFor="userAddressComplement">Complemento:</label>
                 <input
-                  type="password"
-                  id="password"
-                  name="password"
-                  {...register("password")}
+                  type="text"
+                  id="userAddressComplement"
+                  name="userAddressComplement"
+                  {...register("userAddressComplement")}
                   onChange={(e) => setPassword(e.target.value)}
                 />
-                <span>{errors.password?.message}</span>
+                <span>{errors.userAddressComplement?.message}</span>
               </InputContent>
             </Div>
 
             <InputContent category={"secundary"}>
-              <label htmlFor="password">Bairro:</label>
+              <label htmlFor="userAddressDiscrict">Bairro:</label>
               <input
-                type="password"
-                id="password"
-                name="password"
-                {...register("password")}
+                type="text"
+                id="userAddressDiscrict"
+                name="userAddressDiscrict"
+                {...register("userAddressDiscrict")}
                 onChange={(e) => setPassword(e.target.value)}
               />
-              <span>{errors.password?.message}</span>
+              <span>{errors.userAddressDiscrict?.message}</span>
             </InputContent>
 
             <Div size={"small"}>
               <InputContent category={"secundary"}>
-                <label htmlFor="password">Cidade:</label>
+                <label htmlFor="userAddressCity">Cidade:</label>
                 <input
-                  type="password"
-                  id="password"
-                  name="password"
-                  {...register("password")}
+                  type="text"
+                  id="userAddressCity"
+                  name="userAddressCity"
+                  {...register("userAddressCity")}
                   onChange={(e) => setPassword(e.target.value)}
                 />
-                <span>{errors.password?.message}</span>
+                <span>{errors.userAddressCity?.message}</span>
               </InputContent>
 
               <InputContent category={"secundary"}>
-                <label htmlFor="password">Estado:</label>
+                <label htmlFor="userAddressState">Estado:</label>
                 <input
-                  type="password"
-                  id="password"
-                  name="password"
-                  {...register("password")}
+                  type="text"
+                  id="userAddressState"
+                  name="userAddressState"
+                  {...register("userAddressState")}
                   onChange={(e) => setPassword(e.target.value)}
                 />
-                <span>{errors.password?.message}</span>
+                <span>{errors.userAddressState?.message}</span>
               </InputContent>
             </Div>
+            <ButtonBox>
+              <Button
+                style={{ margin: "50%" }}
+                category={"primary"}
+                type={"submit"}
+              >
+                Cadastrar
+              </Button>
+            </ButtonBox>
           </form>
-
-          <Button category={"primary"} type={"submit"}>
-            Cadastrar
-          </Button>
 
           <ButtonBox>
             <Link to={"/login"}>
