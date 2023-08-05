@@ -1,11 +1,12 @@
 import { styled } from "styled-components";
 
 export const Container = styled.div`
+  top: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
-
+  z-index: 2;
   height: 100%;
   width: 100%;
   background-color: rgba(94, 94, 94, 0.6);
@@ -31,6 +32,7 @@ export const Card = styled.div`
 
     @media (max-width: 500px) {
       font-size: 1.5rem;
+      text-align: center;
     }
   }
 
@@ -40,7 +42,7 @@ export const Card = styled.div`
     gap: 1rem;
     padding: 1rem;
     width: 100%;
-    max-width: 30rem;
+    max-width: 40rem;
   }
 
   div {
@@ -81,7 +83,7 @@ export const BtnSubmit = styled.button`
   width: 10rem;
   height: 3rem;
   border-radius: 4.98rem;
-  border: 1.058px solid var(--black-700);
+  border: none;
   background: var(--green-500);
   font-size: 0.9rem;
   font-weight: 600;

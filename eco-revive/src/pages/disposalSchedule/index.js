@@ -15,7 +15,6 @@ function DisposalSchedule({ isOpen, closeModalSchedule }) {
           <form>
             <div>
               <Input type="text" item="item" label="Item:" />
-              <Input type="text" item="tipo" label="Tipo:" />
             </div>
             <div>
               <Input type="text" item="Unidade" label="Unidade:" />
@@ -30,7 +29,6 @@ function DisposalSchedule({ isOpen, closeModalSchedule }) {
             <ContainerButton>
               <BtnExit onClick={closeModalSchedule}>cancelar</BtnExit>
               <BtnSubmit type="submit" onClick={closeModalSchedule}>
-                {/* onclick close provisório */}
                 Salvar
               </BtnSubmit>
             </ContainerButton>

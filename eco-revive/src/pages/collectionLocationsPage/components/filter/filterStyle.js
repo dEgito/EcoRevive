@@ -91,7 +91,7 @@ export const BtnSubmit = styled.button`
   border: none;
   background: var(--green-500);
   border-radius: 4.98rem;
-  border: 1.058px solid var(--black-700);
+  border: none;
   background: var(--green-500);
   font-size: 0.7rem;
   font-weight: 600;
@@ -99,7 +99,7 @@ export const BtnSubmit = styled.button`
   text-transform: uppercase;
 
   &:hover {
-    background-color: var(--green-500);
+    background-color: var(--green-400);
     transition: 0.5s;
   }
 `;
