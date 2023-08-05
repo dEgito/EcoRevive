@@ -1,19 +1,43 @@
 // Libs
-import { Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+
+//useStates
+import { useState } from "react";
+
+//api
+import { api } from "../../Services/Api";
 
 // Components
 import Button from "../../components/button/index";
-import Input from "../../components/input/index";
 import DefaultNavbar from "../../components/defaultNavbar/navbar";
 
 // Styles
-import { ButtonBox, Container, Content } from "./style";
+import { ButtonBox, Container, Content, InputContent } from "./style";
 
 // Assets
 import Logo from "../../assets/Logo320.png";
 
-
 function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const history = useNavigate();
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    api
+      .post("/login", {
+        user_email: email,
+        user_password: password,
+      })
+      .then((response) => {
+        localStorage.setItem("token", response.data.token);
+        history("/home");
+      })
+      .catch((error) => {
+        return alert("Senha incorreta!");
+      });
+  }
+
   return (
     <>
       <DefaultNavbar />
@@ -22,25 +46,23 @@ function Login() {
 
         <Content>
           <h1>Login</h1>
-          <form>
-            <Input
-              category="secundary"
-              type={"text"}
-              item={"user"}
-              label={"Email"}
+          <form onSubmit={handleSubmit}>
+            <input
+              type="text"
+              label="Email"
+              name="email"
+              onChange={(e) => setEmail(e.target.value)}
             />
-            <Input
-              category="secundary"
-              type={"password"}
-              item={"password"}
-              label={"Senha"}
+            <input
+              type="password"
+              label="Senha"
+              name="password"
+              onChange={(e) => setPassword(e.target.value)}
             />
 
-            <Link to={"/home"} style={{ textDecoration: "none" }}>
-              <Button category={"primary"} type={"submit"}>
-                Entrar
-              </Button>
-            </Link>
+            <Button category={"primary"} type={"submit"}>
+              Entrar
+            </Button>
           </form>
 
           <ButtonBox>

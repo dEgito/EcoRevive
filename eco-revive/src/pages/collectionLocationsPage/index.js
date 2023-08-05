@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 // Components
-import Button from "../../components/button/index";
+import ButtonFiltro from "./components/buttons/button";
 import Copyright from "../../components/copyright/copyright";
 import DisposalSchedule from "../disposalSchedule";
 import FiltersModal from "./components/filter/filter";
@@ -56,6 +56,7 @@ function ColletionLocations() {
 
   return (
     <Container>
+      <InternalNavbar />
       <FiltersModal
         isOpen={openModal}
         closeModalFilter={() => setOpenModal(!openModal)}
@@ -64,13 +65,9 @@ function ColletionLocations() {
         isOpen={openSchedule}
         closeModalSchedule={() => setOpenModalSchedule(!openSchedule)}
       />
-      <InternalNavbar />
 
       <Cont>
-        <Button category="filter" openModalFilter={() => setOpenModal(true)}>
-          Todos os filtros
-        </Button>
-
+        <ButtonFiltro openModalFilter={() => setOpenModal(true)} />
         <ConteinerMain>
           <ul>
             {companies.map((company) => {

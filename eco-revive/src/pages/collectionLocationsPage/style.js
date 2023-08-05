@@ -1,36 +1,12 @@
 import styled from "styled-components";
-import { Btn } from "../../components/button/style";
 
 export const Container = styled.body`
   margin: 0;
   background: var(--gray-600);
-  overflow-y: hidden;
   position: relative;
 
   li {
     list-style: none;
-  }
-  ${Btn} {
-    margin: 2rem 0 0 5.5rem;
-  }
-
-  @media (max-width: 600px) {
-    ${Btn} {
-      margin: 1rem 0 0 1rem;
-      width: 100%;
-      width: 3.3rem;
-      height: 2.3rem;
-      font-size: 0rem; /* Falta remover o texto de corretamente  */
-      gap: 0;
-      padding: 0;
-      border-radius: 0.6rem;
-    }
-  }
-
-  @media (min-width: 451px) and (max-width: 600px) {
-    ${Btn} {
-      margin: 1rem 0 0 4.5rem;
-    }
   }
 `;
 
@@ -41,7 +17,12 @@ export const Map = styled.iframe`
   height: 45.06rem;
 `;
 
-export const Cont = styled.div``;
+export const Cont = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 
 export const ConteinerMain = styled.div`
   max-width: 90rem;

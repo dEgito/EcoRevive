@@ -1,6 +1,7 @@
 import { styled } from "styled-components";
 
 export const Container = styled.div`
+  top: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,7 +19,7 @@ export const Card = styled.div`
   justify-content: center;
   gap: 1.5rem;
   width: 100%;
-  max-width: 35rem;
+  max-width: 40rem;
   background-color: var(--white);
 
   padding: 4rem;
@@ -39,7 +40,7 @@ export const Card = styled.div`
     gap: 1rem;
     padding: 1rem;
     width: 100%;
-    max-width: 30rem;
+    max-width: 35rem;
   }
 
   div {
@@ -70,7 +71,6 @@ export const BtnExit = styled.button`
   font-weight: 600;
   text-transform: uppercase;
   cursor: pointer;
-  
 
   &:hover {
     background-color: var(--gray-300);
@@ -84,7 +84,7 @@ export const BtnSubmit = styled.button`
   border-radius: 4.98rem;
   border: none;
   background: var(--green-500);
-  border: 1.058px solid var(--black-700);
+  border: none;
   background: var(--green-500);
   font-size: 0.9rem;
   font-weight: 600;

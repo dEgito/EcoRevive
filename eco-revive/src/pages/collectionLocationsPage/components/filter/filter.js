@@ -31,7 +31,6 @@ function FiltersModal({ isOpen, closeModalFilter }) {
           <ConteinerButton>
             <BtnExit onClick={closeModalFilter}>cancelar</BtnExit>
             <BtnSubmit type="submit" onClick={closeModalFilter}>
-              {/* o onclick de fechar é proviório */}
               aplicar
             </BtnSubmit>
           </ConteinerButton>
