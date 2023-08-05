@@ -24,6 +24,14 @@ function Register() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [phone, setPhone] = useState("");
+  const [addressCep, setAddressCep] = useState("");
+  const [userAddressRoad, setUserAddressRoad] = useState("")
+  const [userAddressNumber, setUserAddressNumber] = useState("")
+  const [userAddressDiscrict, setUserAddressDiscrict] = useState("")
+  const [userAddressCity, setUserAddressCity] = useState("")
+  const [userAddressState, setUserAddressState] = useState("")
+  const [userAddressComplement, setUserAddressComplement] = useState("")
 
   const schema = yup.object().shape({
     name: yup
@@ -39,7 +47,6 @@ function Register() {
       .string()
       .required("*Campo obrigatório!")
       .oneOf([yup.ref("password")], "Senhas não correspondentes!"),
-
     phone: yup.string().max(11),
     addressCep: yup.string().max(255),
     userAddressRoad: yup.string().max(255),
@@ -62,6 +69,14 @@ function Register() {
         user_name: name,
         user_email: email,
         user_password: password,
+        user_phone: phone,
+        addrress_cep: addressCep,
+        user_addrress_road: userAddressRoad,
+        user_addrress_number: userAddressNumber,
+        user_addrress_district: userAddressDiscrict,
+        user_addrress_city: userAddressCity,
+        user_addrress_state: userAddressState,
+        user_addrress_complement: userAddressComplement,
       })
       .then((response) => {
         if (response.data.message.errors) {
@@ -137,7 +152,7 @@ function Register() {
                 id="phone"
                 name="phone"
                 {...register("phone")}
-                onChange={(e) => setPassword(e.target.value)}
+                onChange={(e) => setPhone(e.target.value)}
               />
               <span>{errors.phone?.message}</span>
             </InputContent>
@@ -149,7 +164,7 @@ function Register() {
                 id="addressCep"
                 name="addressCep"
                 {...register("addressCep")}
-                onChange={(e) => setPassword(e.target.value)}
+                onChange={(e) => setAddressCep(e.target.value)}
               />
               <span>{errors.addressCep?.message}</span>
             </InputContent>
@@ -161,7 +176,7 @@ function Register() {
                 id="userAddressRoad"
                 name="userAddressRoad"
                 {...register("userAddressRoad")}
-                onChange={(e) => setPassword(e.target.value)}
+                onChange={(e) => setUserAddressRoad(e.target.value)}
               />
               <span>{errors.userAddressRoad?.message}</span>
             </InputContent>
@@ -174,7 +189,7 @@ function Register() {
                   id="userAddressNumber"
                   name="userAddressNumber"
                   {...register("userAddressNumber")}
-                  onChange={(e) => setPassword(e.target.value)}
+                  onChange={(e) => setUserAddressNumber(e.target.value)}
                 />
                 <span>{errors.userAddressNumber?.message}</span>
               </InputContent>
@@ -186,7 +201,7 @@ function Register() {
                   id="userAddressComplement"
                   name="userAddressComplement"
                   {...register("userAddressComplement")}
-                  onChange={(e) => setPassword(e.target.value)}
+                  onChange={(e) => setUserAddressComplement(e.target.value)}
                 />
                 <span>{errors.userAddressComplement?.message}</span>
               </InputContent>
@@ -199,7 +214,7 @@ function Register() {
                 id="userAddressDiscrict"
                 name="userAddressDiscrict"
                 {...register("userAddressDiscrict")}
-                onChange={(e) => setPassword(e.target.value)}
+                onChange={(e) => setUserAddressDiscrict(e.target.value)}
               />
               <span>{errors.userAddressDiscrict?.message}</span>
             </InputContent>
@@ -212,7 +227,7 @@ function Register() {
                   id="userAddressCity"
                   name="userAddressCity"
                   {...register("userAddressCity")}
-                  onChange={(e) => setPassword(e.target.value)}
+                  onChange={(e) => setUserAddressCity(e.target.value)}
                 />
                 <span>{errors.userAddressCity?.message}</span>
               </InputContent>
@@ -224,7 +239,7 @@ function Register() {
                   id="userAddressState"
                   name="userAddressState"
                   {...register("userAddressState")}
-                  onChange={(e) => setPassword(e.target.value)}
+                  onChange={(e) => setUserAddressState(e.target.value)}
                 />
                 <span>{errors.userAddressState?.message}</span>
               </InputContent>
