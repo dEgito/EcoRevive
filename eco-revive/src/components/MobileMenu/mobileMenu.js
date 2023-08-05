@@ -1,54 +1,22 @@
-// Libs
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-
 // Components
 import Button from "../button";
 
-// Assets
-import Logo from "../../assets/Logo-nav.png";
-
-import MobileMenu from "../MobileMenu/mobileMenu";
+import { Link } from "react-router-dom";
 
 // Style
 import {
   BtnContainer,
+  MobileMenuContainer,
   Container,
-  HamburgerIcon,
-  NavbarContainer,
   Menu,
   MenuItem,
   MenuLink,
-} from "./style";
+} from "./mobileMenuStyle";
 
-// Icons
-import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-
-function DefaultNavbar() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-  return (
-    <NavbarContainer>
+function MobileMenu({ isOpen }) {
+  return isOpen ? (
+    <MobileMenuContainer>
       <Container>
-        <Link to={"/"} style={{ textDecoration: "none" }}>
-          <img src={Logo} />
-        </Link>
-        {isOpen ? (
-          <AiOutlineClose
-            onClick={toggleMenu}
-            className="menu-icon"
-            style={{ cursor: "pointer" }}
-          />
-        ) : (
-          <AiOutlineMenu
-            onClick={toggleMenu}
-            className="menu-icon"
-            style={{ cursor: "pointer" }}
-          />
-        )}
         <Menu>
           <MenuItem>
             <Link to={"/"} style={{ textDecoration: "none" }}>
@@ -80,9 +48,8 @@ function DefaultNavbar() {
           </Link>
         </BtnContainer>
       </Container>
-      <MobileMenu isOpen={isOpen}></MobileMenu>
-    </NavbarContainer>
-  );
+    </MobileMenuContainer>
+  ) : null;
 }
 
-export default DefaultNavbar;
+export default MobileMenu;
