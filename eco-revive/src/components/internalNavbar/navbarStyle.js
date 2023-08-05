@@ -1,12 +1,19 @@
 import styled from "styled-components";
 
+export const NavbarContainerInterna = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  position: relative;
+`;
+
 export const Container = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 1rem 7.5rem;
+  padding: 1rem 3rem;
 
   background: var(--gray-600);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -23,6 +30,7 @@ export const Container = styled.div`
     padding: 1rem 2.5rem;
   }
   img {
+    display: block;
     width: 100%;
     max-width: 80px;
   }
@@ -43,49 +51,33 @@ export const Container = styled.div`
   }
 `;
 
+export const HamburgerIcon = styled.div`
+  cursor: pointer;
+  display: none;
+
+  sgv {
+    display: none;
+    color: var(--white);
+  }
+
+  @media (max-width: 1000px) {
+    display: block;
+  }
+`;
+
 export const Menu = styled.ul`
   margin: 0;
   display: flex;
-  flex-direction: row;
   align-items: center;
   gap: 4rem;
   list-style: none;
 
   @media (max-width: 1000px) {
-    display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    right: 0.5rem;
-    background-color: var(--gray-600);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    padding: 1rem;
-
-    width: 100%;
-    max-width: 180px;
-  }
-
-  @media (max-width: 400px) {
-    align-items: center;
-    width: 100%;
-    max-width: none;
-    right: 0;
-  }
-
-  div {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-
-    @media (max-width: 1000px) {
-      flex-direction: column;
-    }
+    display: none;
   }
 `;
 
-export const MenuItem = styled.li`
-  text-decoration: none;
-`;
+export const MenuItem = styled.li``;
 
 export const MenuLink = styled.a`
   color: var(--white);
@@ -94,12 +86,10 @@ export const MenuLink = styled.a`
 
 export const BtnContainer = styled.div`
   display: flex;
-  flex-direction: row;
   gap: 1rem;
-  width: 10rem;
+  /* width: 10rem; */
 
   @media (max-width: 1000px) {
-    flex-direction: column;
-    gap: 0rem;
+    display: none !important;
   }
 `;

@@ -33,7 +33,7 @@ function DefaultNavbar() {
   return (
     <NavbarContainer>
       <Container>
-        <Link to={"/"} style={{ textDecoration: "none" }}>
+      <Link to={"/"} style={{ textDecoration: "none" }}>
           <img src={Logo} />
         </Link>
         {isOpen ? (
@@ -49,6 +49,7 @@ function DefaultNavbar() {
             style={{ cursor: "pointer" }}
           />
         )}
+        
         <Menu>
           <MenuItem>
             <Link to={"/"} style={{ textDecoration: "none" }}>
