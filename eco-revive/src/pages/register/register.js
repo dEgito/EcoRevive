@@ -15,7 +15,7 @@ import Button from "../../components/button/index";
 import Navbar from "../../components/defaultNavbar/navbar";
 
 // Styles
-import { ButtonBox, Container, Content, InputContent } from "./style";
+import { Box, ButtonBox, Container, Content, Div, InputContent } from "./style";
 
 // Assets
 import Logo from "../../assets/Logo320.png";
@@ -69,7 +69,7 @@ function Register() {
   }
 
   return (
-    <>
+    <Box>
       <Navbar />
       <Container>
         <Content>
@@ -111,10 +111,110 @@ function Register() {
               <span>{errors.password?.message}</span>
             </InputContent>
 
-            <Button category={"primary"} type={"submit"}>
-              Cadastrar
-            </Button>
+            <InputContent category={"secundary"}>
+              <label htmlFor="password">Telefone:</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                {...register("password")}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              <span>{errors.password?.message}</span>
+            </InputContent>
+
+            <InputContent category={"secundary"}>
+              <label htmlFor="password">Cep:</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                {...register("password")}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              <span>{errors.password?.message}</span>
+            </InputContent>
+
+            <InputContent category={"secundary"}>
+              <label htmlFor="password">Rua/ Avenida:</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                {...register("password")}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              <span>{errors.password?.message}</span>
+            </InputContent>
+
+            <Div size={"small"}>
+              <InputContent category={"secundary"}>
+                <label htmlFor="password">Número:</label>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  {...register("password")}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+                <span>{errors.password?.message}</span>
+              </InputContent>
+
+              <InputContent category={"secundary"}>
+                <label htmlFor="password">Complemento:</label>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  {...register("password")}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+                <span>{errors.password?.message}</span>
+              </InputContent>
+            </Div>
+
+            <InputContent category={"secundary"}>
+              <label htmlFor="password">Bairro:</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                {...register("password")}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              <span>{errors.password?.message}</span>
+            </InputContent>
+
+            <Div size={"small"}>
+              <InputContent category={"secundary"}>
+                <label htmlFor="password">Cidade:</label>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  {...register("password")}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+                <span>{errors.password?.message}</span>
+              </InputContent>
+
+              <InputContent category={"secundary"}>
+                <label htmlFor="password">Estado:</label>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  {...register("password")}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+                <span>{errors.password?.message}</span>
+              </InputContent>
+            </Div>
           </form>
+
+          <Button category={"primary"} type={"submit"}>
+            Cadastrar
+          </Button>
 
           <ButtonBox>
             <Link to={"/login"}>
@@ -125,7 +225,7 @@ function Register() {
 
         <img src={Logo} alt="Eco Revive" />
       </Container>
-    </>
+    </Box>
   );
 }
 export default Register;
