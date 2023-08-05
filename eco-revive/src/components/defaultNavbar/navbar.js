@@ -8,18 +8,21 @@ import Button from "../button";
 // Assets
 import Logo from "../../assets/Logo-nav.png";
 
+import MobileMenu from "../MobileMenu/mobileMenu";
+
 // Style
 import {
   BtnContainer,
   Container,
   HamburgerIcon,
+  NavbarContainer,
   Menu,
   MenuItem,
   MenuLink,
 } from "./style";
 
 // Icons
-import { AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 function DefaultNavbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,17 +31,26 @@ function DefaultNavbar() {
     setIsOpen(!isOpen);
   };
   return (
-    <Container>
+    <NavbarContainer>
+      <Container>
       <Link to={"/"} style={{ textDecoration: "none" }}>
-        <img src={Logo} />
-      </Link>
-      <AiOutlineMenu
-        onClick={toggleMenu}
-        className={`fa ${isOpen ? "fa-times" : "fa-bars"}`}
-      />
-
-      <Menu isOpen={isOpen}>
-        <div>
+          <img src={Logo} />
+        </Link>
+        {isOpen ? (
+          <AiOutlineClose
+            onClick={toggleMenu}
+            className="menu-icon"
+            style={{ cursor: "pointer" }}
+          />
+        ) : (
+          <AiOutlineMenu
+            onClick={toggleMenu}
+            className="menu-icon"
+            style={{ cursor: "pointer" }}
+          />
+        )}
+        
+        <Menu>
           <MenuItem>
             <Link to={"/"} style={{ textDecoration: "none" }}>
               <MenuLink>Home</MenuLink>
@@ -59,8 +71,7 @@ function DefaultNavbar() {
               <MenuLink>FAQ</MenuLink>
             </Link>
           </MenuItem>
-        </div>
-
+        </Menu>
         <BtnContainer>
           <Link to={"/cadastro"} style={{ textDecoration: "none" }}>
             <Button category="primary">Cadastrar</Button>
@@ -69,8 +80,9 @@ function DefaultNavbar() {
             <Button category="secundary">Entrar</Button>
           </Link>
         </BtnContainer>
-      </Menu>
-    </Container>
+      </Container>
+      <MobileMenu isOpen={isOpen}></MobileMenu>
+    </NavbarContainer>
   );
 }
 
