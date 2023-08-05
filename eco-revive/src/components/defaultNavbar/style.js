@@ -13,7 +13,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 1rem 1.25rem;
+  padding: 1rem 3rem;
 
   background: var(--gray-600);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
