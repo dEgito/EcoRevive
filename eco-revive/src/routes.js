@@ -20,7 +20,7 @@ export const routes = () => {
         <Route path="/sobre" element={<AboutUs />} />
         <Route path="/contato" element={<ContactUs />} />
         <Route path="/duvidas" element={<Faqs />} />
-        <Route path="login" element={<Login />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/cadastro" element={<Register />} />
         <Route path="/home" element={<Home />} />
         <Route path="/locais" element={<CollectionLocations />} />
