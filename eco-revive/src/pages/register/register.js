@@ -15,7 +15,7 @@ import Button from "../../components/button/index";
 import Navbar from "../../components/defaultNavbar/navbar";
 
 // Styles
-import { ButtonBox, Container, Content, InputContent } from "./style";
+import { Box, ButtonBox, Container, Content, Div, InputContent } from "./style";
 
 // Assets
 import Logo from "../../assets/Logo320.png";
@@ -39,6 +39,15 @@ function Register() {
       .string()
       .required("*Campo obrigatório!")
       .oneOf([yup.ref("password")], "Senhas não correspondentes!"),
+
+    phone: yup.string().max(11),
+    addressCep: yup.string().max(255),
+    userAddressRoad: yup.string().max(255),
+    userAddressNumber: yup.string().max(255),
+    userAddressDiscrict: yup.string().max(255),
+    userAddressCity: yup.string().max(255),
+    userAddressState: yup.string().max(255),
+    userAddressComplement: yup.string().max(255),
   });
 
   const {
@@ -69,7 +78,7 @@ function Register() {
   }
 
   return (
-    <>
+    <Box>
       <Navbar />
       <Container>
         <Content>
@@ -111,9 +120,124 @@ function Register() {
               <span>{errors.password?.message}</span>
             </InputContent>
 
-            <Button category={"primary"} type={"submit"}>
-              Cadastrar
-            </Button>
+            <InputContent category={"secundary"}>
+              <label htmlFor="passwordConfirmation">Confirmar senha:</label>
+              <input
+                type="password"
+                id="passwordConfirmation"
+                {...register("passwordConfirmation")}
+              />
+              <span>{errors.passwordConfirmation?.message}</span>
+            </InputContent>
+
+            <InputContent category={"secundary"}>
+              <label htmlFor="phone">Telefone:</label>
+              <input
+                type="text"
+                id="phone"
+                name="phone"
+                {...register("phone")}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              <span>{errors.phone?.message}</span>
+            </InputContent>
+
+            <InputContent category={"secundary"}>
+              <label htmlFor="addressCep">Cep:</label>
+              <input
+                type="text"
+                id="addressCep"
+                name="addressCep"
+                {...register("addressCep")}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              <span>{errors.addressCep?.message}</span>
+            </InputContent>
+
+            <InputContent category={"secundary"}>
+              <label htmlFor="userAddressRoad">Rua/ Avenida:</label>
+              <input
+                type="text"
+                id="userAddressRoad"
+                name="userAddressRoad"
+                {...register("userAddressRoad")}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              <span>{errors.userAddressRoad?.message}</span>
+            </InputContent>
+
+            <Div size={"small"}>
+              <InputContent category={"secundary"}>
+                <label htmlFor="userAddressNumber">Número:</label>
+                <input
+                  type="text"
+                  id="userAddressNumber"
+                  name="userAddressNumber"
+                  {...register("userAddressNumber")}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+                <span>{errors.userAddressNumber?.message}</span>
+              </InputContent>
+
+              <InputContent category={"secundary"}>
+                <label htmlFor="userAddressComplement">Complemento:</label>
+                <input
+                  type="text"
+                  id="userAddressComplement"
+                  name="userAddressComplement"
+                  {...register("userAddressComplement")}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+                <span>{errors.userAddressComplement?.message}</span>
+              </InputContent>
+            </Div>
+
+            <InputContent category={"secundary"}>
+              <label htmlFor="userAddressDiscrict">Bairro:</label>
+              <input
+                type="text"
+                id="userAddressDiscrict"
+                name="userAddressDiscrict"
+                {...register("userAddressDiscrict")}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              <span>{errors.userAddressDiscrict?.message}</span>
+            </InputContent>
+
+            <Div size={"small"}>
+              <InputContent category={"secundary"}>
+                <label htmlFor="userAddressCity">Cidade:</label>
+                <input
+                  type="text"
+                  id="userAddressCity"
+                  name="userAddressCity"
+                  {...register("userAddressCity")}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+                <span>{errors.userAddressCity?.message}</span>
+              </InputContent>
+
+              <InputContent category={"secundary"}>
+                <label htmlFor="userAddressState">Estado:</label>
+                <input
+                  type="text"
+                  id="userAddressState"
+                  name="userAddressState"
+                  {...register("userAddressState")}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+                <span>{errors.userAddressState?.message}</span>
+              </InputContent>
+            </Div>
+            <ButtonBox>
+              <Button
+                style={{ margin: "50%" }}
+                category={"primary"}
+                type={"submit"}
+              >
+                Cadastrar
+              </Button>
+            </ButtonBox>
           </form>
 
           <ButtonBox>
@@ -125,7 +249,7 @@ function Register() {
 
         <img src={Logo} alt="Eco Revive" />
       </Container>
-    </>
+    </Box>
   );
 }
 export default Register;
