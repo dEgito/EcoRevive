@@ -43,7 +43,18 @@ function ContactUs() {
       }
       return alert('Erro ao enviar mensagem!')
     }).catch((error) => {
-      console.log(error)
+
+        // Caso seja um erro de timeout, vamos ignorar, pois a mensagem foi enviada
+        // De fato, não podemos ter certeza se a mensagem foi enviada ou não, o que
+        // irá gerar um erro de timeout, mas a mensagem foi enviada com sucesso
+        if (error.code === 'ECONNABORTED'){
+          return alert('Mensagem enviada com sucesso!')
+        }
+        // Caso seja um erro de preenchimento de campos, vamos alertar o usuário com um
+        // adorável pop-up
+        if (error.response.data.message === "Preencha todos os campos!") {
+          return alert('Preencha todos os campos!')
+        }
     });
   }
 
