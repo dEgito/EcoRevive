@@ -27,7 +27,7 @@ export const routes = () => {
         <Route path="/historico" element={<History />} />
         <Route path="/empresas" element={<RegisterCompany />} />
         <Route path="/*" element={<Error />} />
-      </Routes>
+      </Routes> 
     </BrowserRouter>
   );
 };
