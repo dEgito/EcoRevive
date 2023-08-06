@@ -107,7 +107,6 @@ export const InputContent = styled.div`
     border: 1px solid var(--green-500);
     min-height: 1.4rem;
     resize: none;
-    padding: 0.2rem 1rem;
 
     @media (max-width: 600px) {
       margin-bottom: 0;
