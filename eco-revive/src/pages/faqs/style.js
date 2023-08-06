@@ -7,7 +7,7 @@ export const Container = styled.body`
   margin: 0;
 
   h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
 `;

@@ -68,16 +68,6 @@ function Faqs() {
             </p>
           </details>
         </Details>
-
-        <Details>
-          <details>
-            <summary>Como posso apoiar o processo?</summary>
-            <p>
-              Entre em contato com o email ecoreviverecife@gmail.com com o
-              assunto "quero apoiar" para mais informações.
-            </p>
-          </details>
-        </Details>
       </Section>
 
       <TopGreenWave />
