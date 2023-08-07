@@ -47,13 +47,66 @@ export const Card = styled.div`
 
   div {
     display: flex;
-    gap: 1rem;
+    column-gap: 1rem;
 
     @media (max-width: 500px) {
       flex-direction: column;
     }
   }
 `;
+
+export const InputContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
+  width: 100%;
+  min-width: ${(props) => {
+    return props.size === "small" ? "250px" : "unset";
+  }};
+  gap: 0.5rem;
+  color: var(--green-700);
+
+  label {
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    color: ${(props) => {
+      switch (props.category) {
+        case "secundary":
+          return "var(--white)";
+        case "small":
+          return " var(--white)";
+        default:
+          return "var(--green-700)";
+      }
+    }};
+  }
+
+  input {
+    border: 1px solid var(--green-500);
+    min-height: 1.4rem;
+    resize: none;
+    border-radius: 0.25rem;
+
+    @media (max-width: 399px) {
+      max-width: ${(props) => {
+        return props.category === "small" ? "100%" : "unset";
+      }};
+    }
+
+    @media (max-width: 600px) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (max-width: 399px) {
+    width: 100%;
+    max-width: ${(props) => {
+      return props.category === "small" ? "8rem" : "90%";
+    }};
+  }
+`;
+
 export const ContainerButton = styled.div`
   display: flex;
   align-items: center;

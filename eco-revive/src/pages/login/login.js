@@ -46,7 +46,7 @@ function Login() {
         <img src={Logo} alt="Eco Revive" />
 
         <Content>
-          <h1>Login</h1>
+          <h1>Login usuário</h1>
           <form onSubmit={handleSubmit}>
             <InputContent>
             <label htmlFor="email">Email:</label>
