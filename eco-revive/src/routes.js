@@ -2,14 +2,16 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import GuidePage from "./pages/guidePage/guidePage";
 import AboutUs from "./pages/aboutUs/index";
-import ContactUs from "./pages/contactUs/contact";
 import CollectionLocations from "./pages/collectionLocationsPage/index";
-import Faqs from "./pages/faqs/faqs";
-import Login from "./pages/login/login";
-import Register from "./pages/register/register";
-import Home from "./pages/home/home";
-import History from "./pages/history/history";
+import ContactUs from "./pages/contactUs/contact";
 import Error from "./pages/error/error";
+import Faqs from "./pages/faqs/faqs";
+import History from "./pages/history/history";
+import Home from "./pages/home/home";
+import Login from "./pages/login/login";
+import LoginCompany from "./pages/loginCompany/loginCompany";
+import Register from "./pages/register/register";
+import RegisterCompany from "./pages/registerCompany/company";
 
 export const routes = () => {
   return (
@@ -19,13 +21,15 @@ export const routes = () => {
         <Route path="/sobre" element={<AboutUs />} />
         <Route path="/contato" element={<ContactUs />} />
         <Route path="/duvidas" element={<Faqs />} />
-        <Route path="login" element={<Login />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/loginCompany" element={<LoginCompany/>} />
         <Route path="/cadastro" element={<Register />} />
         <Route path="/home" element={<Home />} />
         <Route path="/locais" element={<CollectionLocations />} />
         <Route path="/historico" element={<History />} />
-        <Route path="/erro" element={<Error />} />
-      </Routes>
+        <Route path="/empresas" element={<RegisterCompany />} />
+        <Route path="/*" element={<Error />} />
+      </Routes> 
     </BrowserRouter>
   );
 };

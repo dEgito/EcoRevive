@@ -1,8 +1,12 @@
-import { routes as RoutesReact } from './routes';
+import { routes as RoutesReact } from "./routes";
+import GlobalStyle from "./styles/GlobalStyles";
 
 function App() {
   return (
-    <RoutesReact />
+    <>
+      <GlobalStyle />
+      <RoutesReact />
+    </>
   );
 }
 export default App;

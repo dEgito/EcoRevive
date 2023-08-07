@@ -1,14 +1,11 @@
 import { styled } from "styled-components";
 
 export const Container = styled.div`
-  font-family: Montserrat, sans-serif;
-  color: #002454;
+  color: var(--blue-700);
   margin: 0;
 
   h2 {
     font-size: 1.5rem;
-    letter-spacing: 0.14rem;
-    text-transform: uppercase;
 
     @media (max-width: 480px) {
       font-size: 1rem;
@@ -17,8 +14,6 @@ export const Container = styled.div`
 
   h3 {
     font-size: 1rem;
-    letter-spacing: 0.14rem;
-    text-transform: uppercase;
   }
 
   P {
@@ -60,7 +55,7 @@ export const Content = styled.div`
     row-gap: 1rem;
     padding: 2rem 0;
 
-    color: #014538;
+    color: var(--green-700);
     font-weight: 700;
     gap: 0.4rem;
 
@@ -69,7 +64,7 @@ export const Content = styled.div`
     }
 
     textarea {
-      border: 1px solid #4eb969;
+      border: 1px solid var(--green-500);
       border-radius: 0.25rem;
       resize: none;
 
@@ -88,7 +83,7 @@ export const InfoBox = styled.div`
   border-radius: 0.6875rem;
   background: rgba(111, 145, 61, 0.08);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  color: #014538;
+  color: var(--green-700);
 
   p {
     font-size: 0.9rem;

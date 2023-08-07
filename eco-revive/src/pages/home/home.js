@@ -1,3 +1,11 @@
+// Libs
+import { Link } from "react-router-dom";
+
+// Components
+import BoxLinks from "./components/boxLinks/boxLinks";
+import InternalNavbar from "../../components/internalNavbar/navbar";
+
+// Styles
 import {
   Conteiner,
   Content,
@@ -6,19 +14,14 @@ import {
   Question,
   Boxes,
 } from "./homeStyle";
-import NavBarInner from "../../components/navbarSimple/navbar";
-import BoxLinks from "../../components/boxLinks/boxLinks";
-import { Link } from "react-router-dom";
 
 function Home() {
   return (
     <Conteiner>
-      <NavBarInner />
+      <InternalNavbar />
 
       <Content>
-        <Title>
-          Seja bem vindo, <strong>MARLENA</strong>!
-        </Title>
+        <Title>Olá, seja bem-vindo(a)!</Title>
 
         <SectionLinks>
           <Question> O que você deseja fazer hoje?</Question>
@@ -26,17 +29,14 @@ function Home() {
             <Link to={"/locais"} style={{ textDecoration: "none" }}>
               <BoxLinks color="green" children={"Agendar descarte"} />
             </Link>
-            <Link to={"/erro"} style={{ textDecoration: "none" }}>
-              <BoxLinks color="blue" children={"Acompanhar meu descarte"} />
-            </Link>
             <Link to={"/historico"} style={{ textDecoration: "none" }}>
-              <BoxLinks color="orange" children={"Histórico de agendamentos"} />
+              <BoxLinks color="blue" children={"Histórico de agendamentos "} />
             </Link>
-            <Link to={"/erro"} style={{ textDecoration: "none" }}>
-              <BoxLinks
-                color="purple"
-                children={"Cadastrar ponto de coleta"}
-              />
+            <Link to={"/duvidas"} style={{ textDecoration: "none" }}>
+              <BoxLinks color="orange" children={"Dúvidas frequentes"} />
+            </Link>
+            <Link to={"/empresas"} style={{ textDecoration: "none" }}>
+              <BoxLinks color="purple" children={"Cadastrar ponto de coleta"} />
             </Link>
           </Boxes>
         </SectionLinks>

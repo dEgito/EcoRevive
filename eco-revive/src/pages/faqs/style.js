@@ -1,16 +1,13 @@
 import styled from "styled-components";
 
-export const Container = styled.body`
-  font-family: Montserrat, sans-serif;
+export const Container = styled.div`
   flex-wrap: wrap;
   text-align: center;
-  color: #002454;
+  color: var(--blue-700);
   margin: 0;
 
   h2 {
-    font-size: 2.5rem;
-    letter-spacing: 0.14rem;
-    text-transform: uppercase;
+    font-size: 2rem;
   }
 
 `;
@@ -27,8 +24,8 @@ export const Section = styled.section`
 export const Details = styled.div`
   background: rgba(111, 145, 61, 0.08);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  color: #014538;
-  border-bottom: 1px solid #3ab032;
+  color: var(--green-700);
+  border-bottom: 1px solid var(--accent-green-500);
   border-radius: 6.5rem;
   border-radius: 0.6875rem;
   padding: 2rem;

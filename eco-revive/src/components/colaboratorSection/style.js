@@ -19,22 +19,22 @@ export const Section = styled.section`
   color: ${(props) => {
     switch (props.background) {
       case "blue":
-        return "#ffffff";
+        return "var(--white)";
       default:
-        return "#002454";
+        return "var(--blue-700)";
     }
   }};
 
   background-color: ${(props) => {
     switch (props.background) {
       case "blue":
-        return "#004BB0";
+        return "var(--blue-500)";
 
       case "green":
-        return "#65D781";
+        return "var(--green-400)";
 
       default:
-        return "#ffffff";
+        return "var(--white)";
     }
   }};
 
@@ -90,7 +90,7 @@ export const Content = styled.div`
 
   a {
     font-size: 0.8rem;
-    color: #004bb0;
+    color: var(--blue-500);
     font-weight: bold;
     text-decoration: none;
   }

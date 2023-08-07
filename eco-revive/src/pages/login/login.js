@@ -1,45 +1,81 @@
-import { ButtonBox, Container, Content } from "./style";
+// Libs
+import { useNavigate, Link } from "react-router-dom";
+
+//useStates
+import { useState } from "react";
+
+//api
+import { api } from "../../Services/Api";
+
+// Components
 import Button from "../../components/button/index";
-import Input from "../../components/input/index";
+import InternalNavbar from "../../components/internalNavbar/navbar";
+
+// Styles
+import { ButtonBox, Container, Content, InputContent } from "./style";
+
+// Assets
 import Logo from "../../assets/Logo320.png";
-import { Link } from "react-router-dom";
 
 function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const history = useNavigate();
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    api
+      .post("/login", {
+        user_email: email,
+        user_password: password,
+      })
+      .then((response) => {
+        localStorage.setItem("token", response.data.token);
+        history("/home");
+      })
+      .catch((error) => {
+        console.log(error)
+        return alert("Senha incorreta!");
+      });
+  }
+
   return (
-    <Container>
-      <img src={Logo} />
+    <>
+      <InternalNavbar />
+      <Container>
+        <img src={Logo} alt="Eco Revive" />
 
-      <Content>
-        <img src={Logo} />
-        <h1>Login</h1>
-        <form>
-          <Input
-            category="secundary"
-            type={"text"}
-            item={"user"}
-            label={"Email:"}
-          />
-          <Input
-            category="secundary"
-            type={"password"}
-            item={"password"}
-            label={"Senha:"}
-          />
+        <Content>
+          <h1>Login usuário</h1>
+          <form onSubmit={handleSubmit}>
+            <InputContent>
+            <label htmlFor="email">Email:</label>
+            <input
+              type="text"
+              id="email"
+              name="email"
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <label htmlFor="password">Senha:</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            </InputContent>
 
-          <Link to={"/home"} style={{ textDecoration: "none" }}>
             <Button category={"primary"} type={"submit"}>
               Entrar
             </Button>
-          </Link>
-        </form>
+          </form>
 
-        <ButtonBox>
-          <Link to={"/cadastro"}>
-            <a href="#">Crie uma conta</a>
-          </Link>
-        </ButtonBox>
-      </Content>
-    </Container>
+          <ButtonBox>
+            <Link to={"/loginCompany"}>Logar como empresa</Link>
+          </ButtonBox>
+        </Content>
+      </Container>
+    </>
   );
 }
 export default Login;

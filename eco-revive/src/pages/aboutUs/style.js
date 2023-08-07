@@ -1,16 +1,13 @@
 import styled from "styled-components";
 import Background from "../../assets/bg-quem-somos.jpg";
 
-export const Container = styled.body`
-  font-family: Montserrat, sans-serif;
-  color: #002454;
+export const Container = styled.div`
+  color: var(--blue-700);
   margin: 0;
 
   h2 {
     font-size: 1.5rem;
-    letter-spacing: 0.14rem;
-    text-transform: uppercase;
-    color: #f2f2f2;
+    color: var(--gray-900);
 
     @media (max-width: 480px) {
       font-size: 1.1rem;
@@ -19,8 +16,6 @@ export const Container = styled.body`
 
   h3 {
     font-size: 1rem;
-    letter-spacing: 0.14rem;
-    text-transform: uppercase;
 
     @media (max-width: 480px) {
       font-size: 0.9rem;
@@ -49,19 +44,18 @@ export const Banner = styled.section`
   flex-wrap: wrap;
   padding: 6rem 0;
   gap: 0.5rem;
-  background-color: #4eb969;
+  background-color: var(--green-500);
   background-image: url(${Background});
   background-position: center;
   background-size: cover;
   flex-wrap: wrap;
   background-repeat: no-repeat;
-  color: #f2f2f2;
+  color: var(--gray-900);
 
   h1 {
     font-size: 2rem;
   }
   p {
-    font-family: Montserrat, sans-serif;
     font-size: 1rem;
     letter-spacing: 0.09rem;
     line-height: 1.5rem;
@@ -75,14 +69,14 @@ export const Banner = styled.section`
     }
   }
   span {
-    color: #4eb969;
+    color: var(--green-500);
     font-weight: bold;
   }
 `;
 
 export const Mission = styled.div`
   h2 {
-    color: #52d874;
+    color: var(--green-550);
     font-weight: bold;
   }
 
@@ -97,7 +91,7 @@ export const Mission = styled.div`
 
 export const Values = styled.div`
   h2 {
-    color: #52d874;
+    color: var(--green-550);
     font-weight: bold;
   }
   p {
@@ -121,7 +115,7 @@ export const Content = styled.div`
 
 export const Presentation = styled.div`
   p {
-    color: #52d874;
+    color: var(--green-550);
     font-size: 2rem;
     font-weight: bolder;
     text-align: center;
@@ -156,22 +150,22 @@ export const Section = styled.section`
   color: ${(props) => {
     switch (props.background) {
       case "blue":
-        return "#ffffff";
+        return "var(--white)";
       default:
-        return "#002454";
+        return "var(--blue-700)";
     }
   }};
 
   background-color: ${(props) => {
     switch (props.background) {
       case "blue":
-        return "#004BB0";
+        return "var(--blue-500)";
 
       case "green":
-        return "#65D781";
+        return "var(--green-400)";
 
       default:
-        return "#ffffff";
+        return "var(--white)";
     }
   }};
 
@@ -180,7 +174,7 @@ export const Section = styled.section`
   }
 
   span {
-    color: #004bb0;
+    color: var(--blue-500);
     font-weight: 700;
   }
 
@@ -191,7 +185,6 @@ export const Section = styled.section`
   }
 
   p {
-    font-family: Montserrat, sans-serif;
     letter-spacing: 0.09rem;
     max-width: 30rem;
     margin-bottom: 1rem;

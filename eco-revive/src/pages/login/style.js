@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import Background from "../../assets/Login_Background.png"
+import Background from "../../assets/Login_Background.png";
 
 export const Container = styled.div`
   display: flex;
@@ -9,13 +9,14 @@ export const Container = styled.div`
   gap: 4rem;
   flex-wrap: wrap-reverse;
   font-family: Monteserrat, sans-serif;
-  height: 100vh;
+  height: 90vh;
+  overflow: hidden;
   color: #ffffff;
 
   img {
     margin: auto;
 
-    @media (max-width:800px) {
+    @media (max-width: 800px) {
       display: none;
     }
   }
@@ -63,16 +64,46 @@ export const ButtonBox = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: .5rem;
+  gap: 0.5rem;
   padding: 2rem 0;
+  
 
   a {
     color: #ffffff;
     text-decoration: none;
-    transition: all ease-in-out .5s;
+    transition: all ease-in-out 0.5s;
 
     &:hover {
-      color: #E89F10;
+      color: #e89f10;
     }
+  }
+`;
+
+export const InputContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 250px;
+  gap: 0.5rem;
+  color: var(--green-700);
+  
+  label {
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    color: var(--white);
+  }
+
+  input {
+    border: 1px solid var(--green-500);
+    min-height: 1.4rem;
+    resize: none;
+    padding: 0.2rem 1rem;
+
+    @media (max-width: 600px) {
+      margin-bottom: 0;
+    }
+
+    border-radius: 0.25rem;
   }
 `;

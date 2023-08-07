@@ -1,13 +1,18 @@
+// Components
+import Select from "../inputSelect/select";
+
+// Style
 import {
-  Conteiner,
-  Modal,
-  Exit,
-  ConteinerButton,
   BtnExit,
   BtnSubmit,
+  Conteiner,
+  ConteinerButton,
+  Exit,
+  Modal,
 } from "./filterStyle";
+
+// Icons
 import { MdOutlineClose } from "react-icons/md";
-import Select from "../inputSelect/select";
 
 function FiltersModal({ isOpen, closeModalFilter }) {
   if (isOpen) {
@@ -26,7 +31,6 @@ function FiltersModal({ isOpen, closeModalFilter }) {
           <ConteinerButton>
             <BtnExit onClick={closeModalFilter}>cancelar</BtnExit>
             <BtnSubmit type="submit" onClick={closeModalFilter}>
-              {/* o onclick de fechar é proviório */}
               aplicar
             </BtnSubmit>
           </ConteinerButton>

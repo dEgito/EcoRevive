@@ -1,31 +1,56 @@
+// Libs
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+
+// Components
 import Button from "../button";
+
+// Assets
+import Logo from "../../assets/Logo-nav.png";
+
+import MobileMenu from "../MobileMenu/mobileMenu";
+
+// Style
 import {
-  Container,
   BtnContainer,
+  Container,
   HamburgerIcon,
+  NavbarContainer,
   Menu,
   MenuItem,
   MenuLink,
 } from "./style";
-import React, { useState } from "react";
-import Logo from "../../assets/Logo-nav.png";
-import { Link } from "react-router-dom";
 
-function Navbar() {
+// Icons
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+
+function DefaultNavbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <Container>
-      <img src={Logo} />
-      <HamburgerIcon onClick={toggleMenu}>
-        <i className={`fa ${isOpen ? "fa-times" : "fa-bars"}`} />
-      </HamburgerIcon>
-
-      <Menu isOpen={isOpen}>
-        <div>
+    <NavbarContainer>
+      <Container>
+      <Link to={"/"} style={{ textDecoration: "none" }}>
+          <img src={Logo} />
+        </Link>
+        {isOpen ? (
+          <AiOutlineClose
+            onClick={toggleMenu}
+            className="menu-icon"
+            style={{ cursor: "pointer" }}
+          />
+        ) : (
+          <AiOutlineMenu
+            onClick={toggleMenu}
+            className="menu-icon"
+            style={{ cursor: "pointer" }}
+          />
+        )}
+        
+        <Menu>
           <MenuItem>
             <Link to={"/"} style={{ textDecoration: "none" }}>
               <MenuLink>Home</MenuLink>
@@ -33,7 +58,7 @@ function Navbar() {
           </MenuItem>
           <MenuItem>
             <Link to={"/sobre"} style={{ textDecoration: "none" }}>
-              <MenuLink>Sobre nós</MenuLink>
+              <MenuLink>Sobre</MenuLink>
             </Link>
           </MenuItem>
           <MenuItem>
@@ -43,11 +68,10 @@ function Navbar() {
           </MenuItem>
           <MenuItem>
             <Link to={"/duvidas"} style={{ textDecoration: "none" }}>
-              <MenuLink>Faq</MenuLink>
+              <MenuLink>FAQ</MenuLink>
             </Link>
           </MenuItem>
-        </div>
-
+        </Menu>
         <BtnContainer>
           <Link to={"/cadastro"} style={{ textDecoration: "none" }}>
             <Button category="primary">Cadastrar</Button>
@@ -56,9 +80,10 @@ function Navbar() {
             <Button category="secundary">Entrar</Button>
           </Link>
         </BtnContainer>
-      </Menu>
-    </Container>
+      </Container>
+      <MobileMenu isOpen={isOpen}></MobileMenu>
+    </NavbarContainer>
   );
 }
 
-export default Navbar;
+export default DefaultNavbar;

@@ -1,10 +1,16 @@
-import { useState } from "react";
+// Libs
+import React, { useState } from "react";
+
+// Components
 import Header from "./components/header/header";
-import Navbar from "../../components/navbar/navbar";
+import InternalNavbar from "../../components/internalNavbar/navbar";
 import Schedule from "./components/schedule/schedule";
-import { Container, Content, Section } from "./style";
+
+// Pages
 import Follow from "../../pages/follow/follow";
-import NavBarInner from "../../components/navbarSimple/navbar";
+
+// Style
+import { Container, Content, Section } from "./style";
 
 const schedules = [
   {
@@ -29,13 +35,12 @@ const schedules = [
   },
 ];
 
-// Painel de controle | Rota "/painel"
 function ControlPanel() {
   const [openFollow, setOpenModalFollow] = useState(false);
 
   return (
     <Container>
-      <NavBarInner />
+      <InternalNavbar />
       <Follow
         isOpen={openFollow}
         closeModalFollow={() => setOpenModalFollow(!openFollow)}
