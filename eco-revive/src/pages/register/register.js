@@ -67,7 +67,7 @@ function Register() {
       <InternalNavbar />
       <Container>
         <Content>
-          <h1>Cadastro</h1>
+          <h1>Cadastro usuário</h1>
           <form onSubmit={handleSubmit}>
             <InputContent category={"secundary"}>
               <label htmlFor="name">Nome completo:</label>
