@@ -18,5 +18,9 @@ export const Copy = styled.div`
     align-items: center;
     text-decoration: none;
     text-transform: uppercase;
+
+    @media (max-width:500px) {
+      font-size: .5rem;
+    }
   }
 `;
