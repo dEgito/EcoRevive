@@ -3,6 +3,7 @@ import ColaboratorSection from "../../components/colaboratorSection/colaboratorS
 import Copyright from "../../components/copyright/copyright";
 import InternalNavbar from "../../components/internalNavbar/navbar";
 import TopGreenWave from "../../components/TopGreenWave";
+import { Link } from "react-router-dom";
 
 // Style
 import { Container, Section, Details } from "./style";
@@ -19,8 +20,8 @@ function Faqs() {
             <summary>Como funciona o descarte?</summary>
             <p>
               É simples! Nós ajudamos você a ser direcionado a um ponto de
-              descarte conveniado.{" "}
-              <a href="http://localhost:3000/locais"> Clicando aqui </a> você
+              descarte conveniado.
+              <Link to={"/locais"}> Clicando aqui </Link> você
               pode ter acesso a lista dos pontos de descarte.
             </p>
           </details>
@@ -31,10 +32,9 @@ function Faqs() {
             <summary>Como posso descartar meu eletrônico?</summary>
             <p>
               Faça seu cadastro - entre na sua conta - selecione a opção
-              <a href="http://localhost:3000/locais">
-                {" "}
-                "agendar meu descarte"{" "}
-              </a>
+              <Link to={"/locais"}>
+                "agendar meu descarte"
+              </Link>
               - selecione o local desejado para o descarte - agende o dia e o
               horário - e na data marcada, se direcione até o ponto de coleta.
             </p>
@@ -45,11 +45,10 @@ function Faqs() {
           <details>
             <summary>É possível acompanhar o processo de descarte?</summary>
             <p>
-              Sim. Acessando a sua conta, você seleciona a opção{" "}
-              <a href="http://localhost:3000/historico">
-                {" "}
-                "acompanhar meu descarte".{" "}
-              </a>
+              Sim. Acessando a sua conta, você seleciona a opção
+              <Link to={"/historico"}>
+                "acompanhar meu descarte".
+              </Link>
             </p>
           </details>
         </Details>
@@ -60,11 +59,10 @@ function Faqs() {
               Como posso me inscrever para ser ponto de descarte?
             </summary>
             <p>
-              Você se cadastra na nossa plataforma e seleciona a opção{" "}
-              <a href="http://localhost:3000/empresas">
-                {" "}
-                "Cadastre-se como empresa".{" "}
-              </a>
+              Você se cadastra na nossa plataforma e seleciona a opção
+              <Link to={"/empresas"}>
+                "Cadastre-se como empresa".
+              </Link>
             </p>
           </details>
         </Details>
