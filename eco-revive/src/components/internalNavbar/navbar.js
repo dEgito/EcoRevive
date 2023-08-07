@@ -41,7 +41,9 @@ function InternalNavbar() {
       {token ? (
         <NavbarContainerInterna>
           <Container>
-              <img src={Logo} />
+              <Link to={"/home"} style={{ textDecoration: "none" }}>
+                <img src={Logo} />
+              </Link>
             {isOpen ? (
               <AiOutlineClose
                 onClick={toggleMenu}

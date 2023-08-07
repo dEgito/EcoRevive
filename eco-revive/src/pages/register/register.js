@@ -12,7 +12,7 @@ import Button from "../../components/button/index";
 import InternalNavbar from "../../components/internalNavbar/navbar";
 
 // Styles
-import { Box, ButtonBox, Container, Content, Div, InputContent } from "./style";
+import { Box, ButtonBox, Container, Content, ContainerSmal, InputContent } from "./style";
 
 // Assets
 import Logo from "../../assets/Logo320.png";
@@ -123,8 +123,8 @@ function Register() {
               />
             </InputContent>
 
-            <Div size={"small"}>
-              <InputContent category={"secundary"}>
+            <ContainerSmal size={"small"}>
+              <InputContent category={"small"}>
                 <label htmlFor="AddressNumber">Número:</label>
                 <input
                   type="text"
@@ -133,7 +133,7 @@ function Register() {
                 />
               </InputContent>
 
-              <InputContent category={"secundary"}>
+              <InputContent category={"small"}>
                 <label htmlFor="AddressComplement">Complemento:</label>
                 <input
                   type="text"
@@ -141,7 +141,7 @@ function Register() {
                   onChange={(e) => setUserAddressComplement(e.target.value)}
                 />
               </InputContent>
-            </Div>
+            </ContainerSmal>
 
             <InputContent category={"secundary"}>
               <label htmlFor="AddressDiscrict">Bairro:</label>
@@ -152,8 +152,8 @@ function Register() {
               />
             </InputContent>
 
-            <Div size={"small"}>
-              <InputContent category={"secundary"}>
+            <ContainerSmal size={"small"}>
+              <InputContent category={"small"}>
                 <label htmlFor="AddressCity">Cidade:</label>
                 <input
                   type="text"
@@ -162,7 +162,7 @@ function Register() {
                 />
               </InputContent>
 
-              <InputContent category={"secundary"}>
+              <InputContent category={"small"}>
                 <label htmlFor="AddressState">Estado:</label>
                 <input
                   type="text"
@@ -170,7 +170,7 @@ function Register() {
                   onChange={(e) => setUserAddressState(e.target.value)}
                 />
               </InputContent>
-            </Div>
+            </ContainerSmal>
             <ButtonBox>
               <Button
                 style={{ margin: "50%" }}
