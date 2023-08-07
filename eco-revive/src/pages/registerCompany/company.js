@@ -77,7 +77,7 @@ function RegisterCompany() {
       <InternalNavbar />
       <Container>
         <Content>
-          <h1>Cadastro</h1>
+          <h1>Cadastro empresa</h1>
           <form onSubmit={handleSubmit}>
             <InputContent category={"secundary"}>
               <label htmlFor="name">Nome:</label>
