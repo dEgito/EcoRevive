@@ -47,7 +47,8 @@ function ContactUs() {
         // De fato, não podemos ter certeza se a mensagem foi enviada ou não, o que
         // irá gerar um erro de timeout, mas a mensagem foi enviada com sucesso
         if (error.code === "ECONNABORTED") {
-          return alert("Mensagem enviada com sucesso!");
+          console.log(error)
+          return alert("Tivemos um problema interno!");
         }
         // Caso seja um erro de preenchimento de campos, vamos alertar o usuário com um
         // adorável pop-up
