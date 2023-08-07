@@ -3,8 +3,7 @@ import { Box } from "./style";
 function Header() {
   return (
     <Box>
-      <h2>Olá, <span>Marlena</span>!</h2>
-      <p>Unidade: LOREM IPSUM</p>
+      <h2>Olá, seja Bem-vindo(a)!</h2>
     </Box>
   );
 }

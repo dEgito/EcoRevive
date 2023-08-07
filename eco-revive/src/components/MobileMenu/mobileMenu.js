@@ -1,33 +1,23 @@
+// Components
 import Button from "../button";
+
+import { Link } from "react-router-dom";
+
+// Style
 import {
-  Container,
   BtnContainer,
-  HamburgerIcon,
+  MobileMenuContainer,
+  Container,
   Menu,
   MenuItem,
   MenuLink,
-} from "./style";
-import React, { useState } from "react";
-import Logo from "../../assets/Logo-nav.png";
-import { Link } from "react-router-dom";
+} from "./mobileMenuStyle";
 
-function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-  return (
-    <Container>
-      <Link to={"/"} style={{ textDecoration: "none" }}>
-      <img src={Logo} />
-      </Link>
-      <HamburgerIcon onClick={toggleMenu}>
-        <i className={`fa ${isOpen ? "fa-times" : "fa-bars"}`} />
-      </HamburgerIcon>
-
-      <Menu isOpen={isOpen}>
-        <div>
+function MobileMenu({ isOpen }) {
+  return isOpen ? (
+    <MobileMenuContainer>
+      <Container>
+        <Menu>
           <MenuItem>
             <Link to={"/"} style={{ textDecoration: "none" }}>
               <MenuLink>Home</MenuLink>
@@ -35,7 +25,7 @@ function Navbar() {
           </MenuItem>
           <MenuItem>
             <Link to={"/sobre"} style={{ textDecoration: "none" }}>
-              <MenuLink>Sobre nós</MenuLink>
+              <MenuLink>Sobre</MenuLink>
             </Link>
           </MenuItem>
           <MenuItem>
@@ -48,8 +38,7 @@ function Navbar() {
               <MenuLink>FAQ</MenuLink>
             </Link>
           </MenuItem>
-        </div>
-
+        </Menu>
         <BtnContainer>
           <Link to={"/cadastro"} style={{ textDecoration: "none" }}>
             <Button category="primary">Cadastrar</Button>
@@ -58,9 +47,9 @@ function Navbar() {
             <Button category="secundary">Entrar</Button>
           </Link>
         </BtnContainer>
-      </Menu>
-    </Container>
-  );
+      </Container>
+    </MobileMenuContainer>
+  ) : null;
 }
 
-export default Navbar;
+export default MobileMenu;

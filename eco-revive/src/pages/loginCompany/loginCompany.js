@@ -12,12 +12,12 @@ import Button from "../../components/button/index";
 import InternalNavbar from "../../components/internalNavbar/navbar";
 
 // Styles
-import { ButtonBox, Container, Content, InputContent } from "./style";
+import { ButtonBox, Container, Content, InputContent } from "./LoginCompanystyle";
 
 // Assets
 import Logo from "../../assets/Logo320.png";
 
-function Login() {
+function LoginCompany() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const history = useNavigate();
@@ -25,9 +25,9 @@ function Login() {
   function handleSubmit(e) {
     e.preventDefault();
     api
-      .post("/login", {
-        user_email: email,
-        user_password: password,
+      .post("/loginCompany", {
+        comp_email: email,
+        comp_password: password,
       })
       .then((response) => {
         localStorage.setItem("token", response.data.token);
@@ -71,11 +71,11 @@ function Login() {
           </form>
 
           <ButtonBox>
-            <Link to={"/loginCompany"}>Logar como empresa</Link>
+            <Link to={"/login"}>Logar como Usuário</Link>
           </ButtonBox>
         </Content>
       </Container>
     </>
   );
 }
-export default Login;
+export default LoginCompany;
