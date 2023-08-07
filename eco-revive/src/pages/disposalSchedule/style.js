@@ -54,6 +54,9 @@ export const Card = styled.div`
     }
   }
 `;
+
+export const Input = styled.input``;
+
 export const ContainerButton = styled.div`
   display: flex;
   align-items: center;
