@@ -11,7 +11,7 @@ import {
   Card,
   Container,
   ContainerButton,
-  Input,
+  InputContent,
 } from "./style";
 
 function DisposalSchedule({ isOpen, closeModalSchedule }) {
@@ -60,44 +60,48 @@ function DisposalSchedule({ isOpen, closeModalSchedule }) {
           <h1>Agendar Descarte</h1>
 
           <form onSubmit={handleSubmit}>
-            <div>
+            <InputContent>
               <label htmlFor="item">Item:</label>
-              <Input
+              <input
                 type="text"
                 id="item"
                 onChange={(e) => setItem(e.target.value)}
               />
-            </div>
+            </InputContent>
             <div>
-              <label htmlFor="unidades">Unidades:</label>
-              <Input
-                type="text"
-                id="unidades"
-                onChange={(e) => setAddress(e.target.value)}
-              />
-              <label htmlFor="data">Data:</label>
-              <Input
-                type="date"
-                id="data"
-                onChange={(e) => setData(e.target.value)}
-              />
+              <InputContent>
+                <label htmlFor="unidades">Unidades:</label>
+                <input
+                  type="text"
+                  id="unidades"
+                  onChange={(e) => setAddress(e.target.value)}
+                />
+              </InputContent>
+              <InputContent>
+                <label htmlFor="data">Data:</label>
+                <input
+                  type="date"
+                  id="data"
+                  onChange={(e) => setData(e.target.value)}
+                />
+              </InputContent>
             </div>
-            <div>
+            <InputContent>
               <label htmlFor="responsible">Responsável:</label>
-              <Input
+              <input
                 type="text"
                 id="responsible"
                 onChange={(e) => setResponsible(e.target.value)}
               />
-            </div>
-            <div>
+            </InputContent>
+            <InputContent>
               <label htmlFor="status">Status:</label>
-              <Input
+              <input
                 type="text"
                 id="status"
                 onChange={(e) => setStatus(e.target.value)}
               />
-            </div>
+            </InputContent>
             <ContainerButton>
               <BtnExit onClick={closeModalSchedule}>cancelar</BtnExit>
               <BtnSubmit type="submit">Agendar</BtnSubmit>
