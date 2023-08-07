@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Background from "../../assets/bg-quem-somos.jpg";
 
-export const Container = styled.body`
+export const Container = styled.div`
   color: var(--blue-700);
   margin: 0;
 

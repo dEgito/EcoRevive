@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.body`
+export const Container = styled.div`
   margin: 0;
   background: var(--gray-600);
   position: relative;

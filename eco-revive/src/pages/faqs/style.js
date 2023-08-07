@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.body`
+export const Container = styled.div`
   flex-wrap: wrap;
   text-align: center;
   color: var(--blue-700);

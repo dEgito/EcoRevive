@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.body`
+export const Container = styled.div`
   font-family: Montserrat, sans-serif;
   color: var(--blue-700);
   margin: 0;
