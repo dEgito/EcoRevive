@@ -12,7 +12,13 @@ import Button from "../../components/button/index";
 import InternalNavbar from "../../components/internalNavbar/navbar";
 
 // Styles
-import { Div, ButtonBox, Container, Content, InputContent } from "./style";
+import {
+  ContainerSmal,
+  ButtonBox,
+  Container,
+  Content,
+  InputContent,
+} from "./style";
 
 // Assets
 import Logo from "../../assets/Logo320.png";
@@ -37,7 +43,8 @@ function RegisterCompany() {
 
   function handleSubmit(e) {
     e.preventDefault();
-       api.post("/company", {
+    api
+      .post("/company", {
         comp_name: compName,
         comp_cnpj: compCnpj,
         comp_cnae: compCnae,
@@ -54,12 +61,12 @@ function RegisterCompany() {
         comp_addrress_complement: compAddressComplement,
       })
       .then((response) => {
-        if (token){
-          history("/home")
-        }else{
-           history("/loginCompany") 
+        if (token) {
+          history("/home");
+        } else {
+          history("/loginCompany");
         }
-       
+
         if (response.data.message.errors) {
           return alert("Falha ao cadastrar Empresa");
         }
@@ -69,7 +76,6 @@ function RegisterCompany() {
         console.log(error);
         return alert("Empresa Não Cadastrada");
       });
-
   }
 
   return (
@@ -77,7 +83,7 @@ function RegisterCompany() {
       <InternalNavbar />
       <Container>
         <Content>
-          <h1>Cadastro</h1>
+          <h1>Cadastro empresa</h1>
           <form onSubmit={handleSubmit}>
             <InputContent category={"secundary"}>
               <label htmlFor="name">Nome:</label>
@@ -88,8 +94,8 @@ function RegisterCompany() {
               />
             </InputContent>
 
-            <Div>
-              <InputContent category={"secundary"}>
+            <ContainerSmal size={"small"}>
+              <InputContent category={"small"}>
                 <label htmlFor="compCnpj">CNPJ:</label>
                 <input
                   type="text"
@@ -98,7 +104,7 @@ function RegisterCompany() {
                 />
               </InputContent>
 
-              <InputContent category={"secundary"}>
+              <InputContent category={"small"}>
                 <label htmlFor="compCnae">CNAE:</label>
                 <input
                   type="text"
@@ -106,7 +112,7 @@ function RegisterCompany() {
                   onChange={(e) => setCompCnae(e.target.value)}
                 />
               </InputContent>
-            </Div>
+            </ContainerSmal>
             <InputContent category={"secundary"}>
               <label htmlFor="email">E-mail:</label>
               <input
@@ -161,8 +167,8 @@ function RegisterCompany() {
               />
             </InputContent>
 
-            <Div size={"small"}>
-              <InputContent category={"secundary"}>
+            <ContainerSmal size={"small"}>
+              <InputContent category={"small"}>
                 <label htmlFor="CompAddressNumber">Número:</label>
                 <input
                   type="text"
@@ -171,7 +177,7 @@ function RegisterCompany() {
                 />
               </InputContent>
 
-              <InputContent category={"secundary"}>
+              <InputContent category={"small"}>
                 <label htmlFor="CompAddressComplement">Complemento:</label>
                 <input
                   type="text"
@@ -179,7 +185,7 @@ function RegisterCompany() {
                   onChange={(e) => setCompAddressComplement(e.target.value)}
                 />
               </InputContent>
-            </Div>
+            </ContainerSmal>
 
             <InputContent category={"secundary"}>
               <label htmlFor="CompAddressDiscrict">Bairro:</label>
@@ -190,8 +196,8 @@ function RegisterCompany() {
               />
             </InputContent>
 
-            <Div size={"small"}>
-              <InputContent category={"secundary"}>
+            <ContainerSmal size={"small"}>
+              <InputContent category={"small"}>
                 <label htmlFor="CompAddressCity">Cidade:</label>
                 <input
                   type="text"
@@ -200,7 +206,7 @@ function RegisterCompany() {
                 />
               </InputContent>
 
-              <InputContent category={"secundary"}>
+              <InputContent category={"small"}>
                 <label htmlFor="CompAddressState">Estado:</label>
                 <input
                   type="text"
@@ -208,7 +214,7 @@ function RegisterCompany() {
                   onChange={(e) => setCompAddressState(e.target.value)}
                 />
               </InputContent>
-            </Div>
+            </ContainerSmal>
             <ButtonBox>
               <Button category={"primary"} type={"submit"}>
                 Cadastrar
@@ -217,12 +223,12 @@ function RegisterCompany() {
           </form>
           <div>
             {token ? null : (
-            <ButtonBox>
-              <Link to={"/loginCompany"}>
-                <a href="#">Já possuo conta! Entrar</a>
-              </Link>
-            </ButtonBox>
-            ) }
+              <ButtonBox>
+                <Link to={"/loginCompany"}>
+                  <a href="#">Já possuo conta! Entrar</a>
+                </Link>
+              </ButtonBox>
+            )}
           </div>
         </Content>
 
