@@ -6,16 +6,16 @@ export const api = axios.create({
   headers: { "Content-Type": "application/json" },
 });
 
-api.interceptors.request.use((emilly) => {
+api.interceptors.request.use((e) => {
   const token = localStorage.getItem("token");
   if (token) {
-    emilly.headers = {
-      ...emilly.headers,
+    e.headers = {
+      ...e.headers,
       Authorization: token,
       "Access-Control-Allow-Origin": "*",
     };
   }
-  return emilly;
+  return e;
 });
 
 api.interceptors.response.use((response) => {
