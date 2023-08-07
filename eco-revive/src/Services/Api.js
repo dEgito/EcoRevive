@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const api = axios.create({
-  baseURL: "http://localhost:8081",
+  baseURL: "https://ecorevivebackend.onrender.com",
   timeout: 3000,
   headers: { "Content-Type": "application/json" },
 });
