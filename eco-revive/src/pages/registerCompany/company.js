@@ -1,8 +1,5 @@
 // Libs
-import * as yup from "yup";
-import { yupResolver } from "@hookform/resolvers/yup";
-import { SubmitHandler, useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 //Hooks useStates
 import { useState } from "react";
@@ -12,7 +9,7 @@ import { api } from "../../Services/Api";
 
 // Components
 import Button from "../../components/button/index";
-import Navbar from "../../components/defaultNavbar/navbar";
+import InternalNavbar from "../../components/internalNavbar/navbar";
 
 // Styles
 import { Div, ButtonBox, Container, Content, InputContent } from "./style";
@@ -35,45 +32,12 @@ function RegisterCompany() {
   const [compAddressCity, setCompAddressCity] = useState("");
   const [compAddressState, setCompAddressState] = useState("");
   const [compAddressComplement, setCompAddressComplement] = useState("");
-
-  const schema = yup.object().shape({
-    compName: yup
-      .string()
-      .max(99, "Limite de caracteres atingido.")
-      .required("*Campo obrigatório!"),
-    compCnpj: yup.string().max(14),
-    compCnae: yup.string(),
-    compEmail: yup
-      .string()
-      .email("Insira um e-mail válido!")
-      .required("*Campo obrigatório!"),
-    compPassword: yup.string().required("*Campo obrigatório!"),
-    compPasswordConfirmation: yup
-      .string()
-      .required("*Campo obrigatório!")
-      .oneOf([yup.ref("password")], "Senhas não correspondentes!"),
-    compPhone: yup.string().max(11),
-    compType: yup.string(),
-    compAddressCep: yup.string().max(255),
-    compAddressRoad: yup.string().max(255),
-    compAddressNumber: yup.string().max(255),
-    compAddressDiscrict: yup.string().max(255),
-    compAddressCity: yup.string().max(255),
-    compAddressState: yup.string().max(255),
-    compAddressComplement: yup.string().max(255),
-  });
-
-  const {
-    register,
-    formState: { errors },
-  } = useForm({
-    resolver: yupResolver(schema),
-  });
+  const history = useNavigate();
+  const token = localStorage.getItem("token");
 
   function handleSubmit(e) {
     e.preventDefault();
-    api
-      .post("/company", {
+       api.post("/company", {
         comp_name: compName,
         comp_cnpj: compCnpj,
         comp_cnae: compCnae,
@@ -90,22 +54,27 @@ function RegisterCompany() {
         comp_addrress_complement: compAddressComplement,
       })
       .then((response) => {
-        if (response.data.message.errors) {
-          return alert("Falha ao cadastrar Usuario");
+        if (token){
+          history("/home")
+        }else{
+           history("/loginCompany") 
         }
-        return alert("Usuario Cadastrado com Sucesso");
+       
+        if (response.data.message.errors) {
+          return alert("Falha ao cadastrar Empresa");
+        }
+        return alert("Empresa Cadastrada com Sucesso");
       })
       .catch((error) => {
         console.log(error);
-        return alert("Usuario Não Cadastrado");
+        return alert("Empresa Não Cadastrada");
       });
 
-    //Adicionar lógica de armazenamento dos dados fornecidos no cadastro
   }
 
   return (
     <>
-      <Navbar />
+      <InternalNavbar />
       <Container>
         <Content>
           <h1>Cadastro</h1>
@@ -115,10 +84,8 @@ function RegisterCompany() {
               <input
                 type="text"
                 id="name"
-                {...register("name")}
                 onChange={(e) => setCompName(e.target.value)}
               />
-              <span>{errors.name?.message}</span>
             </InputContent>
 
             <Div>
@@ -127,10 +94,8 @@ function RegisterCompany() {
                 <input
                   type="text"
                   id="compCnpj"
-                  {...register("compCnpj")}
                   onChange={(e) => setCompCnpj(e.target.value)}
                 />
-                <span>{errors.compCnpj?.message}</span>
               </InputContent>
 
               <InputContent category={"secundary"}>
@@ -138,173 +103,110 @@ function RegisterCompany() {
                 <input
                   type="text"
                   id="compCnae"
-                  {...register("compCnae")}
                   onChange={(e) => setCompCnae(e.target.value)}
                 />
-                <span>{errors.compCnae?.message}</span>
               </InputContent>
             </Div>
-            <InputContent category={"secundary"}>
-              <label htmlFor="compCnpj">CNPJ:</label>
-              <input
-                type="text"
-                id="compCnpj"
-                {...register("compCnpj")}
-                onChange={(e) => setCompCnpj(e.target.value)}
-              />
-              <span>{errors.compCnpj?.message}</span>
-            </InputContent>
-
-            <InputContent category={"secundary"}>
-              <label htmlFor="compCnae">CNAE:</label>
-              <input
-                type="text"
-                id="compCnae"
-                {...register("compCnae")}
-                onChange={(e) => setCompCnae(e.target.value)}
-              />
-              <span>{errors.compCnae?.message}</span>
-            </InputContent>
-
             <InputContent category={"secundary"}>
               <label htmlFor="email">E-mail:</label>
               <input
                 type="text"
                 id="email"
-                {...register("email")}
                 onChange={(e) => setCompEmail(e.target.value)}
               />
-              <span>{errors.email?.message}</span>
             </InputContent>
 
             <InputContent category={"secundary"}>
-              <label htmlFor="password">Senha:</label>
+              <label htmlFor="CompPassword">Senha:</label>
               <input
                 type="password"
-                id="password"
-                {...register("password")}
+                id="CompPassword"
                 onChange={(e) => setCompPassword(e.target.value)}
               />
-              <span>{errors.password?.message}</span>
             </InputContent>
 
             <InputContent category={"secundary"}>
-              <label htmlFor="passwordConfirmation">Confirmar senha:</label>
-              <input
-                type="password"
-                id="passwordConfirmation"
-                {...register("passwordConfirmation")}
-              />
-              <span>{errors.passwordConfirmation?.message}</span>
-            </InputContent>
-
-            <InputContent category={"secundary"}>
-              <label htmlFor="name">Telefone:</label>
+              <label htmlFor="phone">Telefone:</label>
               <input
                 type="text"
-                id="name"
-                {...register("name")}
+                id="phone"
                 onChange={(e) => setCompPhone(e.target.value)}
               />
-              <span>{errors.name?.message}</span>
             </InputContent>
 
             <InputContent category={"secundary"}>
-              <label htmlFor="name">Tipo de empresa:</label>
+              <label htmlFor="CompType">Tipo de empresa:</label>
               <input
                 type="text"
-                id="name"
-                {...register("name")}
+                id="CompType"
                 onChange={(e) => setCompType(e.target.value)}
               />
-              <span>{errors.name?.message}</span>
             </InputContent>
 
             <InputContent category={"secundary"}>
-              <label htmlFor="password">Cep:</label>
+              <label htmlFor="CompAddressCep">Cep:</label>
               <input
-                type="password"
-                id="password"
-                name="password"
-                {...register("password")}
+                type="text"
+                id="CompAddressCep"
                 onChange={(e) => setCompAddressCep(e.target.value)}
               />
-              <span>{errors.password?.message}</span>
             </InputContent>
 
             <InputContent category={"secundary"}>
-              <label htmlFor="password">Rua/ Avenida:</label>
+              <label htmlFor="CompAddressRoad">Rua/ Avenida:</label>
               <input
-                type="password"
-                id="password"
-                name="password"
-                {...register("password")}
+                type="text"
+                id="CompAddressRoad"
                 onChange={(e) => setCompAddressRoad(e.target.value)}
               />
-              <span>{errors.password?.message}</span>
             </InputContent>
 
             <Div size={"small"}>
               <InputContent category={"secundary"}>
-                <label htmlFor="password">Número:</label>
+                <label htmlFor="CompAddressNumber">Número:</label>
                 <input
-                  type="password"
-                  id="password"
-                  name="password"
-                  {...register("password")}
+                  type="text"
+                  id="CompAddressNumber"
                   onChange={(e) => setCompAddressNumber(e.target.value)}
                 />
-                <span>{errors.password?.message}</span>
               </InputContent>
 
               <InputContent category={"secundary"}>
-                <label htmlFor="password">Complemento:</label>
+                <label htmlFor="CompAddressComplement">Complemento:</label>
                 <input
-                  type="password"
-                  id="password"
-                  name="password"
-                  {...register("password")}
+                  type="text"
+                  id="CompAddressComplement"
                   onChange={(e) => setCompAddressComplement(e.target.value)}
                 />
-                <span>{errors.password?.message}</span>
               </InputContent>
             </Div>
 
             <InputContent category={"secundary"}>
-              <label htmlFor="password">Bairro:</label>
+              <label htmlFor="CompAddressDiscrict">Bairro:</label>
               <input
-                type="password"
-                id="password"
-                name="password"
-                {...register("password")}
+                type="text"
+                id="CompAddressDiscrict"
                 onChange={(e) => setCompAddressDiscrict(e.target.value)}
               />
-              <span>{errors.password?.message}</span>
             </InputContent>
 
             <Div size={"small"}>
               <InputContent category={"secundary"}>
-                <label htmlFor="password">Cidade:</label>
+                <label htmlFor="CompAddressCity">Cidade:</label>
                 <input
-                  type="password"
-                  id="password"
-                  name="password"
-                  {...register("password")}
+                  type="text"
+                  id="CompAddressCity"
                   onChange={(e) => setCompAddressCity(e.target.value)}
                 />
-                <span>{errors.password?.message}</span>
               </InputContent>
 
               <InputContent category={"secundary"}>
-                <label htmlFor="password">Estado:</label>
+                <label htmlFor="CompAddressState">Estado:</label>
                 <input
-                  type="password"
-                  id="password"
-                  name="password"
-                  {...register("password")}
+                  type="text"
+                  id="CompAddressState"
                   onChange={(e) => setCompAddressState(e.target.value)}
                 />
-                <span>{errors.password?.message}</span>
               </InputContent>
             </Div>
             <ButtonBox>
@@ -313,12 +215,15 @@ function RegisterCompany() {
               </Button>
             </ButtonBox>
           </form>
-
-          <ButtonBox>
-            <Link to={"/login"}>
-              <a href="#">Já possuo conta! Entrar</a>
-            </Link>
-          </ButtonBox>
+          <div>
+            {token ? null : (
+            <ButtonBox>
+              <Link to={"/loginCompany"}>
+                <a href="#">Já possuo conta! Entrar</a>
+              </Link>
+            </ButtonBox>
+            ) }
+          </div>
         </Content>
 
         <img src={Logo} alt="Eco Revive" />

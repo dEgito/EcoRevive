@@ -3,7 +3,7 @@ import BottomBlueWave from "../../components/bottomBlueWave";
 import BottomGreenWave from "../../components/bottomGreenWave";
 import ColaboratorSection from "../../components/colaboratorSection/colaboratorSection";
 import Copyright from "../../components/copyright/copyright";
-import DefaultNavbar from "../../components/defaultNavbar/navbar";
+import InternalNavbar from "../../components/internalNavbar/navbar";
 import TopBlueWave from "../../components/TopBlueWave";
 import TopGreenWave from "../../components/TopGreenWave";
 
@@ -31,7 +31,7 @@ import {
 function AboutUs() {
   return (
     <Container>
-      <DefaultNavbar />
+      <InternalNavbar />
       <Banner>
         <h1>Quem somos?</h1>
         <p>

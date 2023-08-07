@@ -1,7 +1,4 @@
-// Components
-import Button from "../button";
-
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 // Style
 import {
@@ -11,9 +8,17 @@ import {
   Menu,
   MenuItem,
   MenuLink,
+  ButtonExit,
 } from "./InternaStyle";
 
 function MobileMenuInterna({ isOpen }) {
+  const history = useNavigate();
+
+  function handleLogout() {
+    localStorage.removeItem("token");
+    history("/");
+  }
+
   return isOpen ? (
     <MobileInternaMenu>
       <Container>
@@ -34,15 +39,18 @@ function MobileMenuInterna({ isOpen }) {
               </Link>
             </MenuItem>
             <MenuItem>
-              <Link to={"/empresa"} style={{ textDecoration: "none" }}>
-                <MenuLink>Coleta</MenuLink>
+                <Link to={"/duvidas"} style={{ textDecoration: "none" }}>
+                  <MenuLink>FAQ</MenuLink>
+                </Link>
+              </MenuItem>
+            <MenuItem>
+              <Link to={"/empresas"} style={{ textDecoration: "none" }}>
+                <MenuLink>Cadastrar</MenuLink>
               </Link>
             </MenuItem>
             <BtnContainer>
-            <Link to={"/"} style={{ textDecoration: "none" }}>
-              <Button category="secundary">Sair</Button>
-            </Link>
-          </BtnContainer>
+              <ButtonExit onClick={() => handleLogout()}>Sair</ButtonExit>
+            </BtnContainer>
           </Menu>
       </Container>
     </MobileInternaMenu>
