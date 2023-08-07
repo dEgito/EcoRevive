@@ -44,9 +44,15 @@ export const Content = styled.div`
     margin-bottom: 2rem;
     overflow-y: scroll;
 
+    @media (max-width: 399px) {
+      align-items: center;
+      overflow-x: hidden;
+      width: 80%;
+    }
+
     &::-webkit-scrollbar-track {
       background-color: var(--gray-600);
-      
+
       border-radius: 4px;
     }
     &::-webkit-scrollbar {
@@ -76,7 +82,6 @@ export const Content = styled.div`
     font-size: 0.8rem;
     font-weight: 700;
   }
-
   @media (max-width: 800px) {
     width: 100%;
   }
@@ -97,9 +102,14 @@ export const InputContent = styled.div`
     font-weight: 600;
 
     color: ${(props) => {
-      return props.category === "secundary"
-        ? "var(--white)"
-        : "var(--green-700)";
+      switch (props.category) {
+        case "secundary":
+          return "var(--white)";
+        case "small":
+          return " var(--white)";
+        default:
+          return "var(--green-700)";
+      }
     }};
   }
 
@@ -107,21 +117,41 @@ export const InputContent = styled.div`
     border: 1px solid var(--green-500);
     min-height: 1.4rem;
     resize: none;
+    border-radius: 0.25rem;
+
+    @media (max-width: 399px) {
+      max-width: ${(props) => {
+        return props.category === "small" ? "100%" : "unset";
+      }};
+    }
 
     @media (max-width: 600px) {
       margin-bottom: 0;
     }
+  }
 
-    border-radius: 0.25rem;
+  @media (max-width: 399px) {
+    width: 100%;
+    max-width: ${(props) => {
+      return props.category === "small" ? "8rem" : "90%";
+    }};
   }
 `;
 
-export const Div = styled.div`
+export const ContainerSmal = styled.div`
   display: flex;
   flex-direction: row;
   gap: 2rem;
-
   width: 50%;
+
+  @media (max-width: 399px) {
+    width: 100%;
+    max-width: 90%;
+    justify-content: ${(props) => {
+      return props.size === "small" ? "center" : "unset";
+    }};
+    gap: 1rem;
+  }
 `;
 
 export const ButtonBox = styled.div`
