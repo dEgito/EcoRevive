@@ -46,7 +46,7 @@ function LoginCompany() {
         <img src={Logo} alt="Eco Revive" />
 
         <Content>
-          <h1>Login empresa</h1>
+          <h1>Login</h1>
           <form onSubmit={handleSubmit}>
             <InputContent>
             <label htmlFor="email">Email:</label>

@@ -43,8 +43,7 @@ function RegisterCompany() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    api
-      .post("/company", {
+       api.post("/company", {
         comp_name: compName,
         comp_cnpj: compCnpj,
         comp_cnae: compCnae,
