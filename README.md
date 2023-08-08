@@ -6,6 +6,8 @@ O EcoRevive é um projeto desenvolvido como parte do Programa STRAT 2023, com o 
 
 Este repositório contém uma plataforma com o objetivo de contribuir para a criação de cidades sustentáveis, incentivando práticas de descarte consciente e adequado, além da reutilização de eletrônicos, de forma que reduza o desperdício e prolongue a vida útil dos dispositivos.
 
+O projeto é baseado em ReactJS no Front-end, NodeJS no [Back-end](https://github.com/akyssaeduarda/eco_revive_back-end) e Postgres no Banco de dados, além outras ferramentas como Axios, Prisma, Express e etc.
+
 ## Ferramentas necessárias
 
 ---
